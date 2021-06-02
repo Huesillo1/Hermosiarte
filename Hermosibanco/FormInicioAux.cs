@@ -58,5 +58,15 @@ namespace Hermosibanco
         {
             AbrirFormEnPanel(new FormTransferencias());
         }
+
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void agregarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

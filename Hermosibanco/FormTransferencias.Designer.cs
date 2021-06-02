@@ -59,7 +59,7 @@ namespace Hermosibanco
             this.groupBox2.Controls.Add(this.txtCuentaReceptora);
             this.groupBox2.Location = new System.Drawing.Point(349, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(364, 49);
+            this.groupBox2.Size = new System.Drawing.Size(332, 49);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cuenta Receptora";
@@ -70,7 +70,7 @@ namespace Hermosibanco
             this.dgvData.ContextMenuStrip = this.menuTransferencias;
             this.dgvData.Location = new System.Drawing.Point(12, 67);
             this.dgvData.Name = "dgvData";
-            this.dgvData.Size = new System.Drawing.Size(789, 376);
+            this.dgvData.Size = new System.Drawing.Size(751, 335);
             this.dgvData.TabIndex = 2;
             this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
             // 
@@ -88,17 +88,18 @@ namespace Hermosibanco
             this.txtCuentaReceptora.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCuentaReceptora.Location = new System.Drawing.Point(6, 19);
             this.txtCuentaReceptora.Name = "txtCuentaReceptora";
-            this.txtCuentaReceptora.Size = new System.Drawing.Size(348, 23);
+            this.txtCuentaReceptora.Size = new System.Drawing.Size(316, 23);
             this.txtCuentaReceptora.TabIndex = 0;
             // 
             // btnValidar
             // 
-            this.btnValidar.Location = new System.Drawing.Point(726, 30);
+            this.btnValidar.Location = new System.Drawing.Point(688, 31);
             this.btnValidar.Name = "btnValidar";
             this.btnValidar.Size = new System.Drawing.Size(75, 23);
             this.btnValidar.TabIndex = 3;
             this.btnValidar.Text = "Validar";
             this.btnValidar.UseVisualStyleBackColor = true;
+            this.btnValidar.Click += new System.EventHandler(this.btnValidar_Click);
             // 
             // menuTransferencias
             // 
@@ -110,14 +111,15 @@ namespace Hermosibanco
             // agregarContactoToolStripMenuItem
             // 
             this.agregarContactoToolStripMenuItem.Name = "agregarContactoToolStripMenuItem";
-            this.agregarContactoToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.agregarContactoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.agregarContactoToolStripMenuItem.Text = "Agregar contacto";
+            this.agregarContactoToolStripMenuItem.Click += new System.EventHandler(this.agregarContactoToolStripMenuItem_Click);
             // 
             // FormTransferencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(813, 455);
+            this.ClientSize = new System.Drawing.Size(775, 414);
             this.Controls.Add(this.btnValidar);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.groupBox2);
