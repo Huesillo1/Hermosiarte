@@ -50,6 +50,7 @@ namespace Hermosibanco
             // 
             // txtUser
             // 
+            this.txtUser.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.Location = new System.Drawing.Point(88, 60);
             this.txtUser.Name = "txtUser";
@@ -89,12 +90,14 @@ namespace Hermosibanco
             // 
             // txtPass
             // 
+            this.txtPass.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPass.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Location = new System.Drawing.Point(88, 96);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(100, 23);
             this.txtPass.TabIndex = 2;
             this.txtPass.UseSystemPasswordChar = true;
+            this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
             this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
             // 
             // FormLogin

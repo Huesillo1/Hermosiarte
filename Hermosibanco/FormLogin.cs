@@ -76,6 +76,11 @@ namespace Hermosibanco
             if(e.KeyCode == Keys.Enter)
                 txtPass.Focus();
         }
+
+        private void txtPass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

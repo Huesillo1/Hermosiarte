@@ -154,8 +154,6 @@ namespace Hermosibanco
         private void txtCuenta_TextChanged(object sender, EventArgs e)
         {
             txtNombre.Text = "";
-            txtNombre.iitem=2
-            showdialog
         }
     }
 }
