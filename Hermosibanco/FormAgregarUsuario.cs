@@ -112,8 +112,14 @@ namespace Hermosibanco
                         MessageBox.Show("La contraseña debe ser de 8 caracteres o más", "Código Postal", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
                     {
+                        string apellidoMaterno = "", noInt = "";
+                        if(txtApellidoMaterno.Text != "OPCIONAL")
+                            apellidoMaterno = txtApellidoMaterno.Text;
+                        if (txtNoInt.Text != "OPCIONAL")
+                            noInt = txtNoInt.Text;
                         string campos = "nombre, apellido_paterno, apellido_materno, calle, num_exterior, num_interior, codigo_postal, municipio, estado, fecha_nacimiento, fecha_registro, status, puesto, usuario, password";
-                        string values = "'" + txtNombre.Text + "', " + "'" + txtApellidoPaterno.Text + "', " + "'" + txtApellidoMaterno.Text + "', " + "'" + txtCalle.Text + "', " + "'" + txtNoExt.Text + "', " + "'" + txtNoInt.Text + "', " + "'" + txtCP.Text + "', " + "'" + cbbMunicipio.GetItemText(cbbMunicipio.SelectedItem).ToUpper() + "', " + "'" + cbbEstado.GetItemText(cbbEstado.SelectedItem).ToUpper() + "', " + "'" + dtFechaNacimiento.Value.ToString("yyyy-MM-dd") + "', '" + DateTime.Now.ToString("yyyy-MM-dd") + "', 'ACTIVO', '" + txtPuesto.Text + "', '" + txtUsuario.Text + "', '" + txtPassword.Text + "'";
+                        
+                        string values = "'" + txtNombre.Text + "', " + "'" + txtApellidoPaterno.Text + "', " + "'" + apellidoMaterno + "', " + "'" + txtCalle.Text + "', " + "'" + txtNoExt.Text + "', " + "'" + noInt + "', " + "'" + txtCP.Text + "', " + "'" + cbbMunicipio.GetItemText(cbbMunicipio.SelectedItem).ToUpper() + "', " + "'" + cbbEstado.GetItemText(cbbEstado.SelectedItem).ToUpper() + "', " + "'" + dtFechaNacimiento.Value.ToString("yyyy-MM-dd") + "', '" + DateTime.Now.ToString("yyyy-MM-dd") + "', 'ACTIVO', '" + txtPuesto.Text + "', '" + txtUsuario.Text + "', '" + txtPassword.Text + "'";
 
                         bd.insert("usuarios", campos, values);
                         bd.insert("cuentas_bancarias", "cuenta, usuario_id, saldo", "'" + txtCuenta.Text + "', " + bd.lastRecord("id", "ultimo_id", "usuarios").ToString() + ", 0.00");
@@ -155,6 +161,24 @@ namespace Hermosibanco
             {
                 txtApellidoMaterno.ForeColor = Color.DimGray;
                 txtApellidoMaterno.Text = "OPCIONAL";
+            }
+        }
+
+        private void txtNoInt_Enter(object sender, EventArgs e)
+        {
+            if (txtNoInt.Text == "OPCIONAL")
+            {
+                txtNoInt.ForeColor = Color.Black;
+                txtNoInt.Text = "";
+            }
+        }
+
+        private void txtNoInt_Leave(object sender, EventArgs e)
+        {
+            if (txtNoInt.Text == String.Empty)
+            {
+                txtNoInt.ForeColor = Color.DimGray;
+                txtNoInt.Text = "OPCIONAL";
             }
         }
     }

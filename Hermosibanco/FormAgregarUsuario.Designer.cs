@@ -60,6 +60,7 @@ namespace Hermosibanco
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.cbbMunicipio = new System.Windows.Forms.ComboBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -211,6 +212,7 @@ namespace Hermosibanco
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(189, 23);
             this.txtPassword.TabIndex = 8;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btnShowPassword
             // 
@@ -330,13 +332,15 @@ namespace Hermosibanco
             // txtNoInt
             // 
             this.txtNoInt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNoInt.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNoInt.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNoInt.ForeColor = System.Drawing.Color.DimGray;
             this.txtNoInt.Location = new System.Drawing.Point(271, 42);
             this.txtNoInt.Name = "txtNoInt";
-            this.txtNoInt.Size = new System.Drawing.Size(63, 23);
+            this.txtNoInt.Size = new System.Drawing.Size(63, 22);
             this.txtNoInt.TabIndex = 21;
             this.txtNoInt.Text = "OPCIONAL";
+            this.txtNoInt.Enter += new System.EventHandler(this.txtNoInt_Enter);
+            this.txtNoInt.Leave += new System.EventHandler(this.txtNoInt_Leave);
             // 
             // label12
             // 
@@ -396,15 +400,31 @@ namespace Hermosibanco
             this.cbbMunicipio.Size = new System.Drawing.Size(201, 23);
             this.cbbMunicipio.TabIndex = 28;
             // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Image = global::Hermosibanco.Properties.Resources.icons8_save_30;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar.Location = new System.Drawing.Point(157, 338);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(102, 43);
+            this.btnGuardar.TabIndex = 2;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
             // FormAgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 378);
+            this.ClientSize = new System.Drawing.Size(435, 394);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormAgregarUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Usuario";
             this.Load += new System.EventHandler(this.FormAgregarUsuario_Load);
             this.groupBox1.ResumeLayout(false);
@@ -448,5 +468,6 @@ namespace Hermosibanco
         private System.Windows.Forms.TextBox txtNoExt;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtCalle;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }

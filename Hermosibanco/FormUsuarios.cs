@@ -76,6 +76,8 @@ namespace Hermosibanco
                     where += "cuenta = '" + txtCuenta.Text + "' AND status = 'ACTIVO'";
                 else if(cbbStatus.SelectedIndex == 2)
                     where += "cuenta = '" + txtCuenta.Text + "' AND status = 'INACTIVO'";
+                else
+                    where += "cuenta = '" + txtCuenta.Text + "' ";
             }
             else
             {
@@ -138,7 +140,7 @@ namespace Hermosibanco
 
         private void cbbStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MessageBox.Show(cbbStatus.SelectedIndex.ToString());
+            //MessageBox.Show(cbbStatus.SelectedIndex.ToString());
             cargarDatos();
         }
 

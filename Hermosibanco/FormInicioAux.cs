@@ -66,7 +66,8 @@ namespace Hermosibanco
 
         private void agregarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FormAgregarUsuario formAgregarUsuario = new FormAgregarUsuario();
+            formAgregarUsuario.ShowDialog();
         }
     }
 }

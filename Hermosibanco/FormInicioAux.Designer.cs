@@ -33,12 +33,12 @@ namespace Hermosibanco
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.movimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transferirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verTodoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.movimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.transferirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,9 +73,23 @@ namespace Hermosibanco
             // miCuentaToolStripMenuItem
             // 
             this.miCuentaToolStripMenuItem.Name = "miCuentaToolStripMenuItem";
-            this.miCuentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.miCuentaToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.miCuentaToolStripMenuItem.Text = "Mi Cuenta";
             this.miCuentaToolStripMenuItem.Click += new System.EventHandler(this.miCuentaToolStripMenuItem_Click);
+            // 
+            // movimientosToolStripMenuItem
+            // 
+            this.movimientosToolStripMenuItem.Name = "movimientosToolStripMenuItem";
+            this.movimientosToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.movimientosToolStripMenuItem.Text = "Movimientos";
+            this.movimientosToolStripMenuItem.Click += new System.EventHandler(this.movimientosToolStripMenuItem_Click);
+            // 
+            // transferirToolStripMenuItem
+            // 
+            this.transferirToolStripMenuItem.Name = "transferirToolStripMenuItem";
+            this.transferirToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.transferirToolStripMenuItem.Text = "Transferir";
+            this.transferirToolStripMenuItem.Click += new System.EventHandler(this.transferirToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 
@@ -110,20 +124,6 @@ namespace Hermosibanco
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Hola, ";
             // 
-            // movimientosToolStripMenuItem
-            // 
-            this.movimientosToolStripMenuItem.Name = "movimientosToolStripMenuItem";
-            this.movimientosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.movimientosToolStripMenuItem.Text = "Movimientos";
-            this.movimientosToolStripMenuItem.Click += new System.EventHandler(this.movimientosToolStripMenuItem_Click);
-            // 
-            // transferirToolStripMenuItem
-            // 
-            this.transferirToolStripMenuItem.Name = "transferirToolStripMenuItem";
-            this.transferirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.transferirToolStripMenuItem.Text = "Transferir";
-            this.transferirToolStripMenuItem.Click += new System.EventHandler(this.transferirToolStripMenuItem_Click);
-            // 
             // FormInicioAux
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -134,6 +134,7 @@ namespace Hermosibanco
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormInicioAux";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.FormInicioAux_Load);
             this.menuStrip1.ResumeLayout(false);
