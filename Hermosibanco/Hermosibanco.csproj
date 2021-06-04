@@ -153,6 +153,12 @@
     <Compile Include="FormTransferencias.Designer.cs">
       <DependentUpon>FormTransferencias.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTransferir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransferir.Designer.cs">
+      <DependentUpon>FormTransferir.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTransferencias.resx">
       <DependentUpon>FormTransferencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransferir.resx">
+      <DependentUpon>FormTransferir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUsuarios.resx">
       <DependentUpon>FormUsuarios.cs</DependentUpon>

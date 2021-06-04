@@ -18,23 +18,23 @@ namespace Hermosibanco
         {
             try
             {
-                
                 string campos = "", tablas= "", where = "";
                 campos = "mov.id AS id_movimiento, mov.cantidad AS cantidad, mov.concepto AS concepto, cb.cuenta AS cuenta, CONCAT(ue.nombre, ' ', ue.apellido_paterno, ' ', ue.apellido_materno) AS nombre_emisor, CONCAT(ur.nombre, ' ', ur.apellido_paterno, ' ', ur.apellido_materno) AS nombre_receptor, ue.id AS id_emisor, ur.id AS id_receptor, mov.fecha AS fecha_movimiento, mov.tipo AS tipo";
                 tablas = "movimientos AS mov INNER JOIN usuarios as ue ON mov.emisor_id = ue.id INNER JOIN usuarios AS ur ON mov.receptor_id = ur.id INNER JOIN cuentas_bancarias AS cb ON mov.cuenta_bancaria_id = cb.id";
+                where += "mov.emisor_id = " + Properties.Settings.Default.idUsuario + " OR mov.receptor_id = " + Properties.Settings.Default.idUsuario + " ";
                 if (rbFecha.Checked)
-                    where += "fecha BETWEEN '" + dtFechaInicio.Value.ToString("yyyy-MM-dd") + "' AND '" + dtFechaFin.Value.ToString("yyyy-MM-dd") + "' ";
+                    where += "AND fecha BETWEEN '" + dtFechaInicio.Value.ToString("yyyy-MM-dd") + "' AND '" + dtFechaFin.Value.ToString("yyyy-MM-dd") + "' ";
                 else if (rbMes.Checked)
                 {
                     DateTime mesInicio = new DateTime(dtMes.Value.Year, dtMes.Value.Month, 1, 0, 0, 0);
                     DateTime mesFin = mesInicio.AddMonths(1).AddSeconds(-1);
-                    where += "fecha BETWEEN '" + mesInicio.ToString("yyyy-MM-dd") + "' AND '" + mesFin.ToString("yyyy-MM-dd") + "' ";
+                    where += "AND fecha BETWEEN '" + mesInicio.ToString("yyyy-MM-dd") + "' AND '" + mesFin.ToString("yyyy-MM-dd") + "' ";
                 }
                 else
                 {
                     DateTime anioInicio = new DateTime(dtAnio.Value.Year, 1, 1, 0, 0, 0);
                     DateTime anioFin = anioInicio.AddYears(1).AddSeconds(-1);
-                    where += "fecha BETWEEN '" + anioInicio.ToString("yyyy-MM-dd") + "' AND '" + anioFin.ToString("yyyy-MM-dd") + "' ";
+                    where += "AND fecha  BETWEEN '" + anioInicio.ToString("yyyy-MM-dd") + "' AND '" + anioFin.ToString("yyyy-MM-dd") + "' ";
                 }
                 /*
                     Tipos:{
@@ -107,6 +107,7 @@ namespace Hermosibanco
         {
             cargarDatos();
             cbbTipo.SelectedIndex = 0;
+            rbFecha.Checked = true;
         }
 
         private void dtFechaInicio_ValueChanged(object sender, EventArgs e)

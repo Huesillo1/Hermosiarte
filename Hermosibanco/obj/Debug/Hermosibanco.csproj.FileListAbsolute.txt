@@ -39,3 +39,4 @@ C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosiban
 C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormTransferencias.resources
 C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.Form1.resources
 C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormAgregarUsuario.resources
+C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormTransferir.resources

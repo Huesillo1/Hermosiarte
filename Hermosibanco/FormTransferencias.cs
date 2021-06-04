@@ -16,7 +16,23 @@ namespace Hermosibanco
 
         private void cargarContactosComboBox()
         {
-            //DataSet ds = bd.consult
+            DataSet ds = bd.consult("*", "cuentas_bancarias", "usuario_id = " + Properties.Settings.Default.idUsuario, "SI");
+            if(ds.Tables[0].Rows.Count > 0)
+            {
+                cbbCuentaEmisora.DisplayMember = "cuenta";
+                cbbCuentaEmisora.ValueMember = "id";
+                cbbCuentaEmisora.DataSource = ds.Tables[0];
+            }
+        }
+
+        private void cargarHeaders()
+        {
+            dgvData.Columns[0].HeaderText = "CUENTA";
+            dgvData.Columns[1].HeaderText = "NOMBRE";
+            dgvData.Columns[0].Width = 100;
+            dgvData.Columns[1].Width = 608;
+            dgvData.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvData.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
         private void cargarDatosTabla()
@@ -24,7 +40,8 @@ namespace Hermosibanco
             DataSet ds = bd.consult("cb.cuenta AS cuenta_banco, CONCAT(u.nombre,' ',u.apellido_paterno,' ', u.apellido_materno) AS nombre_completo", "contactos AS c INNER JOIN usuarios AS u ON c.usuario_destinatario_id = u.id INNER JOIN cuentas_bancarias AS cb ON cb.id = c.cuenta_bancaria_destinatario_id ", "c.usuario_remitente_id = " + Properties.Settings.Default.idUsuario, "SI");
             if (ds.Tables[0].Rows.Count > 0)
             {
-                dgvData.DataSource = ds;
+                dgvData.DataSource = ds.Tables[0];
+                cargarHeaders();
             }
         }
 
@@ -41,7 +58,9 @@ namespace Hermosibanco
 
         private void FormTransferencias_Load(object sender, EventArgs e)
         {
-
+            //dgvData.AutoGenerateColumns = true;
+            cargarContactosComboBox();
+            cargarDatosTabla();
         }
 
         private void btnValidar_Click(object sender, EventArgs e)
@@ -72,11 +91,20 @@ namespace Hermosibanco
                     }                    
                 }
             }
+            cargarDatosTabla();
         }
 
         private void agregarContactoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void transferirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTransferir formTransferir = new FormTransferir();
+            formTransferir.setCuenta(dgvData.CurrentRow.Cells[0].Value.ToString());
+            formTransferir.setNombre(dgvData.CurrentRow.Cells[1].Value.ToString());
+            formTransferir.ShowDialog();
         }
     }
 }

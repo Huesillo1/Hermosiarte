@@ -31,13 +31,13 @@ namespace Hermosibanco
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dgvData = new System.Windows.Forms.DataGridView();
             this.cbbCuentaEmisora = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtCuentaReceptora = new System.Windows.Forms.TextBox();
-            this.btnValidar = new System.Windows.Forms.Button();
+            this.dgvData = new System.Windows.Forms.DataGridView();
             this.menuTransferencias = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.agregarContactoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnValidar = new System.Windows.Forms.Button();
+            this.transferirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
@@ -54,6 +54,15 @@ namespace Hermosibanco
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cuenta Emisora";
             // 
+            // cbbCuentaEmisora
+            // 
+            this.cbbCuentaEmisora.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbCuentaEmisora.FormattingEnabled = true;
+            this.cbbCuentaEmisora.Location = new System.Drawing.Point(6, 19);
+            this.cbbCuentaEmisora.Name = "cbbCuentaEmisora";
+            this.cbbCuentaEmisora.Size = new System.Drawing.Size(319, 23);
+            this.cbbCuentaEmisora.TabIndex = 0;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtCuentaReceptora);
@@ -64,25 +73,6 @@ namespace Hermosibanco
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cuenta Receptora";
             // 
-            // dgvData
-            // 
-            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvData.ContextMenuStrip = this.menuTransferencias;
-            this.dgvData.Location = new System.Drawing.Point(12, 67);
-            this.dgvData.Name = "dgvData";
-            this.dgvData.Size = new System.Drawing.Size(751, 335);
-            this.dgvData.TabIndex = 2;
-            this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
-            // 
-            // cbbCuentaEmisora
-            // 
-            this.cbbCuentaEmisora.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbCuentaEmisora.FormattingEnabled = true;
-            this.cbbCuentaEmisora.Location = new System.Drawing.Point(6, 19);
-            this.cbbCuentaEmisora.Name = "cbbCuentaEmisora";
-            this.cbbCuentaEmisora.Size = new System.Drawing.Size(319, 23);
-            this.cbbCuentaEmisora.TabIndex = 0;
-            // 
             // txtCuentaReceptora
             // 
             this.txtCuentaReceptora.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -90,6 +80,27 @@ namespace Hermosibanco
             this.txtCuentaReceptora.Name = "txtCuentaReceptora";
             this.txtCuentaReceptora.Size = new System.Drawing.Size(316, 23);
             this.txtCuentaReceptora.TabIndex = 0;
+            // 
+            // dgvData
+            // 
+            this.dgvData.AllowUserToAddRows = false;
+            this.dgvData.AllowUserToDeleteRows = false;
+            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvData.ContextMenuStrip = this.menuTransferencias;
+            this.dgvData.Location = new System.Drawing.Point(12, 67);
+            this.dgvData.MultiSelect = false;
+            this.dgvData.Name = "dgvData";
+            this.dgvData.ReadOnly = true;
+            this.dgvData.Size = new System.Drawing.Size(751, 335);
+            this.dgvData.TabIndex = 2;
+            this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
+            // 
+            // menuTransferencias
+            // 
+            this.menuTransferencias.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.transferirToolStripMenuItem});
+            this.menuTransferencias.Name = "menuTransferencias";
+            this.menuTransferencias.Size = new System.Drawing.Size(181, 48);
             // 
             // btnValidar
             // 
@@ -101,19 +112,12 @@ namespace Hermosibanco
             this.btnValidar.UseVisualStyleBackColor = true;
             this.btnValidar.Click += new System.EventHandler(this.btnValidar_Click);
             // 
-            // menuTransferencias
+            // transferirToolStripMenuItem
             // 
-            this.menuTransferencias.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarContactoToolStripMenuItem});
-            this.menuTransferencias.Name = "menuTransferencias";
-            this.menuTransferencias.Size = new System.Drawing.Size(167, 26);
-            // 
-            // agregarContactoToolStripMenuItem
-            // 
-            this.agregarContactoToolStripMenuItem.Name = "agregarContactoToolStripMenuItem";
-            this.agregarContactoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.agregarContactoToolStripMenuItem.Text = "Agregar contacto";
-            this.agregarContactoToolStripMenuItem.Click += new System.EventHandler(this.agregarContactoToolStripMenuItem_Click);
+            this.transferirToolStripMenuItem.Name = "transferirToolStripMenuItem";
+            this.transferirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.transferirToolStripMenuItem.Text = "Transferir";
+            this.transferirToolStripMenuItem.Click += new System.EventHandler(this.transferirToolStripMenuItem_Click);
             // 
             // FormTransferencias
             // 
@@ -146,6 +150,6 @@ namespace Hermosibanco
         private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.Button btnValidar;
         private System.Windows.Forms.ContextMenuStrip menuTransferencias;
-        private System.Windows.Forms.ToolStripMenuItem agregarContactoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem transferirToolStripMenuItem;
     }
 }

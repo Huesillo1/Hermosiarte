@@ -68,27 +68,27 @@ namespace Hermosibanco
             this.transferirToolStripMenuItem});
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
             this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
-            this.opcionesToolStripMenuItem.Text = "Opciones";
+            this.opcionesToolStripMenuItem.Text = "&Opciones";
             // 
             // miCuentaToolStripMenuItem
             // 
             this.miCuentaToolStripMenuItem.Name = "miCuentaToolStripMenuItem";
-            this.miCuentaToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.miCuentaToolStripMenuItem.Text = "Mi Cuenta";
+            this.miCuentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.miCuentaToolStripMenuItem.Text = "Mi &Cuenta";
             this.miCuentaToolStripMenuItem.Click += new System.EventHandler(this.miCuentaToolStripMenuItem_Click);
             // 
             // movimientosToolStripMenuItem
             // 
             this.movimientosToolStripMenuItem.Name = "movimientosToolStripMenuItem";
-            this.movimientosToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.movimientosToolStripMenuItem.Text = "Movimientos";
+            this.movimientosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.movimientosToolStripMenuItem.Text = "&Movimientos";
             this.movimientosToolStripMenuItem.Click += new System.EventHandler(this.movimientosToolStripMenuItem_Click);
             // 
             // transferirToolStripMenuItem
             // 
             this.transferirToolStripMenuItem.Name = "transferirToolStripMenuItem";
-            this.transferirToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
-            this.transferirToolStripMenuItem.Text = "Transferir";
+            this.transferirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.transferirToolStripMenuItem.Text = "&Transferir";
             this.transferirToolStripMenuItem.Click += new System.EventHandler(this.transferirToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
@@ -98,20 +98,20 @@ namespace Hermosibanco
             this.agregarUsuarioToolStripMenuItem});
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Text = "&Usuarios";
             // 
             // verTodoToolStripMenuItem
             // 
             this.verTodoToolStripMenuItem.Name = "verTodoToolStripMenuItem";
             this.verTodoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.verTodoToolStripMenuItem.Text = "Ver todo";
+            this.verTodoToolStripMenuItem.Text = "&Ver todo";
             this.verTodoToolStripMenuItem.Click += new System.EventHandler(this.verTodoToolStripMenuItem_Click);
             // 
             // agregarUsuarioToolStripMenuItem
             // 
             this.agregarUsuarioToolStripMenuItem.Name = "agregarUsuarioToolStripMenuItem";
             this.agregarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.agregarUsuarioToolStripMenuItem.Text = "Agregar Usuario";
+            this.agregarUsuarioToolStripMenuItem.Text = "&Agregar Usuario";
             this.agregarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.agregarUsuarioToolStripMenuItem_Click);
             // 
             // lblNombre
