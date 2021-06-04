@@ -56,6 +56,7 @@ namespace Hermosibanco
             // 
             // cbbCuentaEmisora
             // 
+            this.cbbCuentaEmisora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbCuentaEmisora.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbCuentaEmisora.FormattingEnabled = true;
             this.cbbCuentaEmisora.Location = new System.Drawing.Point(6, 19);
@@ -100,7 +101,7 @@ namespace Hermosibanco
             this.menuTransferencias.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.transferirToolStripMenuItem});
             this.menuTransferencias.Name = "menuTransferencias";
-            this.menuTransferencias.Size = new System.Drawing.Size(181, 48);
+            this.menuTransferencias.Size = new System.Drawing.Size(123, 26);
             // 
             // btnValidar
             // 
@@ -108,7 +109,7 @@ namespace Hermosibanco
             this.btnValidar.Name = "btnValidar";
             this.btnValidar.Size = new System.Drawing.Size(75, 23);
             this.btnValidar.TabIndex = 3;
-            this.btnValidar.Text = "Validar";
+            this.btnValidar.Text = "Agregar";
             this.btnValidar.UseVisualStyleBackColor = true;
             this.btnValidar.Click += new System.EventHandler(this.btnValidar_Click);
             // 

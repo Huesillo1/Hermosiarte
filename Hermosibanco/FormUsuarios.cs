@@ -118,6 +118,7 @@ namespace Hermosibanco
         {
             FormAgregarUsuario formAgregarUsuario = new FormAgregarUsuario();
             formAgregarUsuario.ShowDialog();
+            cargarDatos();
         }
 
         private void FormUsuarios_Load(object sender, EventArgs e)
@@ -151,11 +152,19 @@ namespace Hermosibanco
             formDeposito.setIdUsuario(dgvData.CurrentRow.Cells[13].Value.ToString());
             formDeposito.setNombre(dgvData.CurrentRow.Cells[0].Value.ToString());
             formDeposito.ShowDialog();
+            cargarDatos();
         }
 
         private void txtCuenta_TextChanged(object sender, EventArgs e)
         {
             txtNombre.Text = "";
+        }
+
+        private void eliminarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(!String.IsNullOrEmpty(dgvData.CurrentRow.Cells[13].Value.ToString()))
+                bd.update("status = 'INACTIVO'", "usuarios", "id = " + dgvData.CurrentRow.Cells[13].Value, "SI");
+            cargarDatos();
         }
     }
 }

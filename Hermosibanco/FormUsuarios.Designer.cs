@@ -37,8 +37,6 @@ namespace Hermosibanco
             this.eliminarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.depositarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cbbStatus = new System.Windows.Forms.ComboBox();
@@ -46,6 +44,8 @@ namespace Hermosibanco
             this.txtCuenta = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.dgvMenu.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -73,65 +73,39 @@ namespace Hermosibanco
             this.toolStripSeparator1,
             this.depositarToolStripMenuItem});
             this.dgvMenu.Name = "dgvMenu";
-            this.dgvMenu.Size = new System.Drawing.Size(169, 98);
+            this.dgvMenu.Size = new System.Drawing.Size(181, 120);
             // 
             // agregarUsuarioToolStripMenuItem
             // 
             this.agregarUsuarioToolStripMenuItem.Name = "agregarUsuarioToolStripMenuItem";
-            this.agregarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.agregarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.agregarUsuarioToolStripMenuItem.Text = "Agregar Usuario";
             this.agregarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // modificarUsuarioToolStripMenuItem
             // 
             this.modificarUsuarioToolStripMenuItem.Name = "modificarUsuarioToolStripMenuItem";
-            this.modificarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.modificarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modificarUsuarioToolStripMenuItem.Text = "Modificar Usuario";
             // 
             // eliminarUsuarioToolStripMenuItem
             // 
             this.eliminarUsuarioToolStripMenuItem.Name = "eliminarUsuarioToolStripMenuItem";
-            this.eliminarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.eliminarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.eliminarUsuarioToolStripMenuItem.Text = "Eliminar Usuario";
+            this.eliminarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.eliminarUsuarioToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(165, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // depositarToolStripMenuItem
             // 
             this.depositarToolStripMenuItem.Name = "depositarToolStripMenuItem";
-            this.depositarToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.depositarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.depositarToolStripMenuItem.Text = "Depositar";
             this.depositarToolStripMenuItem.Click += new System.EventHandler(this.depositarToolStripMenuItem_Click);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::Hermosibanco.Properties.Resources.icons8_update_file_30;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(121, 372);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 42);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Modificar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::Hermosibanco.Properties.Resources.icons8_new_contact_30;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(-1, 372);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 42);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Nuevo";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // groupBox1
             // 
@@ -212,6 +186,33 @@ namespace Hermosibanco
             this.txtNombre.Size = new System.Drawing.Size(179, 23);
             this.txtNombre.TabIndex = 0;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = global::Hermosibanco.Properties.Resources.icons8_update_file_30;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.Location = new System.Drawing.Point(121, 372);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(112, 42);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Modificar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::Hermosibanco.Properties.Resources.icons8_new_contact_30;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(-1, 372);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 42);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Nuevo";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // FormUsuarios
             // 

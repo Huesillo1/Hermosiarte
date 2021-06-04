@@ -39,7 +39,6 @@ namespace Hermosibanco
         {
             string[] array = cuenta_saldo.Split(' ');
             return array[0];
-
         }
 
         private void cargarMisCuentas()
@@ -62,6 +61,7 @@ namespace Hermosibanco
             }
             else
             {
+                cuenta = "";
                 MessageBox.Show("No se pudo obtener tú saldo. Consulte con el administrador.");
             }
         }
@@ -83,12 +83,31 @@ namespace Hermosibanco
         private void cbbMisCuentas_SelectedIndexChanged(object sender, EventArgs e)
         {
             establecerMontoMaximo();
+            miCuenta = getMiCuenta(cbbMisCuentas.GetItemText(cbbMisCuentas.SelectedItem));
             //MessageBox.Show(cbbMisCuentas.GetItemText(cbbMisCuentas.SelectedItem));
         }
 
         private void txtMonto_KeyDown(object sender, KeyEventArgs e)
         {
             btnTransferir.Enabled = false;
+        }
+
+        private void btnTransferir_Click(object sender, EventArgs e)
+        {
+            double montoTransferencia = double.Parse(txtMonto.Value.ToString());
+            if(miCuenta != "")
+            {
+                DataSet ds_emisor = bd.consult("saldo", "cuentas_bancarias","cuenta = '" + miCuenta + "'", "SI");
+                DataSet ds_receptor = bd.consult("saldo", "cuentas_bancarias", "cuenta = '" + cuenta + "'", "SI");
+                if(ds_emisor.Tables[0].Rows.Count > 0 && ds_receptor.Tables[0].Rows.Count > 0)
+                {
+                    //MessageBox.Show(ds_emisor.Tables[0].Rows[0]["saldo"].ToString() + "\n" + ds_receptor.Tables[0].Rows[0]["saldo"].ToString() + "\n\n___________________\n" + (double.Parse(ds_emisor.Tables[0].Rows[0]["saldo"].ToString()) - montoTransferencia).ToString() + "\n" + (double.Parse(ds_receptor.Tables[0].Rows[0]["saldo"].ToString()) + montoTransferencia).ToString());
+                    bd.update("saldo = " + (double.Parse(ds_emisor.Tables[0].Rows[0]["saldo"].ToString()) - montoTransferencia).ToString(), "cuentas_bancarias", "cuenta = '" + miCuenta + "'", "SI");
+                    bd.update("saldo = " + (double.Parse(ds_receptor.Tables[0].Rows[0]["saldo"].ToString()) + montoTransferencia).ToString(), "cuentas_bancarias", "cuenta = '" + cuenta + "'", "SI");
+                    MessageBox.Show("Transferencia Exitosa!\n\nTú nuevo saldo es de $" + (double.Parse(ds_emisor.Tables[0].Rows[0]["saldo"].ToString()) - montoTransferencia).ToString(), "Saldo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Close();
+                }
+            }
         }
 
         private void btnValidar_Click(object sender, EventArgs e)
