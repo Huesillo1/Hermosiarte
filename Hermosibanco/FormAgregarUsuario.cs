@@ -192,9 +192,9 @@ namespace Hermosibanco
                     else
                     {
                         string apellidoMaterno = "", noInt = "";
-                        if(txtApellidoMaterno.Text != "OPCIONAL" || txtApellidoMaterno.Text != "")
+                        if(txtApellidoMaterno.Text != "OPCIONAL" && txtApellidoMaterno.Text != "")
                             apellidoMaterno = txtApellidoMaterno.Text;
-                        if (txtNoInt.Text != "OPCIONAL" || txtNoInt.Text != "")
+                        if (txtNoInt.Text != "OPCIONAL" && txtNoInt.Text != "")
                             noInt = txtNoInt.Text;
                         string campos = "nombre, apellido_paterno, apellido_materno, calle, num_exterior, num_interior, codigo_postal, municipio, estado, fecha_nacimiento, fecha_registro, status, puesto, usuario, password";
                         

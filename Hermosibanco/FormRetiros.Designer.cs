@@ -52,6 +52,9 @@ namespace Hermosibanco
             // 
             this.dgvData.AllowUserToAddRows = false;
             this.dgvData.AllowUserToDeleteRows = false;
+            this.dgvData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData.Location = new System.Drawing.Point(8, 93);
             this.dgvData.MultiSelect = false;
@@ -62,6 +65,8 @@ namespace Hermosibanco
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.cbbStatus);
             this.groupBox1.Controls.Add(this.dtAnio);
@@ -208,12 +213,13 @@ namespace Hermosibanco
             // 
             // btnSolicitarRetiro
             // 
+            this.btnSolicitarRetiro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSolicitarRetiro.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnSolicitarRetiro.Image = global::Hermosibanco.Properties.Resources.withdraw_money;
             this.btnSolicitarRetiro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSolicitarRetiro.Location = new System.Drawing.Point(628, 22);
+            this.btnSolicitarRetiro.Location = new System.Drawing.Point(628, 16);
             this.btnSolicitarRetiro.Name = "btnSolicitarRetiro";
-            this.btnSolicitarRetiro.Size = new System.Drawing.Size(139, 65);
+            this.btnSolicitarRetiro.Size = new System.Drawing.Size(139, 71);
             this.btnSolicitarRetiro.TabIndex = 5;
             this.btnSolicitarRetiro.Text = "Solicitar\r\nRetiro";
             this.btnSolicitarRetiro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
