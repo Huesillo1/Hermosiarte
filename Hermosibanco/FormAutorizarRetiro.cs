@@ -275,9 +275,7 @@ namespace Hermosibanco
                 mniAutorizar.Visible = false;
                 mniObservaciones.Visible = false;
                 mnuAutoriza.Visible = false;
-            }
-            
-                
+            }   
         }
     }
 }
