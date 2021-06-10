@@ -36,8 +36,8 @@ namespace Hermosibanco
             this.txtCuentaReceptora = new System.Windows.Forms.TextBox();
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.menuTransferencias = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mniTransferir = new System.Windows.Forms.ToolStripMenuItem();
             this.btnValidar = new System.Windows.Forms.Button();
-            this.transferirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
@@ -99,9 +99,17 @@ namespace Hermosibanco
             // menuTransferencias
             // 
             this.menuTransferencias.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.transferirToolStripMenuItem});
+            this.mniTransferir});
             this.menuTransferencias.Name = "menuTransferencias";
-            this.menuTransferencias.Size = new System.Drawing.Size(123, 26);
+            this.menuTransferencias.Size = new System.Drawing.Size(181, 48);
+            this.menuTransferencias.Opening += new System.ComponentModel.CancelEventHandler(this.menuTransferencias_Opening);
+            // 
+            // mniTransferir
+            // 
+            this.mniTransferir.Name = "mniTransferir";
+            this.mniTransferir.Size = new System.Drawing.Size(180, 22);
+            this.mniTransferir.Text = "Transferir";
+            this.mniTransferir.Click += new System.EventHandler(this.transferirToolStripMenuItem_Click);
             // 
             // btnValidar
             // 
@@ -112,13 +120,6 @@ namespace Hermosibanco
             this.btnValidar.Text = "Agregar";
             this.btnValidar.UseVisualStyleBackColor = true;
             this.btnValidar.Click += new System.EventHandler(this.btnValidar_Click);
-            // 
-            // transferirToolStripMenuItem
-            // 
-            this.transferirToolStripMenuItem.Name = "transferirToolStripMenuItem";
-            this.transferirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.transferirToolStripMenuItem.Text = "Transferir";
-            this.transferirToolStripMenuItem.Click += new System.EventHandler(this.transferirToolStripMenuItem_Click);
             // 
             // FormTransferencias
             // 
@@ -151,6 +152,6 @@ namespace Hermosibanco
         private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.Button btnValidar;
         private System.Windows.Forms.ContextMenuStrip menuTransferencias;
-        private System.Windows.Forms.ToolStripMenuItem transferirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mniTransferir;
     }
 }

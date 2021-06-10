@@ -69,5 +69,15 @@ namespace Hermosibanco
             FormAgregarUsuario formAgregarUsuario = new FormAgregarUsuario();
             formAgregarUsuario.ShowDialog();
         }
+
+        private void retirarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new FormRetiros());
+        }
+
+        private void autorizarRetiroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new FormAutorizarRetiro());
+        }
     }
 }

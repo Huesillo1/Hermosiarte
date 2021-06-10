@@ -106,5 +106,13 @@ namespace Hermosibanco
             formTransferir.setNombre(dgvData.CurrentRow.Cells[1].Value.ToString());
             formTransferir.ShowDialog();
         }
+
+        private void menuTransferencias_Opening(object sender, CancelEventArgs e)
+        {
+            if (dgvData.RowCount <= 0)// (dgvData.CurrentRow == null) || (string.IsNullOrEmpty(dgvData.CurrentRow.Cells[0].Value.ToString())))
+                mniTransferir.Visible = false;
+            else
+                mniTransferir.Visible = true;
+        }
     }
 }

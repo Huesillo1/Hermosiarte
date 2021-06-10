@@ -1,7 +1,7 @@
 ﻿
 namespace Hermosibanco
 {
-    partial class FormMovimientos
+    partial class FormAutorizarRetiro
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,11 @@ namespace Hermosibanco
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.dgvData = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbbTipo = new System.Windows.Forms.ComboBox();
+            this.cbbStatus = new System.Windows.Forms.ComboBox();
             this.dtAnio = new System.Windows.Forms.DateTimePicker();
             this.rbAnio = new System.Windows.Forms.RadioButton();
             this.dtMes = new System.Windows.Forms.DateTimePicker();
@@ -40,15 +42,35 @@ namespace Hermosibanco
             this.dtFechaFin = new System.Windows.Forms.DateTimePicker();
             this.dtFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.rbFecha = new System.Windows.Forms.RadioButton();
-            this.dgvData = new System.Windows.Forms.DataGridView();
-            this.groupBox1.SuspendLayout();
+            this.mnuAutoriza = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.autorizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rechazarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtClave = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.mnuAutoriza.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // dgvData
+            // 
+            this.dgvData.AllowUserToAddRows = false;
+            this.dgvData.AllowUserToDeleteRows = false;
+            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvData.ContextMenuStrip = this.mnuAutoriza;
+            this.dgvData.Location = new System.Drawing.Point(8, 93);
+            this.dgvData.MultiSelect = false;
+            this.dgvData.Name = "dgvData";
+            this.dgvData.ReadOnly = true;
+            this.dgvData.Size = new System.Drawing.Size(759, 311);
+            this.dgvData.TabIndex = 5;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtClave);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.cbbTipo);
+            this.groupBox1.Controls.Add(this.cbbStatus);
             this.groupBox1.Controls.Add(this.dtAnio);
             this.groupBox1.Controls.Add(this.rbAnio);
             this.groupBox1.Controls.Add(this.dtMes);
@@ -57,45 +79,44 @@ namespace Hermosibanco
             this.groupBox1.Controls.Add(this.dtFechaFin);
             this.groupBox1.Controls.Add(this.dtFechaInicio);
             this.groupBox1.Controls.Add(this.rbFecha);
-            this.groupBox1.Location = new System.Drawing.Point(13, 13);
+            this.groupBox1.Location = new System.Drawing.Point(8, 11);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(759, 76);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.Size = new System.Drawing.Size(728, 76);
+            this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(469, 24);
+            this.label2.Location = new System.Drawing.Point(598, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Tipo";
+            this.label2.Text = "Estatus";
             // 
-            // cbbTipo
+            // cbbStatus
             // 
-            this.cbbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbTipo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTipo.FormattingEnabled = true;
-            this.cbbTipo.Items.AddRange(new object[] {
+            this.cbbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbStatus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbStatus.FormattingEnabled = true;
+            this.cbbStatus.Items.AddRange(new object[] {
             "TODOS",
-            "DEPOSITO",
-            "TRANSFERENCIA",
-            "RETIRO"});
-            this.cbbTipo.Location = new System.Drawing.Point(472, 45);
-            this.cbbTipo.Name = "cbbTipo";
-            this.cbbTipo.Size = new System.Drawing.Size(121, 23);
-            this.cbbTipo.TabIndex = 8;
-            this.cbbTipo.SelectedIndexChanged += new System.EventHandler(this.cbbTipo_SelectedIndexChanged);
+            "CANCELADO",
+            "PENDIENTE",
+            "APROBADO"});
+            this.cbbStatus.Location = new System.Drawing.Point(601, 45);
+            this.cbbStatus.Name = "cbbStatus";
+            this.cbbStatus.Size = new System.Drawing.Size(121, 23);
+            this.cbbStatus.TabIndex = 8;
+            this.cbbStatus.SelectedIndexChanged += new System.EventHandler(this.cbbStatus_SelectedIndexChanged);
             // 
             // dtAnio
             // 
             this.dtAnio.CustomFormat = "yyyy";
             this.dtAnio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtAnio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtAnio.Location = new System.Drawing.Point(399, 45);
+            this.dtAnio.Location = new System.Drawing.Point(374, 45);
             this.dtAnio.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
             this.dtAnio.Name = "dtAnio";
             this.dtAnio.ShowUpDown = true;
@@ -106,7 +127,7 @@ namespace Hermosibanco
             // rbAnio
             // 
             this.rbAnio.AutoSize = true;
-            this.rbAnio.Location = new System.Drawing.Point(399, 22);
+            this.rbAnio.Location = new System.Drawing.Point(374, 22);
             this.rbAnio.Name = "rbAnio";
             this.rbAnio.Size = new System.Drawing.Size(48, 17);
             this.rbAnio.TabIndex = 6;
@@ -120,7 +141,7 @@ namespace Hermosibanco
             this.dtMes.CustomFormat = "MMMM-yyyy";
             this.dtMes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtMes.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtMes.Location = new System.Drawing.Point(251, 45);
+            this.dtMes.Location = new System.Drawing.Point(236, 45);
             this.dtMes.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
             this.dtMes.Name = "dtMes";
             this.dtMes.ShowUpDown = true;
@@ -131,7 +152,7 @@ namespace Hermosibanco
             // rbMes
             // 
             this.rbMes.AutoSize = true;
-            this.rbMes.Location = new System.Drawing.Point(251, 22);
+            this.rbMes.Location = new System.Drawing.Point(236, 22);
             this.rbMes.Name = "rbMes";
             this.rbMes.Size = new System.Drawing.Size(48, 17);
             this.rbMes.TabIndex = 4;
@@ -144,7 +165,7 @@ namespace Hermosibanco
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(113, 51);
+            this.label1.Location = new System.Drawing.Point(109, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(15, 15);
             this.label1.TabIndex = 3;
@@ -155,7 +176,7 @@ namespace Hermosibanco
             this.dtFechaFin.CustomFormat = "dd-MM-yyyy";
             this.dtFechaFin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaFin.Location = new System.Drawing.Point(134, 45);
+            this.dtFechaFin.Location = new System.Drawing.Point(129, 45);
             this.dtFechaFin.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
             this.dtFechaFin.Name = "dtFechaFin";
             this.dtFechaFin.Size = new System.Drawing.Size(101, 23);
@@ -187,19 +208,48 @@ namespace Hermosibanco
             this.rbFecha.UseVisualStyleBackColor = true;
             this.rbFecha.CheckedChanged += new System.EventHandler(this.rbFecha_CheckedChanged);
             // 
-            // dgvData
+            // mnuAutoriza
             // 
-            this.dgvData.AllowUserToAddRows = false;
-            this.dgvData.AllowUserToDeleteRows = false;
-            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvData.Location = new System.Drawing.Point(13, 95);
-            this.dgvData.MultiSelect = false;
-            this.dgvData.Name = "dgvData";
-            this.dgvData.ReadOnly = true;
-            this.dgvData.Size = new System.Drawing.Size(759, 311);
-            this.dgvData.TabIndex = 1;
+            this.mnuAutoriza.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.autorizarToolStripMenuItem,
+            this.rechazarToolStripMenuItem});
+            this.mnuAutoriza.Name = "mnuAutoriza";
+            this.mnuAutoriza.Size = new System.Drawing.Size(123, 48);
             // 
-            // FormMovimientos
+            // autorizarToolStripMenuItem
+            // 
+            this.autorizarToolStripMenuItem.Name = "autorizarToolStripMenuItem";
+            this.autorizarToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.autorizarToolStripMenuItem.Text = "Autorizar";
+            this.autorizarToolStripMenuItem.Click += new System.EventHandler(this.autorizarToolStripMenuItem_Click);
+            // 
+            // rechazarToolStripMenuItem
+            // 
+            this.rechazarToolStripMenuItem.Name = "rechazarToolStripMenuItem";
+            this.rechazarToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.rechazarToolStripMenuItem.Text = "Rechazar";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(434, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Clave";
+            // 
+            // txtClave
+            // 
+            this.txtClave.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClave.Location = new System.Drawing.Point(437, 43);
+            this.txtClave.Mask = "####-####-####-####";
+            this.txtClave.Name = "txtClave";
+            this.txtClave.Size = new System.Drawing.Size(158, 25);
+            this.txtClave.TabIndex = 12;
+            this.txtClave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtClave.TextChanged += new System.EventHandler(this.txtClave_TextChanged);
+            // 
+            // FormAutorizarRetiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -207,21 +257,23 @@ namespace Hermosibanco
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormMovimientos";
-            this.Text = "FormMovimientos";
-            this.Load += new System.EventHandler(this.FormMovimientos_Load);
+            this.Name = "FormAutorizarRetiro";
+            this.Text = "FormAutorizarRetiro";
+            this.Load += new System.EventHandler(this.FormAutorizarRetiro_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
+            this.mnuAutoriza.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbbTipo;
+        private System.Windows.Forms.ComboBox cbbStatus;
         private System.Windows.Forms.DateTimePicker dtAnio;
         private System.Windows.Forms.RadioButton rbAnio;
         private System.Windows.Forms.DateTimePicker dtMes;
@@ -230,6 +282,10 @@ namespace Hermosibanco
         private System.Windows.Forms.DateTimePicker dtFechaFin;
         private System.Windows.Forms.DateTimePicker dtFechaInicio;
         private System.Windows.Forms.RadioButton rbFecha;
-        private System.Windows.Forms.DataGridView dgvData;
+        private System.Windows.Forms.ContextMenuStrip mnuAutoriza;
+        private System.Windows.Forms.ToolStripMenuItem autorizarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rechazarToolStripMenuItem;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.MaskedTextBox txtClave;
     }
 }

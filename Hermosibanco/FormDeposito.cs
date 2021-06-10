@@ -59,7 +59,7 @@ namespace Hermosibanco
                 if (bd.update("saldo =" + saldo.ToString(), "cuentas_bancarias", "cuenta = '" + cuenta + "'", "SI"))
                 {
                     MessageBox.Show("El nuevo saldo actual es de $" + saldo.ToString(), "Saldo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    bd.insert("movimientos", "cantidad,concepto,cuenta_bancaria_id,emisor_id,receptor_id,fecha,tipo", txtMonto.Value.ToString() + ", 'DEPOSITO A CUENTA PROPIA', " + ds.Tables[0].Rows[0]["id"].ToString() + ", 0, " + idusuario + ", '" + DateTime.Now.ToString("yyyy-MM-dd") + "', 'DEPOSITO'");
+                    bd.insert("movimientos", "cantidad,concepto,cuenta_bancaria_id,emisor_id,receptor_id,fecha,tipo,estatus", txtMonto.Value.ToString() + ", 'DEPOSITO A CUENTA PROPIA', " + ds.Tables[0].Rows[0]["id"].ToString() + ", 0, " + idusuario + ", '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', 'DEPOSITO', 'EXITOSA'");
                 }                    
                 else
                     MessageBox.Show("Algo salió mal con la transacción.\nIntente más tarde.", "Transacción fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);

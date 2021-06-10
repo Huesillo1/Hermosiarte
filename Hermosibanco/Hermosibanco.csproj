@@ -117,11 +117,29 @@
     <Compile Include="FormAgregarUsuario.Designer.cs">
       <DependentUpon>FormAgregarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAutorizarRetiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutorizarRetiro.Designer.cs">
+      <DependentUpon>FormAutorizarRetiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormClaveRetiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClaveRetiro.Designer.cs">
+      <DependentUpon>FormClaveRetiro.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDeposito.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormDeposito.Designer.cs">
       <DependentUpon>FormDeposito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDetallesSolicitudRetiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetallesSolicitudRetiro.Designer.cs">
+      <DependentUpon>FormDetallesSolicitudRetiro.cs</DependentUpon>
     </Compile>
     <Compile Include="FormInicioAux.cs">
       <SubType>Form</SubType>
@@ -146,6 +164,12 @@
     </Compile>
     <Compile Include="FormMovimientos.Designer.cs">
       <DependentUpon>FormMovimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRetiros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRetiros.Designer.cs">
+      <DependentUpon>FormRetiros.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTransferencias.cs">
       <SubType>Form</SubType>
@@ -173,8 +197,17 @@
     <EmbeddedResource Include="FormAgregarUsuario.resx">
       <DependentUpon>FormAgregarUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAutorizarRetiro.resx">
+      <DependentUpon>FormAutorizarRetiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormClaveRetiro.resx">
+      <DependentUpon>FormClaveRetiro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDeposito.resx">
       <DependentUpon>FormDeposito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetallesSolicitudRetiro.resx">
+      <DependentUpon>FormDetallesSolicitudRetiro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicioAux.resx">
       <DependentUpon>FormInicioAux.cs</DependentUpon>
@@ -187,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMovimientos.resx">
       <DependentUpon>FormMovimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRetiros.resx">
+      <DependentUpon>FormRetiros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTransferencias.resx">
       <DependentUpon>FormTransferencias.cs</DependentUpon>

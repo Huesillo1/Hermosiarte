@@ -107,8 +107,6 @@ namespace Hermosibanco
             }
         }
 
-
-
         public FormUsuarios()
         {
             InitializeComponent();
@@ -164,6 +162,28 @@ namespace Hermosibanco
         {
             if(!String.IsNullOrEmpty(dgvData.CurrentRow.Cells[13].Value.ToString()))
                 bd.update("status = 'INACTIVO'", "usuarios", "id = " + dgvData.CurrentRow.Cells[13].Value, "SI");
+            cargarDatos();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if(!String.IsNullOrEmpty(dgvData.CurrentRow.Cells[13].Value.ToString()))
+            {
+                FormAgregarUsuario formAgregarUsuario = new FormAgregarUsuario();
+                formAgregarUsuario.setUsuarioId(dgvData.CurrentRow.Cells[13].Value.ToString());
+                formAgregarUsuario.Text = "Modificar Usuario";
+                formAgregarUsuario.ShowDialog();
+                cargarDatos();
+            }            
+        }
+
+        private void dgvData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            FormAgregarUsuario formAgregarUsuario = new FormAgregarUsuario();
+            formAgregarUsuario.setUsuarioId(dgvData.CurrentRow.Cells[13].Value.ToString());
+            formAgregarUsuario.Text = "Detalles Usuario";
+            formAgregarUsuario.deshabilitarTextBox();
+            formAgregarUsuario.ShowDialog();
             cargarDatos();
         }
     }

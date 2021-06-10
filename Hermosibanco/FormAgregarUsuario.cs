@@ -13,7 +13,19 @@ namespace Hermosibanco
     public partial class FormAgregarUsuario : Form
     {
         BasedeDatos bd = new BasedeDatos();
+
         private int showPassword;
+        private string usuario_id;
+
+        public void setUsuarioId(string value)
+        {
+            usuario_id = value;
+        }
+
+        public string getUsuarioId()
+        {
+            return usuario_id;
+        }
 
         private void cargarEstados()
         {
@@ -45,6 +57,37 @@ namespace Hermosibanco
             }
         }
 
+        private void cargarUsuario()
+        {
+            DataSet ds = bd.consult("nombre, apellido_paterno, apellido_materno, calle, num_exterior, num_interior, codigo_postal, municipio, estado, fecha_nacimiento, fecha_registro, puesto, usuario, password, cuenta", "usuarios INNER JOIN cuentas_bancarias ON usuarios.id = cuentas_bancarias.usuario_id", "usuarios.id = " + usuario_id, "SI");
+            if(ds.Tables[0].Rows.Count > 0)
+            {
+                if (!String.IsNullOrEmpty(ds.Tables[0].Rows[0]["apellido_materno"].ToString()))
+                    txtApellidoMaterno.ForeColor = Color.Black;
+                txtApellidoMaterno.Text = ds.Tables[0].Rows[0]["apellido_materno"].ToString();
+                txtApellidoPaterno.Text = ds.Tables[0].Rows[0]["apellido_paterno"].ToString();
+                txtCalle.Text = ds.Tables[0].Rows[0]["calle"].ToString();
+                txtCP.Text = ds.Tables[0].Rows[0]["codigo_postal"].ToString();
+                txtCuenta.Text = ds.Tables[0].Rows[0]["cuenta"].ToString();
+                txtNoExt.Text = ds.Tables[0].Rows[0]["num_exterior"].ToString();
+                if (!String.IsNullOrEmpty(ds.Tables[0].Rows[0]["num_interior"].ToString()))
+                    txtNoInt.ForeColor = Color.Black;
+                txtNoInt.Text = ds.Tables[0].Rows[0]["num_interior"].ToString();
+                txtNombre.Text = ds.Tables[0].Rows[0]["nombre"].ToString();
+                txtPassword.Text = ds.Tables[0].Rows[0]["password"].ToString();
+                txtPuesto.Text = ds.Tables[0].Rows[0]["puesto"].ToString();
+                txtUsuario.Text = ds.Tables[0].Rows[0]["usuario"].ToString();
+                dtFechaNacimiento.Value = DateTime.Parse(ds.Tables[0].Rows[0]["fecha_nacimiento"].ToString());
+                dtFechaNacimiento.MaxDate = DateTime.Parse(ds.Tables[0].Rows[0]["fecha_nacimiento"].ToString());
+                dtFechaNacimiento.MinDate = DateTime.Parse(ds.Tables[0].Rows[0]["fecha_nacimiento"].ToString());
+                DataSet ds_aux = bd.consult("id", "estados", "estado = '" + ds.Tables[0].Rows[0]["estado"].ToString() + "'", "SI");
+                cbbEstado.SelectedValue = ds_aux.Tables[0].Rows[0]["id"].ToString();
+                ds_aux = null;
+                ds_aux = bd.consult("id", "municipios", "municipio = '" + ds.Tables[0].Rows[0]["municipio"].ToString() + "'", "SI");
+                cbbMunicipio.SelectedValue = ds_aux.Tables[0].Rows[0]["id"].ToString();                
+            }
+        }
+
         private bool fieldsEmpty()
         {
             if (txtNombre.Text == String.Empty || txtApellidoPaterno.Text == String.Empty || txtUsuario.Text == String.Empty || txtPassword.Text == String.Empty || txtCuenta.Text == String.Empty || txtCalle.Text == String.Empty || txtNoExt.Text == String.Empty || txtCP.Text == String.Empty)
@@ -71,6 +114,26 @@ namespace Hermosibanco
             return false;
         }
 
+        public void deshabilitarTextBox()
+        {
+            txtCuenta.ReadOnly = true;
+            txtApellidoPaterno.ReadOnly = true;
+            txtApellidoMaterno.ReadOnly = true;
+            txtCalle.ReadOnly = true;
+            txtCP.ReadOnly = true;
+            txtCuenta.ReadOnly = true;
+            txtNoExt.ReadOnly = true;
+            txtNoInt.ReadOnly = true;
+            txtNombre.ReadOnly = true;
+            txtUsuario.ReadOnly = true;
+            txtPassword.ReadOnly = true;
+            txtPuesto.ReadOnly = true;
+            btnGuardar.Visible = false;
+            //dtFechaNacimiento.Enabled = false;
+            cbbEstado.Enabled = false;
+            cbbMunicipio.Enabled = false;
+        }
+
         public FormAgregarUsuario()
         {
             InitializeComponent();
@@ -81,15 +144,31 @@ namespace Hermosibanco
             cargarEstados();
             cbbEstado.SelectedIndex = 0;
             dtFechaNacimiento.MaxDate = DateTime.Now;
-            string cuenta = "";
-            do
+            if(string.IsNullOrEmpty(usuario_id))
             {
-                cuenta = crearCuenta();
-
-            } while (validarExisteCuenta(cuenta));
-            txtCuenta.Text = cuenta;
+                string cuenta = "";
+                do
+                {
+                    cuenta = crearCuenta();
+                } while (validarExisteCuenta(cuenta));
+                txtCuenta.Text = cuenta;
+            }
+            else
+            {
+                try
+                {
+                    cargarUsuario();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error en método cargarUsuario()", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }                       
+            showPassword = 0;            
             txtCuenta.ReadOnly = true;
-            showPassword = 0;
+            txtNoInt_Leave(sender, e);
+            txtApellidoMaterno_Leave(sender, e);
+
         }
 
         private void cbbEstado_SelectedIndexChanged(object sender, EventArgs e)
@@ -113,16 +192,23 @@ namespace Hermosibanco
                     else
                     {
                         string apellidoMaterno = "", noInt = "";
-                        if(txtApellidoMaterno.Text != "OPCIONAL")
+                        if(txtApellidoMaterno.Text != "OPCIONAL" || txtApellidoMaterno.Text != "")
                             apellidoMaterno = txtApellidoMaterno.Text;
-                        if (txtNoInt.Text != "OPCIONAL")
+                        if (txtNoInt.Text != "OPCIONAL" || txtNoInt.Text != "")
                             noInt = txtNoInt.Text;
                         string campos = "nombre, apellido_paterno, apellido_materno, calle, num_exterior, num_interior, codigo_postal, municipio, estado, fecha_nacimiento, fecha_registro, status, puesto, usuario, password";
                         
                         string values = "'" + txtNombre.Text + "', " + "'" + txtApellidoPaterno.Text + "', " + "'" + apellidoMaterno + "', " + "'" + txtCalle.Text + "', " + "'" + txtNoExt.Text + "', " + "'" + noInt + "', " + "'" + txtCP.Text + "', " + "'" + cbbMunicipio.GetItemText(cbbMunicipio.SelectedItem).ToUpper() + "', " + "'" + cbbEstado.GetItemText(cbbEstado.SelectedItem).ToUpper() + "', " + "'" + dtFechaNacimiento.Value.ToString("yyyy-MM-dd") + "', '" + DateTime.Now.ToString("yyyy-MM-dd") + "', 'ACTIVO', '" + txtPuesto.Text + "', '" + txtUsuario.Text + "', '" + txtPassword.Text + "'";
-
-                        bd.insert("usuarios", campos, values);
-                        bd.insert("cuentas_bancarias", "cuenta, usuario_id, saldo", "'" + txtCuenta.Text + "', " + bd.lastRecord("id", "ultimo_id", "usuarios").ToString() + ", 0.00");
+                        if (String.IsNullOrEmpty(usuario_id))
+                        {
+                            bd.insert("usuarios", campos, values);
+                            bd.insert("cuentas_bancarias", "cuenta, usuario_id, saldo", "'" + txtCuenta.Text + "', " + bd.lastRecord("id", "ultimo_id", "usuarios").ToString() + ", 0.00");
+                        }
+                        else
+                        {
+                            bd.update("nombre = '" + txtNombre.Text + "', apellido_paterno = '" + txtApellidoPaterno.Text + "', apellido_materno = '" + apellidoMaterno + "', calle = '" + txtCalle.Text + "', num_exterior = '" + txtNoExt.Text + "', num_interior = '" + noInt +"', codigo_postal = '" + txtCP.Text + "', municipio = '" + cbbMunicipio.GetItemText(cbbMunicipio.SelectedItem).ToUpper() + "', estado = '" + cbbEstado.GetItemText(cbbEstado.SelectedItem).ToUpper() + "', fecha_nacimiento = '" + dtFechaNacimiento.Value.ToString("yyyy-MM-dd") + "', puesto = '" + txtPuesto.Text + "', usuario = '" + txtUsuario.Text + "', password = '" + txtPassword.Text +"'", "usuarios", "id = " + usuario_id, "SI");
+                        }
+                        
                         this.Close();
                     }
                 }
@@ -151,7 +237,6 @@ namespace Hermosibanco
             {
                 txtApellidoMaterno.ForeColor = Color.Black;
                 txtApellidoMaterno.Text = "";
-
             }
         }
 
@@ -181,5 +266,7 @@ namespace Hermosibanco
                 txtNoInt.Text = "OPCIONAL";
             }
         }
+
+
     }
 }

@@ -97,14 +97,15 @@ namespace Hermosibanco
             double montoTransferencia = double.Parse(txtMonto.Value.ToString());
             if(miCuenta != "")
             {
-                DataSet ds_emisor = bd.consult("saldo", "cuentas_bancarias","cuenta = '" + miCuenta + "'", "SI");
-                DataSet ds_receptor = bd.consult("saldo", "cuentas_bancarias", "cuenta = '" + cuenta + "'", "SI");
+                DataSet ds_emisor = bd.consult("id, saldo", "cuentas_bancarias","cuenta = '" + miCuenta + "'", "SI");
+                DataSet ds_receptor = bd.consult("id, usuario_id, saldo", "cuentas_bancarias", "cuenta = '" + cuenta + "'", "SI");
                 if(ds_emisor.Tables[0].Rows.Count > 0 && ds_receptor.Tables[0].Rows.Count > 0)
                 {
                     //MessageBox.Show(ds_emisor.Tables[0].Rows[0]["saldo"].ToString() + "\n" + ds_receptor.Tables[0].Rows[0]["saldo"].ToString() + "\n\n___________________\n" + (double.Parse(ds_emisor.Tables[0].Rows[0]["saldo"].ToString()) - montoTransferencia).ToString() + "\n" + (double.Parse(ds_receptor.Tables[0].Rows[0]["saldo"].ToString()) + montoTransferencia).ToString());
                     bd.update("saldo = " + (double.Parse(ds_emisor.Tables[0].Rows[0]["saldo"].ToString()) - montoTransferencia).ToString(), "cuentas_bancarias", "cuenta = '" + miCuenta + "'", "SI");
                     bd.update("saldo = " + (double.Parse(ds_receptor.Tables[0].Rows[0]["saldo"].ToString()) + montoTransferencia).ToString(), "cuentas_bancarias", "cuenta = '" + cuenta + "'", "SI");
                     MessageBox.Show("Transferencia Exitosa!\n\nTú nuevo saldo es de $" + (double.Parse(ds_emisor.Tables[0].Rows[0]["saldo"].ToString()) - montoTransferencia).ToString(), "Saldo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    bd.insert("movimientos", "cantidad, concepto, cuenta_bancaria_id, cuenta_bancaria_emisor_id, emisor_id, receptor_id, fecha, tipo, estatus", txtMonto.Value.ToString() + ", 'TRANSFERENCIA A TERCEROS', " + ds_receptor.Tables[0].Rows[0]["id"].ToString() + ", " + ds_emisor.Tables[0].Rows[0]["id"].ToString() + ", " + Properties.Settings.Default.idUsuario + ", " + ds_receptor.Tables[0].Rows[0]["usuario_id"].ToString() + ", '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', 'TRANSFERENCIA', 'EXITOSA'");
                     Close();
                 }
             }

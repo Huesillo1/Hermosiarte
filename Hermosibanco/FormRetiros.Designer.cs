@@ -1,7 +1,7 @@
 ﻿
 namespace Hermosibanco
 {
-    partial class FormMovimientos
+    partial class FormRetiros
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,8 @@ namespace Hermosibanco
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.dgvData = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbbTipo = new System.Windows.Forms.ComboBox();
@@ -40,10 +42,23 @@ namespace Hermosibanco
             this.dtFechaFin = new System.Windows.Forms.DateTimePicker();
             this.dtFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.rbFecha = new System.Windows.Forms.RadioButton();
-            this.dgvData = new System.Windows.Forms.DataGridView();
-            this.groupBox1.SuspendLayout();
+            this.mnuRetiro = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnSolicitarRetiro = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // dgvData
+            // 
+            this.dgvData.AllowUserToAddRows = false;
+            this.dgvData.AllowUserToDeleteRows = false;
+            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvData.Location = new System.Drawing.Point(8, 93);
+            this.dgvData.MultiSelect = false;
+            this.dgvData.Name = "dgvData";
+            this.dgvData.ReadOnly = true;
+            this.dgvData.Size = new System.Drawing.Size(759, 311);
+            this.dgvData.TabIndex = 3;
             // 
             // groupBox1
             // 
@@ -57,22 +72,21 @@ namespace Hermosibanco
             this.groupBox1.Controls.Add(this.dtFechaFin);
             this.groupBox1.Controls.Add(this.dtFechaInicio);
             this.groupBox1.Controls.Add(this.rbFecha);
-            this.groupBox1.Location = new System.Drawing.Point(13, 13);
+            this.groupBox1.Location = new System.Drawing.Point(8, 11);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(759, 76);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.Size = new System.Drawing.Size(614, 76);
+            this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(469, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Tipo";
+            this.label2.Text = "Estatus";
             // 
             // cbbTipo
             // 
@@ -88,7 +102,6 @@ namespace Hermosibanco
             this.cbbTipo.Name = "cbbTipo";
             this.cbbTipo.Size = new System.Drawing.Size(121, 23);
             this.cbbTipo.TabIndex = 8;
-            this.cbbTipo.SelectedIndexChanged += new System.EventHandler(this.cbbTipo_SelectedIndexChanged);
             // 
             // dtAnio
             // 
@@ -101,7 +114,6 @@ namespace Hermosibanco
             this.dtAnio.ShowUpDown = true;
             this.dtAnio.Size = new System.Drawing.Size(57, 23);
             this.dtAnio.TabIndex = 7;
-            this.dtAnio.ValueChanged += new System.EventHandler(this.dtFechaInicio_ValueChanged);
             // 
             // rbAnio
             // 
@@ -113,7 +125,6 @@ namespace Hermosibanco
             this.rbAnio.TabStop = true;
             this.rbAnio.Text = "AÑO";
             this.rbAnio.UseVisualStyleBackColor = true;
-            this.rbAnio.CheckedChanged += new System.EventHandler(this.rbFecha_CheckedChanged);
             // 
             // dtMes
             // 
@@ -126,7 +137,6 @@ namespace Hermosibanco
             this.dtMes.ShowUpDown = true;
             this.dtMes.Size = new System.Drawing.Size(132, 23);
             this.dtMes.TabIndex = 5;
-            this.dtMes.ValueChanged += new System.EventHandler(this.dtFechaInicio_ValueChanged);
             // 
             // rbMes
             // 
@@ -138,7 +148,6 @@ namespace Hermosibanco
             this.rbMes.TabStop = true;
             this.rbMes.Text = "MES";
             this.rbMes.UseVisualStyleBackColor = true;
-            this.rbMes.CheckedChanged += new System.EventHandler(this.rbFecha_CheckedChanged);
             // 
             // label1
             // 
@@ -160,7 +169,6 @@ namespace Hermosibanco
             this.dtFechaFin.Name = "dtFechaFin";
             this.dtFechaFin.Size = new System.Drawing.Size(101, 23);
             this.dtFechaFin.TabIndex = 2;
-            this.dtFechaFin.ValueChanged += new System.EventHandler(this.dtFechaInicio_ValueChanged);
             // 
             // dtFechaInicio
             // 
@@ -173,7 +181,6 @@ namespace Hermosibanco
             this.dtFechaInicio.Size = new System.Drawing.Size(101, 23);
             this.dtFechaInicio.TabIndex = 1;
             this.dtFechaInicio.Value = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
-            this.dtFechaInicio.ValueChanged += new System.EventHandler(this.dtFechaInicio_ValueChanged);
             // 
             // rbFecha
             // 
@@ -185,40 +192,48 @@ namespace Hermosibanco
             this.rbFecha.TabStop = true;
             this.rbFecha.Text = "FECHA";
             this.rbFecha.UseVisualStyleBackColor = true;
-            this.rbFecha.CheckedChanged += new System.EventHandler(this.rbFecha_CheckedChanged);
             // 
-            // dgvData
+            // mnuRetiro
             // 
-            this.dgvData.AllowUserToAddRows = false;
-            this.dgvData.AllowUserToDeleteRows = false;
-            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvData.Location = new System.Drawing.Point(13, 95);
-            this.dgvData.MultiSelect = false;
-            this.dgvData.Name = "dgvData";
-            this.dgvData.ReadOnly = true;
-            this.dgvData.Size = new System.Drawing.Size(759, 311);
-            this.dgvData.TabIndex = 1;
+            this.mnuRetiro.Name = "mnuRetiro";
+            this.mnuRetiro.Size = new System.Drawing.Size(61, 4);
             // 
-            // FormMovimientos
+            // btnSolicitarRetiro
+            // 
+            this.btnSolicitarRetiro.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btnSolicitarRetiro.Image = global::Hermosibanco.Properties.Resources.withdraw_money;
+            this.btnSolicitarRetiro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSolicitarRetiro.Location = new System.Drawing.Point(628, 22);
+            this.btnSolicitarRetiro.Name = "btnSolicitarRetiro";
+            this.btnSolicitarRetiro.Size = new System.Drawing.Size(139, 65);
+            this.btnSolicitarRetiro.TabIndex = 5;
+            this.btnSolicitarRetiro.Text = "Solicitar\r\nRetiro";
+            this.btnSolicitarRetiro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSolicitarRetiro.UseVisualStyleBackColor = true;
+            this.btnSolicitarRetiro.Click += new System.EventHandler(this.btnSolicitarRetiro_Click);
+            // 
+            // FormRetiros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 414);
+            this.Controls.Add(this.btnSolicitarRetiro);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormMovimientos";
-            this.Text = "FormMovimientos";
-            this.Load += new System.EventHandler(this.FormMovimientos_Load);
+            this.Name = "FormRetiros";
+            this.Text = "FormRetiros";
+            this.Load += new System.EventHandler(this.FormRetiros_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbbTipo;
@@ -230,6 +245,7 @@ namespace Hermosibanco
         private System.Windows.Forms.DateTimePicker dtFechaFin;
         private System.Windows.Forms.DateTimePicker dtFechaInicio;
         private System.Windows.Forms.RadioButton rbFecha;
-        private System.Windows.Forms.DataGridView dgvData;
+        private System.Windows.Forms.ContextMenuStrip mnuRetiro;
+        private System.Windows.Forms.Button btnSolicitarRetiro;
     }
 }
