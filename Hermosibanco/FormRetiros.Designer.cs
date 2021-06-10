@@ -33,7 +33,7 @@ namespace Hermosibanco
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbbTipo = new System.Windows.Forms.ComboBox();
+            this.cbbStatus = new System.Windows.Forms.ComboBox();
             this.dtAnio = new System.Windows.Forms.DateTimePicker();
             this.rbAnio = new System.Windows.Forms.RadioButton();
             this.dtMes = new System.Windows.Forms.DateTimePicker();
@@ -63,7 +63,7 @@ namespace Hermosibanco
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.cbbTipo);
+            this.groupBox1.Controls.Add(this.cbbStatus);
             this.groupBox1.Controls.Add(this.dtAnio);
             this.groupBox1.Controls.Add(this.rbAnio);
             this.groupBox1.Controls.Add(this.dtMes);
@@ -88,20 +88,21 @@ namespace Hermosibanco
             this.label2.TabIndex = 9;
             this.label2.Text = "Estatus";
             // 
-            // cbbTipo
+            // cbbStatus
             // 
-            this.cbbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbTipo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbTipo.FormattingEnabled = true;
-            this.cbbTipo.Items.AddRange(new object[] {
+            this.cbbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbStatus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbStatus.FormattingEnabled = true;
+            this.cbbStatus.Items.AddRange(new object[] {
             "TODOS",
-            "DEPOSITO",
-            "TRANSFERENCIA",
-            "RETIRO"});
-            this.cbbTipo.Location = new System.Drawing.Point(472, 45);
-            this.cbbTipo.Name = "cbbTipo";
-            this.cbbTipo.Size = new System.Drawing.Size(121, 23);
-            this.cbbTipo.TabIndex = 8;
+            "APROBADO",
+            "PENDIENTE",
+            "CANCELADO"});
+            this.cbbStatus.Location = new System.Drawing.Point(472, 45);
+            this.cbbStatus.Name = "cbbStatus";
+            this.cbbStatus.Size = new System.Drawing.Size(121, 23);
+            this.cbbStatus.TabIndex = 8;
+            this.cbbStatus.SelectedIndexChanged += new System.EventHandler(this.cbbStatus_SelectedIndexChanged);
             // 
             // dtAnio
             // 
@@ -114,6 +115,7 @@ namespace Hermosibanco
             this.dtAnio.ShowUpDown = true;
             this.dtAnio.Size = new System.Drawing.Size(57, 23);
             this.dtAnio.TabIndex = 7;
+            this.dtAnio.ValueChanged += new System.EventHandler(this.dtFechaInicio_ValueChanged);
             // 
             // rbAnio
             // 
@@ -125,6 +127,7 @@ namespace Hermosibanco
             this.rbAnio.TabStop = true;
             this.rbAnio.Text = "AÑO";
             this.rbAnio.UseVisualStyleBackColor = true;
+            this.rbAnio.CheckedChanged += new System.EventHandler(this.rbFecha_CheckedChanged);
             // 
             // dtMes
             // 
@@ -137,6 +140,7 @@ namespace Hermosibanco
             this.dtMes.ShowUpDown = true;
             this.dtMes.Size = new System.Drawing.Size(132, 23);
             this.dtMes.TabIndex = 5;
+            this.dtMes.ValueChanged += new System.EventHandler(this.dtFechaInicio_ValueChanged);
             // 
             // rbMes
             // 
@@ -148,6 +152,7 @@ namespace Hermosibanco
             this.rbMes.TabStop = true;
             this.rbMes.Text = "MES";
             this.rbMes.UseVisualStyleBackColor = true;
+            this.rbMes.CheckedChanged += new System.EventHandler(this.rbFecha_CheckedChanged);
             // 
             // label1
             // 
@@ -169,6 +174,7 @@ namespace Hermosibanco
             this.dtFechaFin.Name = "dtFechaFin";
             this.dtFechaFin.Size = new System.Drawing.Size(101, 23);
             this.dtFechaFin.TabIndex = 2;
+            this.dtFechaFin.ValueChanged += new System.EventHandler(this.dtFechaInicio_ValueChanged);
             // 
             // dtFechaInicio
             // 
@@ -181,6 +187,7 @@ namespace Hermosibanco
             this.dtFechaInicio.Size = new System.Drawing.Size(101, 23);
             this.dtFechaInicio.TabIndex = 1;
             this.dtFechaInicio.Value = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
+            this.dtFechaInicio.ValueChanged += new System.EventHandler(this.dtFechaInicio_ValueChanged);
             // 
             // rbFecha
             // 
@@ -192,6 +199,7 @@ namespace Hermosibanco
             this.rbFecha.TabStop = true;
             this.rbFecha.Text = "FECHA";
             this.rbFecha.UseVisualStyleBackColor = true;
+            this.rbFecha.CheckedChanged += new System.EventHandler(this.rbFecha_CheckedChanged);
             // 
             // mnuRetiro
             // 
@@ -236,7 +244,7 @@ namespace Hermosibanco
         private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbbTipo;
+        private System.Windows.Forms.ComboBox cbbStatus;
         private System.Windows.Forms.DateTimePicker dtAnio;
         private System.Windows.Forms.RadioButton rbAnio;
         private System.Windows.Forms.DateTimePicker dtMes;

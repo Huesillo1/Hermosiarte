@@ -43,10 +43,11 @@ namespace Hermosibanco
             this.dtFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.rbFecha = new System.Windows.Forms.RadioButton();
             this.mnuAutoriza = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.autorizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rechazarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mniAutorizar = new System.Windows.Forms.ToolStripMenuItem();
+            this.mniRechazar = new System.Windows.Forms.ToolStripMenuItem();
             this.label3 = new System.Windows.Forms.Label();
             this.txtClave = new System.Windows.Forms.MaskedTextBox();
+            this.mniObservaciones = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.mnuAutoriza.SuspendLayout();
@@ -64,6 +65,8 @@ namespace Hermosibanco
             this.dgvData.ReadOnly = true;
             this.dgvData.Size = new System.Drawing.Size(759, 311);
             this.dgvData.TabIndex = 5;
+            this.dgvData.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
+            this.dgvData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellDoubleClick);
             // 
             // groupBox1
             // 
@@ -211,23 +214,26 @@ namespace Hermosibanco
             // mnuAutoriza
             // 
             this.mnuAutoriza.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.autorizarToolStripMenuItem,
-            this.rechazarToolStripMenuItem});
+            this.mniAutorizar,
+            this.mniRechazar,
+            this.mniObservaciones});
             this.mnuAutoriza.Name = "mnuAutoriza";
-            this.mnuAutoriza.Size = new System.Drawing.Size(123, 48);
+            this.mnuAutoriza.Size = new System.Drawing.Size(181, 92);
+            this.mnuAutoriza.Opening += new System.ComponentModel.CancelEventHandler(this.mnuAutoriza_Opening);
             // 
-            // autorizarToolStripMenuItem
+            // mniAutorizar
             // 
-            this.autorizarToolStripMenuItem.Name = "autorizarToolStripMenuItem";
-            this.autorizarToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.autorizarToolStripMenuItem.Text = "Autorizar";
-            this.autorizarToolStripMenuItem.Click += new System.EventHandler(this.autorizarToolStripMenuItem_Click);
+            this.mniAutorizar.Name = "mniAutorizar";
+            this.mniAutorizar.Size = new System.Drawing.Size(180, 22);
+            this.mniAutorizar.Text = "Autorizar";
+            this.mniAutorizar.Click += new System.EventHandler(this.autorizarToolStripMenuItem_Click);
             // 
-            // rechazarToolStripMenuItem
+            // mniRechazar
             // 
-            this.rechazarToolStripMenuItem.Name = "rechazarToolStripMenuItem";
-            this.rechazarToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
-            this.rechazarToolStripMenuItem.Text = "Rechazar";
+            this.mniRechazar.Name = "mniRechazar";
+            this.mniRechazar.Size = new System.Drawing.Size(180, 22);
+            this.mniRechazar.Text = "Rechazar";
+            this.mniRechazar.Click += new System.EventHandler(this.rechazarToolStripMenuItem_Click);
             // 
             // label3
             // 
@@ -248,6 +254,13 @@ namespace Hermosibanco
             this.txtClave.TabIndex = 12;
             this.txtClave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtClave.TextChanged += new System.EventHandler(this.txtClave_TextChanged);
+            // 
+            // mniObservaciones
+            // 
+            this.mniObservaciones.Name = "mniObservaciones";
+            this.mniObservaciones.Size = new System.Drawing.Size(180, 22);
+            this.mniObservaciones.Text = "Observaciones";
+            this.mniObservaciones.Click += new System.EventHandler(this.observacionesToolStripMenuItem_Click);
             // 
             // FormAutorizarRetiro
             // 
@@ -283,9 +296,10 @@ namespace Hermosibanco
         private System.Windows.Forms.DateTimePicker dtFechaInicio;
         private System.Windows.Forms.RadioButton rbFecha;
         private System.Windows.Forms.ContextMenuStrip mnuAutoriza;
-        private System.Windows.Forms.ToolStripMenuItem autorizarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rechazarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mniAutorizar;
+        private System.Windows.Forms.ToolStripMenuItem mniRechazar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox txtClave;
+        private System.Windows.Forms.ToolStripMenuItem mniObservaciones;
     }
 }

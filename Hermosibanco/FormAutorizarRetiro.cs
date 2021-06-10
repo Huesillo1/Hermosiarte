@@ -80,7 +80,7 @@ namespace Hermosibanco
             dgvData.Columns[7].HeaderText = "ESTATUS";
             dgvData.Columns[8].HeaderText = "OBSERVACIONES";
             dgvData.Columns[9].HeaderText = "FECHA";
-            dgvData.Columns[10].HeaderText = "FECHA AUTORIZA";
+            dgvData.Columns[10].HeaderText = "FECHA AUTORIZA/RECHAZA";
             dgvData.Columns[11].HeaderText = "ID USUARIO SOLICITA";
             dgvData.Columns[12].HeaderText = "ID USUARIO AUTORIZA";
             dgvData.Columns[13].HeaderText = "ID MOVIMIENTO";
@@ -178,7 +178,8 @@ namespace Hermosibanco
             {
                 try
                 {
-                    bd.update("saldo = " + (getSaldo() - double.Parse(dgvData.CurrentRow.Cells[2].Value.ToString())).ToString(), "cuentas_bancarias", "cuenta = '" + dgvData.CurrentRow.Cells[2].Value.ToString() + "'", "SI");
+                    bd.update("saldo = " + (getSaldo() - double.Parse(dgvData.CurrentRow.Cells[2].Value.ToString())).ToString(), "cuentas_bancarias", "cuenta = '" + dgvData.CurrentRow.Cells[3].Value.ToString() + "'", "SI");
+                    //MessageBox.Show("Cuenta: " + + "\nTu nuevo saldo es : $" + (getSaldo() - double.Parse(dgvData.CurrentRow.Cells[2].Value.ToString())).ToString());
                 }
                 catch(MySql.Data.MySqlClient.MySqlException ex)
                 {
@@ -208,6 +209,75 @@ namespace Hermosibanco
         {
             //MessageBox.Show(getClave());
             cargarDatos();
+        }
+
+        private void observacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(dgvData.RowCount > 0)
+            {
+                FormObservaciones formObservaciones = new FormObservaciones();
+                formObservaciones.setIdRetiro(dgvData.CurrentRow.Cells[0].Value.ToString());
+                formObservaciones.ShowDialog();
+                cargarDatos();
+            }            
+        }
+
+        private void rechazarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bd.update("status = 'CANCELADO', fecha_autoriza = '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:dd") + "', usuario_autoriza_id = " + Properties.Settings.Default.idUsuario, "retiros", "id = " + dgvData.CurrentRow.Cells[0].Value.ToString(), "SI");
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Error al actualizar status retiro - " + ex.ErrorCode.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            try
+            {
+                bd.update("estatus = 'CANCELADO'", "movimientos", "id = " + dgvData.CurrentRow.Cells[13].Value.ToString(), "SI");
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Error al actualizar estatus movimiento - " + ex.ErrorCode.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            cargarDatos();
+        }
+
+        private void dgvData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dgvData.Rows.Count > 0)
+            {
+                if(dgvData.CurrentCell.ColumnIndex == 8)
+                {
+                    FormObservaciones formObservaciones = new FormObservaciones();
+                    formObservaciones.setIdRetiro(dgvData.CurrentRow.Cells[0].Value.ToString());
+                    formObservaciones.ShowDialog();
+                    cargarDatos();
+                }
+            }            
+        }
+
+        private void mnuAutoriza_Opening(object sender, CancelEventArgs e)
+        {
+            if(dgvData.Rows.Count > 0)
+            {
+                if (dgvData.CurrentRow.Cells[7].Value.ToString() != "PENDIENTE")
+                {
+                    mniRechazar.Visible = false;
+                    mniAutorizar.Visible = false;
+                }
+                mniObservaciones.Visible = true;
+                mnuAutoriza.Visible = true;
+            }
+            else
+            {
+                mniRechazar.Visible = false;
+                mniAutorizar.Visible = false;
+                mniObservaciones.Visible = false;
+                mnuAutoriza.Visible = false;
+            }
+            
+                
         }
     }
 }

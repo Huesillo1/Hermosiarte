@@ -44,3 +44,4 @@ C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosiban
 C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormDetallesSolicitudRetiro.resources
 C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormRetiros.resources
 C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormAutorizarRetiro.resources
+C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormObservaciones.resources
