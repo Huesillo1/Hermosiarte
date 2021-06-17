@@ -22,7 +22,14 @@ namespace Hermosibanco
 
         private bool _createConnection()
         {
-            connection.ConnectionString = "server=" + Properties.Settings.Default.server + ";user id=" + Properties.Settings.Default.user + ";password = " + Properties.Settings.Default.password + ";database=" + Properties.Settings.Default.database;
+            string servidor = "127.0.0.1";
+            string bd = "hermosiarte";
+            string usuario = "root";
+            string password = "user";
+
+            string cadenaConexion = "Database=" + bd + "; Data Source=" + servidor + "; User Id=" + usuario + "; Password=" + password;
+
+            connection.ConnectionString = cadenaConexion;
             return true;
         }
 

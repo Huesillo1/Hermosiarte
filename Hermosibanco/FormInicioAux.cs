@@ -36,12 +36,12 @@ namespace Hermosibanco
             DataSet ds = bd.consult("nombre, apellido_paterno,apellido_materno", "usuarios", "id = " + Properties.Settings.Default.idUsuario, "SI");
             if (ds.Tables[0].Rows.Count > 0)
                 lblNombre.Text = "Hola, " + ds.Tables[0].Rows[0]["nombre"].ToString() + " " + ds.Tables[0].Rows[0]["apellido_paterno"].ToString() + " " + ds.Tables[0].Rows[0]["apellido_materno"].ToString();
-            AbrirFormEnPanel(new FormMiCuenta());
+            AbrirFormEnPanel(new s());
         }
 
         private void miCuentaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new FormMiCuenta());
+            AbrirFormEnPanel(new s());
         }
 
         private void verTodoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -78,6 +78,16 @@ namespace Hermosibanco
         private void autorizarRetiroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AbrirFormEnPanel(new FormAutorizarRetiro());
+        }
+
+        private void pbClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pbMinimized_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

@@ -79,7 +79,6 @@ C:\Development\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormDeposito.res
 C:\Development\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormDetallesSolicitudRetiro.resources
 C:\Development\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormInicioAux.resources
 C:\Development\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormLogin.resources
-C:\Development\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormMiCuenta.resources
 C:\Development\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormMovimientos.resources
 C:\Development\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormObservaciones.resources
 C:\Development\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormRetiros.resources
@@ -92,3 +91,6 @@ C:\Development\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.csproj.CoreCompi
 C:\Development\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.csproj.CopyComplete
 C:\Development\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.exe
 C:\Development\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.pdb
+C:\Development\Hermosibanco\Hermosibanco\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Development\Hermosibanco\Hermosibanco\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Development\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.s.resources

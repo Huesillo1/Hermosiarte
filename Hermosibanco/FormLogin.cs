@@ -90,11 +90,6 @@ namespace Hermosibanco
 
         }
 
-        private void pbClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void pbMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -104,6 +99,16 @@ namespace Hermosibanco
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void pbClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pbMinimized_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void pbClose_MouseEnter(object sender, EventArgs e)
@@ -116,14 +121,14 @@ namespace Hermosibanco
             pbClose.BackColor = this.BackColor;
         }
 
-        private void pbMinimize_MouseEnter(object sender, EventArgs e)
+        private void pbMinimized_MouseEnter(object sender, EventArgs e)
         {
-            pbMinimize.BackColor = Color.Orange;
+            pbMinimized.BackColor = Color.Orange;
         }
 
-        private void pbMinimize_MouseLeave(object sender, EventArgs e)
+        private void pbMinimized_MouseLeave(object sender, EventArgs e)
         {
-            pbMinimize.BackColor = this.BackColor;
+            pbMinimized.BackColor = this.BackColor;
         }
     }
 }

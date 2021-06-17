@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace Hermosibanco
 {
-    public partial class FormMiCuenta : Form
+    public partial class s : Form
     {
         BasedeDatos bd = new BasedeDatos();
         private int showPassword;
 
-        public FormMiCuenta()
+        public s()
         {
             InitializeComponent();
         }
@@ -81,6 +81,31 @@ namespace Hermosibanco
                 btnShowPassword.Image = Properties.Resources.icons8_no_key_16;
                 showPassword = 0;
             }
+        }
+
+        private void lineShape14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lineShape10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lineShape4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lineShape2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lineShape3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
