@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Hermosibanco
 {
@@ -18,6 +19,13 @@ namespace Hermosibanco
         {
             InitializeComponent();
         }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
 
         private bool fieldsEmpty()
         {
@@ -80,6 +88,42 @@ namespace Hermosibanco
         private void txtPass_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pbClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pbMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void FormLogin_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void pbClose_MouseEnter(object sender, EventArgs e)
+        {
+            pbClose.BackColor = Color.Orange;
+        }
+
+        private void pbClose_MouseLeave(object sender, EventArgs e)
+        {
+            pbClose.BackColor = this.BackColor;
+        }
+
+        private void pbMinimize_MouseEnter(object sender, EventArgs e)
+        {
+            pbMinimize.BackColor = Color.Orange;
+        }
+
+        private void pbMinimize_MouseLeave(object sender, EventArgs e)
+        {
+            pbMinimize.BackColor = this.BackColor;
         }
     }
 }
