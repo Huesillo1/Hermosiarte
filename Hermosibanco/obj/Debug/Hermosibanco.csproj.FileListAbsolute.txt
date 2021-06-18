@@ -94,3 +94,5 @@ C:\Development\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.pdb
 C:\Development\Hermosibanco\Hermosibanco\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 C:\Development\Hermosibanco\Hermosibanco\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
 C:\Development\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.s.resources
+C:\Development\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormDetallesTransacciones.resources
+C:\Development\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormHistorialCompras.resources

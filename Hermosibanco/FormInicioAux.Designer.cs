@@ -41,12 +41,12 @@ namespace Hermosibanco
             this.verTodoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autorizarRetiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.pbClose = new System.Windows.Forms.PictureBox();
             this.pbMinimized = new System.Windows.Forms.PictureBox();
+            this.pbClose = new System.Windows.Forms.PictureBox();
+            this.historialDeComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimized)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlContenedor
@@ -55,9 +55,9 @@ namespace Hermosibanco
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlContenedor.Location = new System.Drawing.Point(0, 79);
-            this.pnlContenedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlContenedor.Margin = new System.Windows.Forms.Padding(4);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(1068, 510);
+            this.pnlContenedor.Size = new System.Drawing.Size(1067, 510);
             this.pnlContenedor.TabIndex = 0;
             // 
             // menuStrip1
@@ -75,6 +75,7 @@ namespace Hermosibanco
             this.menuStrip1.Size = new System.Drawing.Size(1068, 29);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.menuStrip1_MouseDown);
             // 
             // opcionesToolStripMenuItem
             // 
@@ -82,7 +83,8 @@ namespace Hermosibanco
             this.miCuentaToolStripMenuItem,
             this.movimientosToolStripMenuItem,
             this.transferirToolStripMenuItem,
-            this.retirarToolStripMenuItem});
+            this.retirarToolStripMenuItem,
+            this.historialDeComprasToolStripMenuItem});
             this.opcionesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
             this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(104, 25);
@@ -91,28 +93,28 @@ namespace Hermosibanco
             // miCuentaToolStripMenuItem
             // 
             this.miCuentaToolStripMenuItem.Name = "miCuentaToolStripMenuItem";
-            this.miCuentaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.miCuentaToolStripMenuItem.Size = new System.Drawing.Size(263, 26);
             this.miCuentaToolStripMenuItem.Text = "Mi &Cuenta";
             this.miCuentaToolStripMenuItem.Click += new System.EventHandler(this.miCuentaToolStripMenuItem_Click);
             // 
             // movimientosToolStripMenuItem
             // 
             this.movimientosToolStripMenuItem.Name = "movimientosToolStripMenuItem";
-            this.movimientosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.movimientosToolStripMenuItem.Size = new System.Drawing.Size(263, 26);
             this.movimientosToolStripMenuItem.Text = "&Movimientos";
             this.movimientosToolStripMenuItem.Click += new System.EventHandler(this.movimientosToolStripMenuItem_Click);
             // 
             // transferirToolStripMenuItem
             // 
             this.transferirToolStripMenuItem.Name = "transferirToolStripMenuItem";
-            this.transferirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.transferirToolStripMenuItem.Size = new System.Drawing.Size(263, 26);
             this.transferirToolStripMenuItem.Text = "&Transferir";
             this.transferirToolStripMenuItem.Click += new System.EventHandler(this.transferirToolStripMenuItem_Click);
             // 
             // retirarToolStripMenuItem
             // 
             this.retirarToolStripMenuItem.Name = "retirarToolStripMenuItem";
-            this.retirarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.retirarToolStripMenuItem.Size = new System.Drawing.Size(263, 26);
             this.retirarToolStripMenuItem.Text = "Retirar";
             this.retirarToolStripMenuItem.Click += new System.EventHandler(this.retirarToolStripMenuItem_Click);
             // 
@@ -148,18 +150,19 @@ namespace Hermosibanco
             this.autorizarRetiroToolStripMenuItem.Text = "Autorizar Retiro";
             this.autorizarRetiroToolStripMenuItem.Click += new System.EventHandler(this.autorizarRetiroToolStripMenuItem_Click);
             // 
-            // lblNombre
+            // pbMinimized
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(13, 29);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(133, 49);
-            this.lblNombre.TabIndex = 0;
-            this.lblNombre.Text = "Hola, ";
+            this.pbMinimized.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMinimized.Image = ((System.Drawing.Image)(resources.GetObject("pbMinimized.Image")));
+            this.pbMinimized.Location = new System.Drawing.Point(994, 1);
+            this.pbMinimized.Name = "pbMinimized";
+            this.pbMinimized.Size = new System.Drawing.Size(36, 29);
+            this.pbMinimized.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMinimized.TabIndex = 3;
+            this.pbMinimized.TabStop = false;
+            this.pbMinimized.Click += new System.EventHandler(this.pbMinimized_Click);
+            this.pbMinimized.MouseEnter += new System.EventHandler(this.pbMinimized_MouseEnter);
+            this.pbMinimized.MouseLeave += new System.EventHandler(this.pbMinimized_MouseLeave);
             // 
             // pbClose
             // 
@@ -172,18 +175,15 @@ namespace Hermosibanco
             this.pbClose.TabIndex = 2;
             this.pbClose.TabStop = false;
             this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
+            this.pbClose.MouseEnter += new System.EventHandler(this.pbClose_MouseEnter);
+            this.pbClose.MouseLeave += new System.EventHandler(this.pbClose_MouseLeave);
             // 
-            // pbMinimized
+            // historialDeComprasToolStripMenuItem
             // 
-            this.pbMinimized.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbMinimized.Image = ((System.Drawing.Image)(resources.GetObject("pbMinimized.Image")));
-            this.pbMinimized.Location = new System.Drawing.Point(994, 1);
-            this.pbMinimized.Name = "pbMinimized";
-            this.pbMinimized.Size = new System.Drawing.Size(36, 29);
-            this.pbMinimized.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbMinimized.TabIndex = 3;
-            this.pbMinimized.TabStop = false;
-            this.pbMinimized.Click += new System.EventHandler(this.pbMinimized_Click);
+            this.historialDeComprasToolStripMenuItem.Name = "historialDeComprasToolStripMenuItem";
+            this.historialDeComprasToolStripMenuItem.Size = new System.Drawing.Size(263, 26);
+            this.historialDeComprasToolStripMenuItem.Text = "Historial de compras";
+            this.historialDeComprasToolStripMenuItem.Click += new System.EventHandler(this.historialDeComprasToolStripMenuItem_Click);
             // 
             // FormInicioAux
             // 
@@ -192,20 +192,19 @@ namespace Hermosibanco
             this.ClientSize = new System.Drawing.Size(1068, 606);
             this.Controls.Add(this.pbMinimized);
             this.Controls.Add(this.pbClose);
-            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormInicioAux";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.FormInicioAux_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimized)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,7 +216,6 @@ namespace Hermosibanco
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
-        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.ToolStripMenuItem miCuentaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verTodoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarUsuarioToolStripMenuItem;
@@ -227,5 +225,6 @@ namespace Hermosibanco
         private System.Windows.Forms.ToolStripMenuItem autorizarRetiroToolStripMenuItem;
         private System.Windows.Forms.PictureBox pbClose;
         private System.Windows.Forms.PictureBox pbMinimized;
+        private System.Windows.Forms.ToolStripMenuItem historialDeComprasToolStripMenuItem;
     }
 }

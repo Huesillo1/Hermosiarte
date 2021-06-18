@@ -83,29 +83,5 @@ namespace Hermosibanco
             }
         }
 
-        private void lineShape14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lineShape10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lineShape4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lineShape2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lineShape3_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
