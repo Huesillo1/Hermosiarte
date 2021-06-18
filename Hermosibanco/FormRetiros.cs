@@ -106,7 +106,7 @@ namespace Hermosibanco
         {
             cargarDatos();
             rbMes.Checked = true;
-            cbbStatus.SelectedIndex = 2;
+            cbbStatus.SelectedIndex = 0;
             DateTime finDia = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 23, 59, 59);
             dtFechaInicio.MaxDate = finDia;
             dtFechaFin.MaxDate = finDia;
