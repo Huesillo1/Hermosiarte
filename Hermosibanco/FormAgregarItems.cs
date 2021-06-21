@@ -29,9 +29,8 @@ namespace Hermosibanco
         string _fecha_modificacion;
         string _imagen;
 
-        private void AgregarButton_Click(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
-            
             // OBTENIENDO INFORMACION
             _descripcion = DescripcionTextBox.Text.ToString();
             _cantidad = CantidadUpDown.Value.ToString();
@@ -58,9 +57,16 @@ namespace Hermosibanco
             {
                 MessageBox.Show(ex.ToString(), "Exception");
             }
+        }
 
-           
+        private void pbClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
+        private void pbMinimized_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

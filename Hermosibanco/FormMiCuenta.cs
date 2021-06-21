@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace Hermosibanco
 {
-    public partial class s : Form
+    public partial class FormMiCuenta : Form
     {
         BasedeDatos bd = new BasedeDatos();
         private int showPassword;
 
-        public s()
+        public FormMiCuenta()
         {
             InitializeComponent();
         }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Hermosibanco
 {
@@ -16,6 +17,13 @@ namespace Hermosibanco
 
         private int showPassword;
         private string usuario_id;
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
 
         public void setUsuarioId(string value)
         {
@@ -267,6 +275,40 @@ namespace Hermosibanco
             }
         }
 
+        private void pbClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
+        private void pbMinimized_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pbClose_MouseEnter(object sender, EventArgs e)
+        {
+            pbClose.BackColor = Color.Orange;
+        }
+
+        private void pbClose_MouseLeave(object sender, EventArgs e)
+        {
+            pbClose.BackColor = this.BackColor;
+        }
+
+        private void pbMinimized_MouseEnter(object sender, EventArgs e)
+        {
+            pbMinimized.BackColor = Color.Orange;
+        }
+
+        private void pbMinimized_MouseLeave(object sender, EventArgs e)
+        {
+            pbMinimized.BackColor = this.BackColor;
+        }
+
+        private void FormAgregarUsuario_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
     }
 }

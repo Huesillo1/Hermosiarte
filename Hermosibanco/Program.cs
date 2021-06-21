@@ -16,7 +16,7 @@ namespace Hermosibanco
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormBusquedaCompra());
+            Application.Run(new FormLogin());
         }
     }
 }

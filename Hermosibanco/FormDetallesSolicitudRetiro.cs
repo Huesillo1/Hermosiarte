@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Hermosibanco
 {
@@ -29,6 +30,11 @@ namespace Hermosibanco
             }
         }
 
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
         private double getSaldo()
         {
             string[] array = cbbCuenta.GetItemText(cbbCuenta.SelectedItem).Split('$');
@@ -107,6 +113,27 @@ namespace Hermosibanco
             {
                 MessageBox.Show("No puedes retirar más de tu saldo actual", "Saldo insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void pbClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pbClose_MouseEnter(object sender, EventArgs e)
+        {
+            pbClose.BackColor = Color.Orange;
+        }
+
+        private void pbClose_MouseLeave(object sender, EventArgs e)
+        {
+            pbClose.BackColor = this.BackColor;
+        }
+
+        private void FormDetallesSolicitudRetiro_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }
