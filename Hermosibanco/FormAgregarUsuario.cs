@@ -235,7 +235,7 @@ namespace Hermosibanco
         {
             if (txtApellidoMaterno.Text == "OPCIONAL")
             {
-                txtApellidoMaterno.ForeColor = Color.Black;
+                txtApellidoMaterno.ForeColor = Color.Orange;
                 txtApellidoMaterno.Text = "";
             }
         }
@@ -244,7 +244,7 @@ namespace Hermosibanco
         {
             if(txtApellidoMaterno.Text == String.Empty)
             {
-                txtApellidoMaterno.ForeColor = Color.DimGray;
+                txtApellidoMaterno.ForeColor = Color.NavajoWhite;
                 txtApellidoMaterno.Text = "OPCIONAL";
             }
         }
@@ -253,7 +253,7 @@ namespace Hermosibanco
         {
             if (txtNoInt.Text == "OPCIONAL")
             {
-                txtNoInt.ForeColor = Color.Black;
+                txtNoInt.ForeColor = Color.Orange;
                 txtNoInt.Text = "";
             }
         }
@@ -262,7 +262,7 @@ namespace Hermosibanco
         {
             if (txtNoInt.Text == String.Empty)
             {
-                txtNoInt.ForeColor = Color.DimGray;
+                txtNoInt.ForeColor = Color.NavajoWhite;
                 txtNoInt.Text = "OPCIONAL";
             }
         }

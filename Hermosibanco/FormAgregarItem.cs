@@ -26,7 +26,7 @@ namespace Hermosibanco
             else
                 estado = "NO DISPONIBLE";
 
-            string valores = "'" + descripcion + "', " + "'" + cantidad + "', " + "'" + precio + "', " + "'" + estado + "', " + "'" + DateTime.Now.ToString("yyyy-MM-dd") + "', " + "'" + DateTime.Now.ToString("yyyy-MM-dd") + "'";
+            string valores = "'" + descripcion + "', " + "'" + cantidad + "', " + "'" + precio + "', " + "'" + estado + "', " + "'" + DateTime.Now.ToString("yyyy-MM-dd") + "', " + "'" + DateTime.Now.ToString("yyyy-MM-dd") + "', '" + txtURLImagen.Text + "'";
             // "'" + txtNombre.Text + "', " + "'" + txtApellidoPaterno.Text + "', " + "'" + apellidoMaterno + "', " + "'" + txtCalle.Text + "', " + "'" + txtNoExt.Text + "', " + "'" + noInt + "', " + "'" + txtCP.Text + "', " + "'" + cbbMunicipio.GetItemText(cbbMunicipio.SelectedItem).ToUpper() + "', " + "'" + cbbEstado.GetItemText(cbbEstado.SelectedItem).ToUpper() + "', " + "'" + dtFechaNacimiento.Value.ToString("yyyy-MM-dd") + "', '" + DateTime.Now.ToString("yyyy-MM-dd") + "', 'ACTIVO', '" + txtPuesto.Text + "', '" + txtUsuario.Text + "', '" + txtPassword.Text + "'";
 
             return valores;
@@ -34,7 +34,7 @@ namespace Hermosibanco
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string campos = "descripcion, cantidad, precio, status, fecha_registro, fecha_modificacion";
+            string campos = "descripcion, cantidad, precio, status, fecha_registro, fecha_modificacion, imagen";
             bd.insert("articulos", campos, ObtenerInformacion());
 
         }

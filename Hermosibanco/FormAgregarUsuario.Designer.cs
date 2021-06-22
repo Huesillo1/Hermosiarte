@@ -223,7 +223,7 @@ namespace Hermosibanco
             this.txtApellidoMaterno.BackColor = System.Drawing.Color.Black;
             this.txtApellidoMaterno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtApellidoMaterno.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidoMaterno.ForeColor = System.Drawing.Color.Orange;
+            this.txtApellidoMaterno.ForeColor = System.Drawing.Color.NavajoWhite;
             this.txtApellidoMaterno.Location = new System.Drawing.Point(296, 43);
             this.txtApellidoMaterno.Name = "txtApellidoMaterno";
             this.txtApellidoMaterno.Size = new System.Drawing.Size(107, 23);
@@ -385,7 +385,7 @@ namespace Hermosibanco
             this.txtNoInt.BackColor = System.Drawing.Color.Black;
             this.txtNoInt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNoInt.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNoInt.ForeColor = System.Drawing.Color.Orange;
+            this.txtNoInt.ForeColor = System.Drawing.Color.NavajoWhite;
             this.txtNoInt.Location = new System.Drawing.Point(271, 42);
             this.txtNoInt.Name = "txtNoInt";
             this.txtNoInt.Size = new System.Drawing.Size(63, 22);

@@ -38,7 +38,7 @@ namespace Hermosibanco
             this.PrecioLabel = new System.Windows.Forms.Label();
             this.DisponibleCheckBox = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtURLImagen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadUpDown)).BeginInit();
@@ -149,14 +149,14 @@ namespace Hermosibanco
             this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // txtURLImagen
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ControlText;
-            this.textBox1.ForeColor = System.Drawing.Color.Orange;
-            this.textBox1.Location = new System.Drawing.Point(134, 153);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 20);
-            this.textBox1.TabIndex = 13;
+            this.txtURLImagen.BackColor = System.Drawing.SystemColors.ControlText;
+            this.txtURLImagen.ForeColor = System.Drawing.Color.Orange;
+            this.txtURLImagen.Location = new System.Drawing.Point(134, 153);
+            this.txtURLImagen.Name = "txtURLImagen";
+            this.txtURLImagen.Size = new System.Drawing.Size(233, 20);
+            this.txtURLImagen.TabIndex = 13;
             // 
             // label1
             // 
@@ -194,7 +194,7 @@ namespace Hermosibanco
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(389, 298);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtURLImagen);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.DisponibleCheckBox);
@@ -228,7 +228,7 @@ namespace Hermosibanco
         private System.Windows.Forms.Label PrecioLabel;
         private System.Windows.Forms.CheckBox DisponibleCheckBox;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtURLImagen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGuardar;
     }
