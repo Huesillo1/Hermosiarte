@@ -25,7 +25,7 @@ namespace Hermosibanco
             string servidor = "127.0.0.1";
             string bd = "hermosiarte";
             string usuario = "root";
-            string password = "user";
+            string password = "";
 
             string cadenaConexion = "Database=" + bd + "; Data Source=" + servidor + "; User Id=" + usuario + "; Password=" + password;
 
