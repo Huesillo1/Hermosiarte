@@ -33,10 +33,10 @@ namespace Hermosibanco
             this.cbbCuenta = new System.Windows.Forms.ComboBox();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.txtConcepto = new System.Windows.Forms.TextBox();
-            this.btnSolicitar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnSolicitar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,16 +85,6 @@ namespace Hermosibanco
             this.txtConcepto.Size = new System.Drawing.Size(145, 20);
             this.txtConcepto.TabIndex = 2;
             // 
-            // btnSolicitar
-            // 
-            this.btnSolicitar.Location = new System.Drawing.Point(15, 159);
-            this.btnSolicitar.Name = "btnSolicitar";
-            this.btnSolicitar.Size = new System.Drawing.Size(145, 23);
-            this.btnSolicitar.TabIndex = 3;
-            this.btnSolicitar.Text = "Solicitar";
-            this.btnSolicitar.UseVisualStyleBackColor = true;
-            this.btnSolicitar.Click += new System.EventHandler(this.btnSolicitar_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -128,16 +118,30 @@ namespace Hermosibanco
             this.label3.TabIndex = 6;
             this.label3.Text = "Cuenta";
             // 
+            // btnSolicitar
+            // 
+            this.btnSolicitar.BackColor = System.Drawing.Color.Black;
+            this.btnSolicitar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSolicitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSolicitar.ForeColor = System.Drawing.Color.Orange;
+            this.btnSolicitar.Location = new System.Drawing.Point(16, 159);
+            this.btnSolicitar.Name = "btnSolicitar";
+            this.btnSolicitar.Size = new System.Drawing.Size(144, 23);
+            this.btnSolicitar.TabIndex = 7;
+            this.btnSolicitar.Text = "Solicitar";
+            this.btnSolicitar.UseVisualStyleBackColor = false;
+            this.btnSolicitar.Click += new System.EventHandler(this.btnSolicitar_Click);
+            // 
             // FormDetallesSolicitudRetiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(177, 194);
+            this.Controls.Add(this.btnSolicitar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnSolicitar);
             this.Controls.Add(this.txtConcepto);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.cbbCuenta);
@@ -158,9 +162,9 @@ namespace Hermosibanco
         private System.Windows.Forms.ComboBox cbbCuenta;
         private System.Windows.Forms.NumericUpDown txtCantidad;
         private System.Windows.Forms.TextBox txtConcepto;
-        private System.Windows.Forms.Button btnSolicitar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnSolicitar;
     }
 }

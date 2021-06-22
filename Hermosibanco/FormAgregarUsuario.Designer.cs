@@ -36,7 +36,6 @@ namespace Hermosibanco
             this.txtPuesto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dtFechaNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.btnShowPassword = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -60,6 +59,7 @@ namespace Hermosibanco
             this.txtNoExt = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtCalle = new System.Windows.Forms.TextBox();
+            this.btnShowPassword = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -158,18 +158,6 @@ namespace Hermosibanco
             this.dtFechaNacimiento.Name = "dtFechaNacimiento";
             this.dtFechaNacimiento.Size = new System.Drawing.Size(127, 23);
             this.dtFechaNacimiento.TabIndex = 11;
-            // 
-            // btnShowPassword
-            // 
-            this.btnShowPassword.FlatAppearance.BorderSize = 0;
-            this.btnShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowPassword.Image = global::Hermosibanco.Properties.Resources.icons8_no_key_16;
-            this.btnShowPassword.Location = new System.Drawing.Point(372, 97);
-            this.btnShowPassword.Name = "btnShowPassword";
-            this.btnShowPassword.Size = new System.Drawing.Size(31, 23);
-            this.btnShowPassword.TabIndex = 10;
-            this.btnShowPassword.UseVisualStyleBackColor = true;
-            this.btnShowPassword.Click += new System.EventHandler(this.btnShowPassword_Click);
             // 
             // label5
             // 
@@ -450,19 +438,33 @@ namespace Hermosibanco
             this.txtCalle.Size = new System.Drawing.Size(189, 23);
             this.txtCalle.TabIndex = 17;
             // 
+            // btnShowPassword
+            // 
+            this.btnShowPassword.FlatAppearance.BorderSize = 0;
+            this.btnShowPassword.Image = global::Hermosibanco.Properties.Resources.icons8_no_key_16;
+            this.btnShowPassword.Location = new System.Drawing.Point(372, 97);
+            this.btnShowPassword.Name = "btnShowPassword";
+            this.btnShowPassword.Size = new System.Drawing.Size(31, 23);
+            this.btnShowPassword.TabIndex = 10;
+            this.btnShowPassword.UseVisualStyleBackColor = true;
+            this.btnShowPassword.Click += new System.EventHandler(this.btnShowPassword_Click);
+            // 
             // btnGuardar
             // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardar.ForeColor = System.Drawing.Color.Orange;
             this.btnGuardar.Image = global::Hermosibanco.Properties.Resources.icons8_save_30;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardar.Location = new System.Drawing.Point(157, 338);
+            this.btnGuardar.Location = new System.Drawing.Point(155, 338);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(102, 43);
-            this.btnGuardar.TabIndex = 2;
+            this.btnGuardar.Size = new System.Drawing.Size(104, 51);
+            this.btnGuardar.TabIndex = 30;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // FormAgregarUsuario

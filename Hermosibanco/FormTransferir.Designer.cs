@@ -30,13 +30,13 @@ namespace Hermosibanco
         private void InitializeComponent()
         {
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.btnTransferir = new System.Windows.Forms.Button();
             this.cbbMisCuentas = new System.Windows.Forms.ComboBox();
             this.txtCuenta = new System.Windows.Forms.TextBox();
             this.txtMonto = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnTransferir = new System.Windows.Forms.Button();
             this.btnValidar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtMonto)).BeginInit();
             this.SuspendLayout();
@@ -50,17 +50,6 @@ namespace Hermosibanco
             this.txtNombre.ReadOnly = true;
             this.txtNombre.Size = new System.Drawing.Size(203, 20);
             this.txtNombre.TabIndex = 0;
-            // 
-            // btnTransferir
-            // 
-            this.btnTransferir.Enabled = false;
-            this.btnTransferir.Location = new System.Drawing.Point(12, 187);
-            this.btnTransferir.Name = "btnTransferir";
-            this.btnTransferir.Size = new System.Drawing.Size(203, 23);
-            this.btnTransferir.TabIndex = 1;
-            this.btnTransferir.Text = "Transferir";
-            this.btnTransferir.UseVisualStyleBackColor = true;
-            this.btnTransferir.Click += new System.EventHandler(this.btnTransferir_Click);
             // 
             // cbbMisCuentas
             // 
@@ -139,14 +128,32 @@ namespace Hermosibanco
             this.label3.TabIndex = 7;
             this.label3.Text = "Monto";
             // 
+            // btnTransferir
+            // 
+            this.btnTransferir.BackColor = System.Drawing.Color.Black;
+            this.btnTransferir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnTransferir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransferir.ForeColor = System.Drawing.Color.Orange;
+            this.btnTransferir.Location = new System.Drawing.Point(12, 187);
+            this.btnTransferir.Name = "btnTransferir";
+            this.btnTransferir.Size = new System.Drawing.Size(202, 23);
+            this.btnTransferir.TabIndex = 9;
+            this.btnTransferir.Text = "Transferir";
+            this.btnTransferir.UseVisualStyleBackColor = false;
+            this.btnTransferir.Click += new System.EventHandler(this.btnTransferir_Click);
+            // 
             // btnValidar
             // 
-            this.btnValidar.Location = new System.Drawing.Point(139, 149);
+            this.btnValidar.BackColor = System.Drawing.Color.Black;
+            this.btnValidar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnValidar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnValidar.ForeColor = System.Drawing.Color.Orange;
+            this.btnValidar.Location = new System.Drawing.Point(139, 146);
             this.btnValidar.Name = "btnValidar";
-            this.btnValidar.Size = new System.Drawing.Size(77, 23);
-            this.btnValidar.TabIndex = 8;
+            this.btnValidar.Size = new System.Drawing.Size(76, 23);
+            this.btnValidar.TabIndex = 10;
             this.btnValidar.Text = "Validar";
-            this.btnValidar.UseVisualStyleBackColor = true;
+            this.btnValidar.UseVisualStyleBackColor = false;
             this.btnValidar.Click += new System.EventHandler(this.btnValidar_Click);
             // 
             // FormTransferir
@@ -157,13 +164,13 @@ namespace Hermosibanco
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(227, 222);
             this.Controls.Add(this.btnValidar);
+            this.Controls.Add(this.btnTransferir);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtMonto);
             this.Controls.Add(this.txtCuenta);
             this.Controls.Add(this.cbbMisCuentas);
-            this.Controls.Add(this.btnTransferir);
             this.Controls.Add(this.txtNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormTransferir";
@@ -179,13 +186,13 @@ namespace Hermosibanco
         #endregion
 
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Button btnTransferir;
         private System.Windows.Forms.ComboBox cbbMisCuentas;
         private System.Windows.Forms.TextBox txtCuenta;
         private System.Windows.Forms.NumericUpDown txtMonto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnTransferir;
         private System.Windows.Forms.Button btnValidar;
     }
 }

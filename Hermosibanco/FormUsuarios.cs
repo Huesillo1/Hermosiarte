@@ -67,14 +67,15 @@ namespace Hermosibanco
                 if (cbbStatus.SelectedIndex == 0)
                     where += like;
                 else if (cbbStatus.SelectedIndex == 1)
-                    where += "status = 'ACTIVO' AND " + like;                
+                    where += "status = 'ACTIVO' AND " + like;
                 else
                     where += "status = 'INACTIVO' AND " + like;
-            }else if(txtCuenta.Text != String.Empty)
+            }
+            else if (txtCuenta.Text != String.Empty)
             {
                 if (cbbStatus.SelectedIndex == 1)
                     where += "cuenta = '" + txtCuenta.Text + "' AND status = 'ACTIVO'";
-                else if(cbbStatus.SelectedIndex == 2)
+                else if (cbbStatus.SelectedIndex == 2)
                     where += "cuenta = '" + txtCuenta.Text + "' AND status = 'INACTIVO'";
                 else
                     where += "cuenta = '" + txtCuenta.Text + "' ";
@@ -86,7 +87,7 @@ namespace Hermosibanco
                 else if (cbbStatus.SelectedIndex == 2)
                     where += "status = 'INACTIVO'";
             }
-            
+
             string campos = "CONCAT(nombre, ' ', apellido_paterno, ' ', apellido_materno) AS nombre_completo, cuenta, usuario, fecha_nacimiento, ";
             campos += "estado, municipio, calle, num_exterior, num_interior, codigo_postal, puesto, fecha_registro, status, usuarios.id";
             DataSet ds;
@@ -133,7 +134,7 @@ namespace Hermosibanco
 
         private void txtCuenta_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
                 cargarDatos();
         }
 
@@ -160,21 +161,21 @@ namespace Hermosibanco
 
         private void eliminarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(!String.IsNullOrEmpty(dgvData.CurrentRow.Cells[13].Value.ToString()))
+            if (!String.IsNullOrEmpty(dgvData.CurrentRow.Cells[13].Value.ToString()))
                 bd.update("status = 'INACTIVO'", "usuarios", "id = " + dgvData.CurrentRow.Cells[13].Value, "SI");
             cargarDatos();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if(!String.IsNullOrEmpty(dgvData.CurrentRow.Cells[13].Value.ToString()))
+            if (!String.IsNullOrEmpty(dgvData.CurrentRow.Cells[13].Value.ToString()))
             {
                 FormAgregarUsuario formAgregarUsuario = new FormAgregarUsuario();
                 formAgregarUsuario.setUsuarioId(dgvData.CurrentRow.Cells[13].Value.ToString());
                 formAgregarUsuario.Text = "Modificar Usuario";
                 formAgregarUsuario.ShowDialog();
                 cargarDatos();
-            }            
+            }
         }
 
         private void dgvData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

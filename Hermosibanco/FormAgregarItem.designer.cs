@@ -38,6 +38,9 @@ namespace Hermosibanco
             this.PrecioLabel = new System.Windows.Forms.Label();
             this.DisponibleCheckBox = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrecioUpDown)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +62,7 @@ namespace Hermosibanco
             this.NombreLabel.AutoSize = true;
             this.NombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NombreLabel.ForeColor = System.Drawing.Color.Orange;
-            this.NombreLabel.Location = new System.Drawing.Point(72, 46);
+            this.NombreLabel.Location = new System.Drawing.Point(14, 73);
             this.NombreLabel.Name = "NombreLabel";
             this.NombreLabel.Size = new System.Drawing.Size(114, 25);
             this.NombreLabel.TabIndex = 1;
@@ -70,9 +73,9 @@ namespace Hermosibanco
             // 
             this.NombreTextBox.BackColor = System.Drawing.SystemColors.ControlText;
             this.NombreTextBox.ForeColor = System.Drawing.Color.Orange;
-            this.NombreTextBox.Location = new System.Drawing.Point(43, 74);
+            this.NombreTextBox.Location = new System.Drawing.Point(134, 78);
             this.NombreTextBox.Name = "NombreTextBox";
-            this.NombreTextBox.Size = new System.Drawing.Size(163, 20);
+            this.NombreTextBox.Size = new System.Drawing.Size(233, 20);
             this.NombreTextBox.TabIndex = 2;
             this.NombreTextBox.TextChanged += new System.EventHandler(this.NombreTextBox_TextChanged);
             // 
@@ -81,7 +84,7 @@ namespace Hermosibanco
             this.CantidadLabel.AutoSize = true;
             this.CantidadLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CantidadLabel.ForeColor = System.Drawing.Color.Orange;
-            this.CantidadLabel.Location = new System.Drawing.Point(59, 105);
+            this.CantidadLabel.Location = new System.Drawing.Point(37, 113);
             this.CantidadLabel.Name = "CantidadLabel";
             this.CantidadLabel.Size = new System.Drawing.Size(91, 25);
             this.CantidadLabel.TabIndex = 5;
@@ -92,7 +95,7 @@ namespace Hermosibanco
             // 
             this.CantidadUpDown.BackColor = System.Drawing.SystemColors.ControlText;
             this.CantidadUpDown.ForeColor = System.Drawing.Color.Orange;
-            this.CantidadUpDown.Location = new System.Drawing.Point(167, 105);
+            this.CantidadUpDown.Location = new System.Drawing.Point(134, 113);
             this.CantidadUpDown.Name = "CantidadUpDown";
             this.CantidadUpDown.Size = new System.Drawing.Size(39, 20);
             this.CantidadUpDown.TabIndex = 6;
@@ -102,7 +105,7 @@ namespace Hermosibanco
             this.PrecioUpDown.BackColor = System.Drawing.SystemColors.ControlText;
             this.PrecioUpDown.DecimalPlaces = 2;
             this.PrecioUpDown.ForeColor = System.Drawing.Color.Orange;
-            this.PrecioUpDown.Location = new System.Drawing.Point(167, 138);
+            this.PrecioUpDown.Location = new System.Drawing.Point(317, 113);
             this.PrecioUpDown.Maximum = new decimal(new int[] {
             5000,
             0,
@@ -117,7 +120,7 @@ namespace Hermosibanco
             this.PrecioLabel.AutoSize = true;
             this.PrecioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PrecioLabel.ForeColor = System.Drawing.Color.Orange;
-            this.PrecioLabel.Location = new System.Drawing.Point(59, 138);
+            this.PrecioLabel.Location = new System.Drawing.Point(209, 113);
             this.PrecioLabel.Name = "PrecioLabel";
             this.PrecioLabel.Size = new System.Drawing.Size(88, 25);
             this.PrecioLabel.TabIndex = 7;
@@ -128,7 +131,7 @@ namespace Hermosibanco
             this.DisponibleCheckBox.AutoSize = true;
             this.DisponibleCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DisponibleCheckBox.ForeColor = System.Drawing.Color.Orange;
-            this.DisponibleCheckBox.Location = new System.Drawing.Point(64, 166);
+            this.DisponibleCheckBox.Location = new System.Drawing.Point(134, 191);
             this.DisponibleCheckBox.Name = "DisponibleCheckBox";
             this.DisponibleCheckBox.Size = new System.Drawing.Size(122, 29);
             this.DisponibleCheckBox.TabIndex = 9;
@@ -137,20 +140,62 @@ namespace Hermosibanco
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(87, 201);
+            this.button1.Location = new System.Drawing.Point(255, 9);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 10;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.ControlText;
+            this.textBox1.ForeColor = System.Drawing.Color.Orange;
+            this.textBox1.Location = new System.Drawing.Point(134, 153);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(233, 20);
+            this.textBox1.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Orange;
+            this.label1.Location = new System.Drawing.Point(14, 148);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 25);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "URL imagen";
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.Orange;
+            this.btnGuardar.Image = global::Hermosibanco.Properties.Resources.icons8_save_30;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar.Location = new System.Drawing.Point(134, 235);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(104, 51);
+            this.btnGuardar.TabIndex = 14;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormAgregarItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(248, 243);
+            this.ClientSize = new System.Drawing.Size(389, 298);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.DisponibleCheckBox);
             this.Controls.Add(this.PrecioUpDown);
@@ -183,5 +228,8 @@ namespace Hermosibanco
         private System.Windows.Forms.Label PrecioLabel;
         private System.Windows.Forms.CheckBox DisponibleCheckBox;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }
