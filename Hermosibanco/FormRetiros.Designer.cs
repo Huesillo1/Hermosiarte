@@ -77,6 +77,7 @@ namespace Hermosibanco
             this.groupBox1.Controls.Add(this.dtFechaFin);
             this.groupBox1.Controls.Add(this.dtFechaInicio);
             this.groupBox1.Controls.Add(this.rbFecha);
+            this.groupBox1.ForeColor = System.Drawing.Color.Orange;
             this.groupBox1.Location = new System.Drawing.Point(8, 11);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(614, 76);
@@ -87,6 +88,7 @@ namespace Hermosibanco
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Orange;
             this.label2.Location = new System.Drawing.Point(469, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
@@ -125,6 +127,7 @@ namespace Hermosibanco
             // rbAnio
             // 
             this.rbAnio.AutoSize = true;
+            this.rbAnio.ForeColor = System.Drawing.Color.Orange;
             this.rbAnio.Location = new System.Drawing.Point(399, 22);
             this.rbAnio.Name = "rbAnio";
             this.rbAnio.Size = new System.Drawing.Size(48, 17);
@@ -150,6 +153,7 @@ namespace Hermosibanco
             // rbMes
             // 
             this.rbMes.AutoSize = true;
+            this.rbMes.ForeColor = System.Drawing.Color.Orange;
             this.rbMes.Location = new System.Drawing.Point(251, 22);
             this.rbMes.Name = "rbMes";
             this.rbMes.Size = new System.Drawing.Size(48, 17);
@@ -163,6 +167,7 @@ namespace Hermosibanco
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Orange;
             this.label1.Location = new System.Drawing.Point(113, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(15, 15);
@@ -197,6 +202,7 @@ namespace Hermosibanco
             // rbFecha
             // 
             this.rbFecha.AutoSize = true;
+            this.rbFecha.ForeColor = System.Drawing.Color.Orange;
             this.rbFecha.Location = new System.Drawing.Point(6, 22);
             this.rbFecha.Name = "rbFecha";
             this.rbFecha.Size = new System.Drawing.Size(60, 17);
@@ -230,6 +236,7 @@ namespace Hermosibanco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(775, 414);
             this.Controls.Add(this.btnSolicitarRetiro);
             this.Controls.Add(this.dgvData);

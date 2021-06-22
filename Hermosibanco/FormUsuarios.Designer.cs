@@ -46,6 +46,7 @@ namespace Hermosibanco
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnModificar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.addCart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.dgvMenu.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -121,6 +122,7 @@ namespace Hermosibanco
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Orange;
             this.groupBox1.Location = new System.Drawing.Point(-1, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(428, 68);
@@ -132,6 +134,7 @@ namespace Hermosibanco
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Orange;
             this.label3.Location = new System.Drawing.Point(295, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 15);
@@ -156,6 +159,7 @@ namespace Hermosibanco
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Orange;
             this.label2.Location = new System.Drawing.Point(192, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 15);
@@ -164,7 +168,9 @@ namespace Hermosibanco
             // 
             // txtCuenta
             // 
+            this.txtCuenta.BackColor = System.Drawing.Color.Black;
             this.txtCuenta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCuenta.ForeColor = System.Drawing.Color.Orange;
             this.txtCuenta.Location = new System.Drawing.Point(192, 39);
             this.txtCuenta.Name = "txtCuenta";
             this.txtCuenta.Size = new System.Drawing.Size(98, 23);
@@ -176,6 +182,7 @@ namespace Hermosibanco
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Orange;
             this.label1.Location = new System.Drawing.Point(6, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 15);
@@ -184,8 +191,10 @@ namespace Hermosibanco
             // 
             // txtNombre
             // 
+            this.txtNombre.BackColor = System.Drawing.Color.Black;
             this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.ForeColor = System.Drawing.Color.Orange;
             this.txtNombre.Location = new System.Drawing.Point(6, 39);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(179, 23);
@@ -222,11 +231,26 @@ namespace Hermosibanco
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // addCart
+            // 
+            this.addCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.addCart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.addCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addCart.ForeColor = System.Drawing.Color.Orange;
+            this.addCart.Location = new System.Drawing.Point(262, 365);
+            this.addCart.Name = "addCart";
+            this.addCart.Size = new System.Drawing.Size(91, 23);
+            this.addCart.TabIndex = 4;
+            this.addCart.Text = "Añadir al carrito";
+            this.addCart.UseVisualStyleBackColor = false;
+            // 
             // FormUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(775, 414);
+            this.Controls.Add(this.addCart);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.button1);
@@ -261,5 +285,6 @@ namespace Hermosibanco
         private System.Windows.Forms.ToolStripMenuItem eliminarUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem depositarToolStripMenuItem;
+        private System.Windows.Forms.Button addCart;
     }
 }

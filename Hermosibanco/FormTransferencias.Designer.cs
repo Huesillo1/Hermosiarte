@@ -47,6 +47,7 @@ namespace Hermosibanco
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cbbCuentaEmisora);
+            this.groupBox1.ForeColor = System.Drawing.Color.Orange;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(331, 49);
@@ -67,6 +68,7 @@ namespace Hermosibanco
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtCuentaReceptora);
+            this.groupBox2.ForeColor = System.Drawing.Color.Orange;
             this.groupBox2.Location = new System.Drawing.Point(349, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(332, 49);
@@ -76,7 +78,9 @@ namespace Hermosibanco
             // 
             // txtCuentaReceptora
             // 
+            this.txtCuentaReceptora.BackColor = System.Drawing.Color.Black;
             this.txtCuentaReceptora.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCuentaReceptora.ForeColor = System.Drawing.Color.Orange;
             this.txtCuentaReceptora.Location = new System.Drawing.Point(6, 19);
             this.txtCuentaReceptora.Name = "txtCuentaReceptora";
             this.txtCuentaReceptora.Size = new System.Drawing.Size(316, 23);
@@ -101,13 +105,13 @@ namespace Hermosibanco
             this.menuTransferencias.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mniTransferir});
             this.menuTransferencias.Name = "menuTransferencias";
-            this.menuTransferencias.Size = new System.Drawing.Size(181, 48);
+            this.menuTransferencias.Size = new System.Drawing.Size(123, 26);
             this.menuTransferencias.Opening += new System.ComponentModel.CancelEventHandler(this.menuTransferencias_Opening);
             // 
             // mniTransferir
             // 
             this.mniTransferir.Name = "mniTransferir";
-            this.mniTransferir.Size = new System.Drawing.Size(180, 22);
+            this.mniTransferir.Size = new System.Drawing.Size(122, 22);
             this.mniTransferir.Text = "Transferir";
             this.mniTransferir.Click += new System.EventHandler(this.transferirToolStripMenuItem_Click);
             // 
@@ -125,6 +129,7 @@ namespace Hermosibanco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(775, 414);
             this.Controls.Add(this.btnValidar);
             this.Controls.Add(this.dgvData);

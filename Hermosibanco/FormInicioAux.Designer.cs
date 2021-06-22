@@ -36,13 +36,13 @@ namespace Hermosibanco
             this.movimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transferirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.retirarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.misComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verTodoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autorizarRetiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.tiendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.misComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,6 +108,19 @@ namespace Hermosibanco
             this.retirarToolStripMenuItem.Text = "Retirar";
             this.retirarToolStripMenuItem.Click += new System.EventHandler(this.retirarToolStripMenuItem_Click);
             // 
+            // tiendaToolStripMenuItem
+            // 
+            this.tiendaToolStripMenuItem.Name = "tiendaToolStripMenuItem";
+            this.tiendaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tiendaToolStripMenuItem.Text = "Tienda";
+            this.tiendaToolStripMenuItem.Click += new System.EventHandler(this.tiendaToolStripMenuItem_Click);
+            // 
+            // misComprasToolStripMenuItem
+            // 
+            this.misComprasToolStripMenuItem.Name = "misComprasToolStripMenuItem";
+            this.misComprasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.misComprasToolStripMenuItem.Text = "Mis Compras";
+            // 
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -143,29 +156,18 @@ namespace Hermosibanco
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.Orange;
             this.lblNombre.Location = new System.Drawing.Point(12, 24);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(86, 37);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Hola, ";
             // 
-            // tiendaToolStripMenuItem
-            // 
-            this.tiendaToolStripMenuItem.Name = "tiendaToolStripMenuItem";
-            this.tiendaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.tiendaToolStripMenuItem.Text = "Tienda";
-            this.tiendaToolStripMenuItem.Click += new System.EventHandler(this.tiendaToolStripMenuItem_Click);
-            // 
-            // misComprasToolStripMenuItem
-            // 
-            this.misComprasToolStripMenuItem.Name = "misComprasToolStripMenuItem";
-            this.misComprasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.misComprasToolStripMenuItem.Text = "Mis Compras";
-            // 
             // FormInicioAux
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(801, 492);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.pnlContenedor);

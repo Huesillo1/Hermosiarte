@@ -85,6 +85,7 @@ namespace Hermosibanco
             this.groupBox1.Controls.Add(this.txtNombreCompleto);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Orange;
             this.groupBox1.Location = new System.Drawing.Point(12, 26);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(751, 144);
@@ -94,7 +95,9 @@ namespace Hermosibanco
             // 
             // txtCuenta
             // 
+            this.txtCuenta.BackColor = System.Drawing.Color.Black;
             this.txtCuenta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCuenta.ForeColor = System.Drawing.Color.Orange;
             this.txtCuenta.Location = new System.Drawing.Point(591, 104);
             this.txtCuenta.Name = "txtCuenta";
             this.txtCuenta.Size = new System.Drawing.Size(154, 23);
@@ -112,7 +115,9 @@ namespace Hermosibanco
             // 
             // txtPuesto
             // 
+            this.txtPuesto.BackColor = System.Drawing.Color.Black;
             this.txtPuesto.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPuesto.ForeColor = System.Drawing.Color.Orange;
             this.txtPuesto.Location = new System.Drawing.Point(438, 104);
             this.txtPuesto.Name = "txtPuesto";
             this.txtPuesto.Size = new System.Drawing.Size(147, 23);
@@ -130,7 +135,9 @@ namespace Hermosibanco
             // 
             // txtStatus
             // 
+            this.txtStatus.BackColor = System.Drawing.Color.Black;
             this.txtStatus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStatus.ForeColor = System.Drawing.Color.Orange;
             this.txtStatus.Location = new System.Drawing.Point(282, 104);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(150, 23);
@@ -148,7 +155,9 @@ namespace Hermosibanco
             // 
             // txtFechaRegistro
             // 
+            this.txtFechaRegistro.BackColor = System.Drawing.Color.Black;
             this.txtFechaRegistro.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFechaRegistro.ForeColor = System.Drawing.Color.Orange;
             this.txtFechaRegistro.Location = new System.Drawing.Point(145, 104);
             this.txtFechaRegistro.Name = "txtFechaRegistro";
             this.txtFechaRegistro.Size = new System.Drawing.Size(131, 23);
@@ -166,7 +175,9 @@ namespace Hermosibanco
             // 
             // txtFechaNacimiento
             // 
+            this.txtFechaNacimiento.BackColor = System.Drawing.Color.Black;
             this.txtFechaNacimiento.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFechaNacimiento.ForeColor = System.Drawing.Color.Orange;
             this.txtFechaNacimiento.Location = new System.Drawing.Point(7, 104);
             this.txtFechaNacimiento.Name = "txtFechaNacimiento";
             this.txtFechaNacimiento.Size = new System.Drawing.Size(132, 23);
@@ -185,7 +196,6 @@ namespace Hermosibanco
             // btnShowPassword
             // 
             this.btnShowPassword.FlatAppearance.BorderSize = 0;
-            this.btnShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowPassword.Image = global::Hermosibanco.Properties.Resources.icons8_no_key_16;
             this.btnShowPassword.Location = new System.Drawing.Point(720, 41);
             this.btnShowPassword.Name = "btnShowPassword";
@@ -196,7 +206,9 @@ namespace Hermosibanco
             // 
             // txtPassword
             // 
+            this.txtPassword.BackColor = System.Drawing.Color.Black;
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.Color.Orange;
             this.txtPassword.Location = new System.Drawing.Point(556, 42);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(162, 23);
@@ -215,7 +227,9 @@ namespace Hermosibanco
             // 
             // txtUsuario
             // 
+            this.txtUsuario.BackColor = System.Drawing.Color.Black;
             this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.ForeColor = System.Drawing.Color.Orange;
             this.txtUsuario.Location = new System.Drawing.Point(385, 42);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(165, 23);
@@ -233,7 +247,9 @@ namespace Hermosibanco
             // 
             // txtNombreCompleto
             // 
+            this.txtNombreCompleto.BackColor = System.Drawing.Color.Black;
             this.txtNombreCompleto.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreCompleto.ForeColor = System.Drawing.Color.Orange;
             this.txtNombreCompleto.Location = new System.Drawing.Point(6, 41);
             this.txtNombreCompleto.Name = "txtNombreCompleto";
             this.txtNombreCompleto.Size = new System.Drawing.Size(373, 23);
@@ -264,6 +280,7 @@ namespace Hermosibanco
             this.groupBox2.Controls.Add(this.txtCalle);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.Orange;
             this.groupBox2.Location = new System.Drawing.Point(12, 176);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(751, 82);
@@ -273,7 +290,9 @@ namespace Hermosibanco
             // 
             // txtEstado
             // 
+            this.txtEstado.BackColor = System.Drawing.Color.Black;
             this.txtEstado.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstado.ForeColor = System.Drawing.Color.Orange;
             this.txtEstado.Location = new System.Drawing.Point(591, 41);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(154, 23);
@@ -291,7 +310,9 @@ namespace Hermosibanco
             // 
             // txtMunicipio
             // 
+            this.txtMunicipio.BackColor = System.Drawing.Color.Black;
             this.txtMunicipio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMunicipio.ForeColor = System.Drawing.Color.Orange;
             this.txtMunicipio.Location = new System.Drawing.Point(457, 41);
             this.txtMunicipio.Name = "txtMunicipio";
             this.txtMunicipio.Size = new System.Drawing.Size(128, 23);
@@ -309,7 +330,9 @@ namespace Hermosibanco
             // 
             // txtCP
             // 
+            this.txtCP.BackColor = System.Drawing.Color.Black;
             this.txtCP.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCP.ForeColor = System.Drawing.Color.Orange;
             this.txtCP.Location = new System.Drawing.Point(390, 41);
             this.txtCP.Name = "txtCP";
             this.txtCP.Size = new System.Drawing.Size(61, 23);
@@ -327,7 +350,9 @@ namespace Hermosibanco
             // 
             // txtNoInt
             // 
+            this.txtNoInt.BackColor = System.Drawing.Color.Black;
             this.txtNoInt.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNoInt.ForeColor = System.Drawing.Color.Orange;
             this.txtNoInt.Location = new System.Drawing.Point(336, 41);
             this.txtNoInt.Name = "txtNoInt";
             this.txtNoInt.Size = new System.Drawing.Size(48, 23);
@@ -345,7 +370,9 @@ namespace Hermosibanco
             // 
             // txtNoExt
             // 
+            this.txtNoExt.BackColor = System.Drawing.Color.Black;
             this.txtNoExt.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNoExt.ForeColor = System.Drawing.Color.Orange;
             this.txtNoExt.Location = new System.Drawing.Point(282, 41);
             this.txtNoExt.Name = "txtNoExt";
             this.txtNoExt.Size = new System.Drawing.Size(48, 23);
@@ -363,7 +390,9 @@ namespace Hermosibanco
             // 
             // txtCalle
             // 
+            this.txtCalle.BackColor = System.Drawing.Color.Black;
             this.txtCalle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCalle.ForeColor = System.Drawing.Color.Orange;
             this.txtCalle.Location = new System.Drawing.Point(9, 41);
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(267, 23);
@@ -381,9 +410,10 @@ namespace Hermosibanco
             // 
             // txtSaldo
             // 
-            this.txtSaldo.BackColor = System.Drawing.SystemColors.Control;
+            this.txtSaldo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.txtSaldo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSaldo.Font = new System.Drawing.Font("Segoe UI", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSaldo.ForeColor = System.Drawing.Color.Orange;
             this.txtSaldo.Location = new System.Drawing.Point(12, 282);
             this.txtSaldo.Name = "txtSaldo";
             this.txtSaldo.Size = new System.Drawing.Size(751, 89);
@@ -395,6 +425,7 @@ namespace Hermosibanco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(775, 414);
             this.Controls.Add(this.txtSaldo);
             this.Controls.Add(this.groupBox2);

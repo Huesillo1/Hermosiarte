@@ -57,7 +57,9 @@ namespace Hermosibanco
             // 
             // txtObservaciones
             // 
+            this.txtObservaciones.BackColor = System.Drawing.Color.Black;
             this.txtObservaciones.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservaciones.ForeColor = System.Drawing.Color.Orange;
             this.txtObservaciones.Location = new System.Drawing.Point(12, 10);
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.Size = new System.Drawing.Size(208, 75);
@@ -69,6 +71,7 @@ namespace Hermosibanco
             this.AcceptButton = this.btnGuardar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.CancelButton = this.btnCerrar;
             this.ClientSize = new System.Drawing.Size(232, 118);
             this.Controls.Add(this.txtObservaciones);

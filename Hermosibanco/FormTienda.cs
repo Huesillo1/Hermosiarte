@@ -72,7 +72,8 @@ namespace Hermosibanco
 
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
-
+            FormAgregarItem formAgregarItem = new FormAgregarItem();
+            formAgregarItem.ShowDialog();
         }
     }
 }

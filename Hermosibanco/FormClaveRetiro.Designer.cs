@@ -39,6 +39,7 @@ namespace Hermosibanco
             // 
             this.lblParte1.AutoSize = true;
             this.lblParte1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblParte1.ForeColor = System.Drawing.Color.Orange;
             this.lblParte1.Location = new System.Drawing.Point(11, 16);
             this.lblParte1.Name = "lblParte1";
             this.lblParte1.Size = new System.Drawing.Size(61, 30);
@@ -49,6 +50,7 @@ namespace Hermosibanco
             // 
             this.lblParte2.AutoSize = true;
             this.lblParte2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblParte2.ForeColor = System.Drawing.Color.Orange;
             this.lblParte2.Location = new System.Drawing.Point(78, 16);
             this.lblParte2.Name = "lblParte2";
             this.lblParte2.Size = new System.Drawing.Size(61, 30);
@@ -59,6 +61,7 @@ namespace Hermosibanco
             // 
             this.lblParte3.AutoSize = true;
             this.lblParte3.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblParte3.ForeColor = System.Drawing.Color.Orange;
             this.lblParte3.Location = new System.Drawing.Point(145, 16);
             this.lblParte3.Name = "lblParte3";
             this.lblParte3.Size = new System.Drawing.Size(61, 30);
@@ -69,6 +72,7 @@ namespace Hermosibanco
             // 
             this.lblParte4.AutoSize = true;
             this.lblParte4.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblParte4.ForeColor = System.Drawing.Color.Orange;
             this.lblParte4.Location = new System.Drawing.Point(212, 16);
             this.lblParte4.Name = "lblParte4";
             this.lblParte4.Size = new System.Drawing.Size(61, 30);
@@ -79,6 +83,7 @@ namespace Hermosibanco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(295, 61);
             this.Controls.Add(this.lblParte4);
             this.Controls.Add(this.lblParte3);

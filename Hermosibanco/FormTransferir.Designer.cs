@@ -43,6 +43,8 @@ namespace Hermosibanco
             // 
             // txtNombre
             // 
+            this.txtNombre.BackColor = System.Drawing.Color.Black;
+            this.txtNombre.ForeColor = System.Drawing.Color.Orange;
             this.txtNombre.Location = new System.Drawing.Point(12, 97);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ReadOnly = true;
@@ -72,6 +74,8 @@ namespace Hermosibanco
             // 
             // txtCuenta
             // 
+            this.txtCuenta.BackColor = System.Drawing.Color.Black;
+            this.txtCuenta.ForeColor = System.Drawing.Color.Orange;
             this.txtCuenta.Location = new System.Drawing.Point(12, 71);
             this.txtCuenta.Name = "txtCuenta";
             this.txtCuenta.ReadOnly = true;
@@ -80,7 +84,9 @@ namespace Hermosibanco
             // 
             // txtMonto
             // 
+            this.txtMonto.BackColor = System.Drawing.Color.Black;
             this.txtMonto.DecimalPlaces = 2;
+            this.txtMonto.ForeColor = System.Drawing.Color.Orange;
             this.txtMonto.Location = new System.Drawing.Point(13, 149);
             this.txtMonto.Maximum = new decimal(new int[] {
             1000000,
@@ -106,6 +112,7 @@ namespace Hermosibanco
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Orange;
             this.label1.Location = new System.Drawing.Point(10, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 13);
@@ -115,6 +122,7 @@ namespace Hermosibanco
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Orange;
             this.label2.Location = new System.Drawing.Point(10, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 13);
@@ -124,6 +132,7 @@ namespace Hermosibanco
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Orange;
             this.label3.Location = new System.Drawing.Point(10, 133);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
@@ -145,6 +154,7 @@ namespace Hermosibanco
             this.AcceptButton = this.btnTransferir;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(227, 222);
             this.Controls.Add(this.btnValidar);
             this.Controls.Add(this.label3);

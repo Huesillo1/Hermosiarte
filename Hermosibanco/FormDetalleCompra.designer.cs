@@ -40,6 +40,11 @@ namespace Hermosibanco
             // 
             // InfoCompraGrid
             // 
+            this.InfoCompraGrid.AllowUserToAddRows = false;
+            this.InfoCompraGrid.AllowUserToDeleteRows = false;
+            this.InfoCompraGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.InfoCompraGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.InfoCompraGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DESCRIPCION,
@@ -47,9 +52,11 @@ namespace Hermosibanco
             this.CANTIDAD,
             this.PRECIO_UNITARIO,
             this.TOTAL});
-            this.InfoCompraGrid.Location = new System.Drawing.Point(21, 12);
+            this.InfoCompraGrid.Location = new System.Drawing.Point(12, 12);
+            this.InfoCompraGrid.MultiSelect = false;
             this.InfoCompraGrid.Name = "InfoCompraGrid";
-            this.InfoCompraGrid.Size = new System.Drawing.Size(544, 97);
+            this.InfoCompraGrid.ReadOnly = true;
+            this.InfoCompraGrid.Size = new System.Drawing.Size(570, 310);
             this.InfoCompraGrid.TabIndex = 0;
             // 
             // DESCRIPCION
@@ -86,7 +93,7 @@ namespace Hermosibanco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(583, 138);
+            this.ClientSize = new System.Drawing.Size(594, 334);
             this.Controls.Add(this.InfoCompraGrid);
             this.Name = "FormDetalleCompra";
             this.Text = "FormDetalleCompra";

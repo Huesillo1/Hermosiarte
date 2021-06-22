@@ -48,6 +48,7 @@ namespace Hermosibanco
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Orange;
             this.label1.Location = new System.Drawing.Point(9, 270);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 13);
@@ -57,6 +58,8 @@ namespace Hermosibanco
             // 
             // IDTextBox
             // 
+            this.IDTextBox.BackColor = System.Drawing.SystemColors.ControlText;
+            this.IDTextBox.ForeColor = System.Drawing.Color.Orange;
             this.IDTextBox.Location = new System.Drawing.Point(98, 267);
             this.IDTextBox.Name = "IDTextBox";
             this.IDTextBox.Size = new System.Drawing.Size(100, 20);
@@ -76,6 +79,7 @@ namespace Hermosibanco
             // 
             this.a.AutoSize = true;
             this.a.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.a.ForeColor = System.Drawing.Color.Orange;
             this.a.Location = new System.Drawing.Point(12, 228);
             this.a.Name = "a";
             this.a.Size = new System.Drawing.Size(220, 31);
@@ -87,6 +91,9 @@ namespace Hermosibanco
             // 
             this.DatosGridView.AllowUserToAddRows = false;
             this.DatosGridView.AllowUserToDeleteRows = false;
+            this.DatosGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DatosGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DatosGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_CARRITO,
@@ -94,7 +101,9 @@ namespace Hermosibanco
             this.FECHA_CREACION,
             this.STATUS});
             this.DatosGridView.Location = new System.Drawing.Point(64, 12);
+            this.DatosGridView.MultiSelect = false;
             this.DatosGridView.Name = "DatosGridView";
+            this.DatosGridView.ReadOnly = true;
             this.DatosGridView.Size = new System.Drawing.Size(446, 190);
             this.DatosGridView.TabIndex = 9;
             this.DatosGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DatosGridView_CellContentClick);
@@ -129,6 +138,7 @@ namespace Hermosibanco
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Orange;
             this.label2.Location = new System.Drawing.Point(324, 228);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(216, 31);
@@ -137,6 +147,9 @@ namespace Hermosibanco
             // 
             // FiltroFecha
             // 
+            this.FiltroFecha.CalendarForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FiltroFecha.CalendarMonthBackground = System.Drawing.SystemColors.Info;
+            this.FiltroFecha.CalendarTitleForeColor = System.Drawing.Color.Orange;
             this.FiltroFecha.CustomFormat = "dd-MM-yyyy";
             this.FiltroFecha.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FiltroFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -159,7 +172,11 @@ namespace Hermosibanco
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Orange;
             this.label3.Location = new System.Drawing.Point(61, 205);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(305, 13);
@@ -170,6 +187,7 @@ namespace Hermosibanco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(564, 311);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);

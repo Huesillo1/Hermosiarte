@@ -52,7 +52,9 @@ namespace Hermosibanco
             // 
             // txtCantidad
             // 
+            this.txtCantidad.BackColor = System.Drawing.Color.Black;
             this.txtCantidad.DecimalPlaces = 2;
+            this.txtCantidad.ForeColor = System.Drawing.Color.Orange;
             this.txtCantidad.Location = new System.Drawing.Point(76, 117);
             this.txtCantidad.Maximum = new decimal(new int[] {
             999999,
@@ -75,7 +77,9 @@ namespace Hermosibanco
             // 
             // txtConcepto
             // 
+            this.txtConcepto.BackColor = System.Drawing.Color.Black;
             this.txtConcepto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtConcepto.ForeColor = System.Drawing.Color.Orange;
             this.txtConcepto.Location = new System.Drawing.Point(15, 78);
             this.txtConcepto.Name = "txtConcepto";
             this.txtConcepto.Size = new System.Drawing.Size(145, 20);
@@ -95,6 +99,7 @@ namespace Hermosibanco
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Orange;
             this.label1.Location = new System.Drawing.Point(12, 60);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 15);
@@ -105,6 +110,7 @@ namespace Hermosibanco
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Orange;
             this.label2.Location = new System.Drawing.Point(13, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 15);
@@ -115,6 +121,7 @@ namespace Hermosibanco
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Orange;
             this.label3.Location = new System.Drawing.Point(9, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 15);
@@ -125,6 +132,7 @@ namespace Hermosibanco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(177, 194);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
