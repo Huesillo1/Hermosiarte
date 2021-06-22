@@ -149,6 +149,8 @@ D:\Desktop\Proyecto\Hermosiarte\Hermosibanco\obj\Debug\Hermosibanco.exe
 D:\Desktop\Proyecto\Hermosiarte\Hermosibanco\obj\Debug\Hermosibanco.pdb
 D:\Desktop\Proyecto\Hermosiarte\Hermosibanco\obj\Debug\Hermosibanco.FormBusquedaCompra.resources
 D:\Desktop\Proyecto\Hermosiarte\Hermosibanco\obj\Debug\Hermosibanco.FormDetalleCompra.resources
+<<<<<<< HEAD
+=======
 C:\Development\v16\Hermosibanco\bin\Debug\Hermosibanco.exe.config
 C:\Development\v16\Hermosibanco\bin\Debug\Hermosibanco.exe
 C:\Development\v16\Hermosibanco\bin\Debug\BouncyCastle.Crypto.dll
@@ -257,3 +259,5 @@ C:\Development\FinalVersion\Hermosibanco\obj\Debug\Hermosibanco.exe
 C:\Development\FinalVersion\Hermosibanco\obj\Debug\Hermosibanco.pdb
 C:\Development\FinalVersion\Hermosibanco\obj\Debug\Hermosibanco.FormBusquedaCarrito.resources
 C:\Development\FinalVersion\Hermosibanco\obj\Debug\Hermosibanco.FormDetalleCarrito.resources
+>>>>>>> beb03d0e90b9290b6cf1f92b1c7423ae2eea8548
+>>>>>>> aa4f97d8db71d227f61d457a87833dc7782d9f5d

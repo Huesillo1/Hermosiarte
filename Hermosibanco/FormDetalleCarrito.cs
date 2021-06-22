@@ -7,7 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
+=======
 using System.Runtime.InteropServices;
+>>>>>>> beb03d0e90b9290b6cf1f92b1c7423ae2eea8548
 
 namespace Hermosibanco
 {
@@ -69,6 +72,8 @@ namespace Hermosibanco
 
 
         }
+<<<<<<< HEAD
+=======
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -96,5 +101,6 @@ namespace Hermosibanco
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+>>>>>>> beb03d0e90b9290b6cf1f92b1c7423ae2eea8548
     }
 }
