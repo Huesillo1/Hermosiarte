@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
+=======
+using System.Runtime.InteropServices;
+>>>>>>> beb03d0e90b9290b6cf1f92b1c7423ae2eea8548
 
 namespace Hermosibanco
 {
@@ -68,5 +72,35 @@ namespace Hermosibanco
 
 
         }
+<<<<<<< HEAD
+=======
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
+        private void pbClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pbClose_MouseEnter(object sender, EventArgs e)
+        {
+            pbClose.BackColor = Color.Orange;
+        }
+
+        private void pbClose_MouseLeave(object sender, EventArgs e)
+        {
+            pbClose.BackColor = this.BackColor;
+        }
+
+        private void FormDetalleCompra_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+>>>>>>> beb03d0e90b9290b6cf1f92b1c7423ae2eea8548
     }
 }

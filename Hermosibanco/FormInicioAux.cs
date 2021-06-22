@@ -35,6 +35,7 @@ namespace Hermosibanco
             fh.Dock = DockStyle.Fill;
             this.pnlContenedor.Controls.Add(fh);
             this.pnlContenedor.Tag = fh;
+            label1.Text = fh.Text;
             fh.Show();
         }
 
@@ -43,12 +44,12 @@ namespace Hermosibanco
             //DataSet ds = bd.consult("nombre, apellido_paterno,apellido_materno", "usuarios", "id = " + Properties.Settings.Default.idUsuario, "SI");
             //if (ds.Tables[0].Rows.Count > 0)
             //    lblNombre.Text = "Hola, " + ds.Tables[0].Rows[0]["nombre"].ToString() + " " + ds.Tables[0].Rows[0]["apellido_paterno"].ToString() + " " + ds.Tables[0].Rows[0]["apellido_materno"].ToString();
-            AbrirFormEnPanel(new s());
+            AbrirFormEnPanel(new FormMiCuenta());
         }
 
         private void miCuentaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new s());
+            AbrirFormEnPanel(new FormMiCuenta());
         }
 
         private void verTodoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -125,7 +126,13 @@ namespace Hermosibanco
 
         private void historialDeComprasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new FormHistorialCompras());
+            AbrirFormEnPanel(new FormBusquedaCompra());
+        }
+
+        private void FormInicioAux_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

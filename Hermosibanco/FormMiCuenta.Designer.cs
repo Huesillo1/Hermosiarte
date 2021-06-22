@@ -1,7 +1,7 @@
 ﻿
 namespace Hermosibanco
 {
-    partial class s
+    partial class FormMiCuenta
     {
         /// <summary>
         /// Required designer variable.
@@ -59,21 +59,21 @@ namespace Hermosibanco
             this.label9 = new System.Windows.Forms.Label();
             this.txtSaldo = new System.Windows.Forms.TextBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape12 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape11 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape10 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape9 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape8 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape7 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape6 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape13 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.label15 = new System.Windows.Forms.Label();
             this.btnShowPassword = new System.Windows.Forms.Button();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape5 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape6 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape7 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape8 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape9 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape10 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape11 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape12 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -277,7 +277,7 @@ namespace Hermosibanco
             this.txtEstado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEstado.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEstado.ForeColor = System.Drawing.Color.White;
-            this.txtEstado.Location = new System.Drawing.Point(201, 350);
+            this.txtEstado.Location = new System.Drawing.Point(201, 369);
             this.txtEstado.Margin = new System.Windows.Forms.Padding(4);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.ReadOnly = true;
@@ -288,7 +288,7 @@ namespace Hermosibanco
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(197, 326);
+            this.label14.Location = new System.Drawing.Point(197, 335);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(54, 20);
@@ -301,7 +301,7 @@ namespace Hermosibanco
             this.txtMunicipio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMunicipio.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMunicipio.ForeColor = System.Drawing.Color.White;
-            this.txtMunicipio.Location = new System.Drawing.Point(24, 350);
+            this.txtMunicipio.Location = new System.Drawing.Point(25, 369);
             this.txtMunicipio.Margin = new System.Windows.Forms.Padding(4);
             this.txtMunicipio.Name = "txtMunicipio";
             this.txtMunicipio.ReadOnly = true;
@@ -312,7 +312,7 @@ namespace Hermosibanco
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(20, 326);
+            this.label13.Location = new System.Drawing.Point(22, 335);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(78, 20);
@@ -325,7 +325,7 @@ namespace Hermosibanco
             this.txtCP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCP.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCP.ForeColor = System.Drawing.Color.White;
-            this.txtCP.Location = new System.Drawing.Point(539, 260);
+            this.txtCP.Location = new System.Drawing.Point(528, 286);
             this.txtCP.Margin = new System.Windows.Forms.Padding(4);
             this.txtCP.Name = "txtCP";
             this.txtCP.ReadOnly = true;
@@ -336,7 +336,7 @@ namespace Hermosibanco
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(535, 236);
+            this.label12.Location = new System.Drawing.Point(530, 251);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(31, 20);
@@ -349,7 +349,7 @@ namespace Hermosibanco
             this.txtNoInt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNoInt.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNoInt.ForeColor = System.Drawing.Color.White;
-            this.txtNoInt.Location = new System.Drawing.Point(463, 260);
+            this.txtNoInt.Location = new System.Drawing.Point(463, 286);
             this.txtNoInt.Margin = new System.Windows.Forms.Padding(4);
             this.txtNoInt.Name = "txtNoInt";
             this.txtNoInt.ReadOnly = true;
@@ -360,7 +360,7 @@ namespace Hermosibanco
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(459, 236);
+            this.label11.Location = new System.Drawing.Point(459, 251);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(60, 20);
@@ -373,7 +373,7 @@ namespace Hermosibanco
             this.txtNoExt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNoExt.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNoExt.ForeColor = System.Drawing.Color.White;
-            this.txtNoExt.Location = new System.Drawing.Point(385, 260);
+            this.txtNoExt.Location = new System.Drawing.Point(378, 286);
             this.txtNoExt.Margin = new System.Windows.Forms.Padding(4);
             this.txtNoExt.Name = "txtNoExt";
             this.txtNoExt.ReadOnly = true;
@@ -384,7 +384,7 @@ namespace Hermosibanco
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(381, 236);
+            this.label10.Location = new System.Drawing.Point(378, 251);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(63, 20);
@@ -397,7 +397,7 @@ namespace Hermosibanco
             this.txtCalle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCalle.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCalle.ForeColor = System.Drawing.Color.White;
-            this.txtCalle.Location = new System.Drawing.Point(26, 260);
+            this.txtCalle.Location = new System.Drawing.Point(26, 286);
             this.txtCalle.Margin = new System.Windows.Forms.Padding(4);
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.ReadOnly = true;
@@ -408,7 +408,7 @@ namespace Hermosibanco
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(22, 236);
+            this.label9.Location = new System.Drawing.Point(22, 251);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(42, 20);
@@ -421,7 +421,7 @@ namespace Hermosibanco
             this.txtSaldo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSaldo.Font = new System.Drawing.Font("Segoe UI", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSaldo.ForeColor = System.Drawing.Color.White;
-            this.txtSaldo.Location = new System.Drawing.Point(718, 339);
+            this.txtSaldo.Location = new System.Drawing.Point(730, 377);
             this.txtSaldo.Margin = new System.Windows.Forms.Padding(4);
             this.txtSaldo.Name = "txtSaldo";
             this.txtSaldo.Size = new System.Drawing.Size(208, 50);
@@ -452,22 +452,130 @@ namespace Hermosibanco
             this.shapeContainer1.TabIndex = 19;
             this.shapeContainer1.TabStop = false;
             // 
+            // lineShape12
+            // 
+            this.lineShape12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lineShape12.Name = "lineShape12";
+            this.lineShape12.X1 = 201;
+            this.lineShape12.X2 = 385;
+            this.lineShape12.Y1 = 398;
+            this.lineShape12.Y2 = 398;
+            // 
+            // lineShape11
+            // 
+            this.lineShape11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lineShape11.Name = "lineShape11";
+            this.lineShape11.X1 = 26;
+            this.lineShape11.X2 = 185;
+            this.lineShape11.Y1 = 399;
+            this.lineShape11.Y2 = 399;
+            // 
+            // lineShape10
+            // 
+            this.lineShape10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lineShape10.Name = "lineShape10";
+            this.lineShape10.X1 = 378;
+            this.lineShape10.X2 = 605;
+            this.lineShape10.Y1 = 312;
+            this.lineShape10.Y2 = 312;
+            // 
+            // lineShape9
+            // 
+            this.lineShape9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lineShape9.Name = "lineShape9";
+            this.lineShape9.X1 = 25;
+            this.lineShape9.X2 = 352;
+            this.lineShape9.Y1 = 313;
+            this.lineShape9.Y2 = 313;
+            // 
+            // lineShape8
+            // 
+            this.lineShape8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lineShape8.Name = "lineShape8";
+            this.lineShape8.X1 = 807;
+            this.lineShape8.X2 = 961;
+            this.lineShape8.Y1 = 189;
+            this.lineShape8.Y2 = 189;
+            // 
+            // lineShape7
+            // 
+            this.lineShape7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lineShape7.Name = "lineShape7";
+            this.lineShape7.X1 = 599;
+            this.lineShape7.X2 = 763;
+            this.lineShape7.Y1 = 190;
+            this.lineShape7.Y2 = 190;
+            // 
+            // lineShape6
+            // 
+            this.lineShape6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lineShape6.Name = "lineShape6";
+            this.lineShape6.X1 = 382;
+            this.lineShape6.X2 = 522;
+            this.lineShape6.Y1 = 188;
+            this.lineShape6.Y2 = 188;
+            // 
+            // lineShape5
+            // 
+            this.lineShape5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lineShape5.Name = "lineShape5";
+            this.lineShape5.X1 = 200;
+            this.lineShape5.X2 = 340;
+            this.lineShape5.Y1 = 190;
+            this.lineShape5.Y2 = 190;
+            // 
+            // lineShape4
+            // 
+            this.lineShape4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lineShape4.Name = "lineShape4";
+            this.lineShape4.X1 = 24;
+            this.lineShape4.X2 = 153;
+            this.lineShape4.Y1 = 190;
+            this.lineShape4.Y2 = 190;
+            // 
+            // lineShape3
+            // 
+            this.lineShape3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lineShape3.Name = "lineShape3";
+            this.lineShape3.X1 = 755;
+            this.lineShape3.X2 = 928;
+            this.lineShape3.Y1 = 96;
+            this.lineShape3.Y2 = 96;
+            // 
+            // lineShape2
+            // 
+            this.lineShape2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lineShape2.Name = "lineShape2";
+            this.lineShape2.X1 = 527;
+            this.lineShape2.X2 = 678;
+            this.lineShape2.Y1 = 96;
+            this.lineShape2.Y2 = 95;
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 22;
+            this.lineShape1.X2 = 454;
+            this.lineShape1.Y1 = 96;
+            this.lineShape1.Y2 = 97;
+            // 
             // lineShape13
             // 
             this.lineShape13.BorderColor = System.Drawing.Color.DarkOrange;
             this.lineShape13.BorderWidth = 2;
             this.lineShape13.Name = "lineShape13";
-            this.lineShape13.X1 = 718;
-            this.lineShape13.X2 = 932;
-            this.lineShape13.Y1 = 395;
-            this.lineShape13.Y2 = 396;
+            this.lineShape13.X1 = 722;
+            this.lineShape13.X2 = 936;
+            this.lineShape13.Y1 = 432;
+            this.lineShape13.Y2 = 433;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(568, 360);
+            this.label15.Location = new System.Drawing.Point(569, 398);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(147, 23);
             this.label15.TabIndex = 20;
@@ -486,137 +594,29 @@ namespace Hermosibanco
             this.btnShowPassword.UseVisualStyleBackColor = true;
             this.btnShowPassword.Click += new System.EventHandler(this.btnShowPassword_Click);
             // 
-            // lineShape1
-            // 
-            this.lineShape1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 22;
-            this.lineShape1.X2 = 454;
-            this.lineShape1.Y1 = 96;
-            this.lineShape1.Y2 = 97;
-            // 
-            // lineShape2
-            // 
-            this.lineShape2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lineShape2.Name = "lineShape2";
-            this.lineShape2.X1 = 527;
-            this.lineShape2.X2 = 678;
-            this.lineShape2.Y1 = 96;
-            this.lineShape2.Y2 = 95;
-            // 
-            // lineShape3
-            // 
-            this.lineShape3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lineShape3.Name = "lineShape3";
-            this.lineShape3.X1 = 755;
-            this.lineShape3.X2 = 928;
-            this.lineShape3.Y1 = 96;
-            this.lineShape3.Y2 = 96;
-            // 
-            // lineShape4
-            // 
-            this.lineShape4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lineShape4.Name = "lineShape4";
-            this.lineShape4.X1 = 24;
-            this.lineShape4.X2 = 153;
-            this.lineShape4.Y1 = 190;
-            this.lineShape4.Y2 = 190;
-            // 
-            // lineShape5
-            // 
-            this.lineShape5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lineShape5.Name = "lineShape5";
-            this.lineShape5.X1 = 200;
-            this.lineShape5.X2 = 340;
-            this.lineShape5.Y1 = 190;
-            this.lineShape5.Y2 = 190;
-            // 
-            // lineShape6
-            // 
-            this.lineShape6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lineShape6.Name = "lineShape6";
-            this.lineShape6.X1 = 382;
-            this.lineShape6.X2 = 522;
-            this.lineShape6.Y1 = 188;
-            this.lineShape6.Y2 = 188;
-            // 
-            // lineShape7
-            // 
-            this.lineShape7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lineShape7.Name = "lineShape7";
-            this.lineShape7.X1 = 599;
-            this.lineShape7.X2 = 763;
-            this.lineShape7.Y1 = 190;
-            this.lineShape7.Y2 = 190;
-            // 
-            // lineShape8
-            // 
-            this.lineShape8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lineShape8.Name = "lineShape8";
-            this.lineShape8.X1 = 807;
-            this.lineShape8.X2 = 961;
-            this.lineShape8.Y1 = 189;
-            this.lineShape8.Y2 = 189;
-            // 
-            // lineShape9
-            // 
-            this.lineShape9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lineShape9.Name = "lineShape9";
-            this.lineShape9.X1 = 26;
-            this.lineShape9.X2 = 329;
-            this.lineShape9.Y1 = 286;
-            this.lineShape9.Y2 = 286;
-            // 
-            // lineShape10
-            // 
-            this.lineShape10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lineShape10.Name = "lineShape10";
-            this.lineShape10.X1 = 381;
-            this.lineShape10.X2 = 608;
-            this.lineShape10.Y1 = 286;
-            this.lineShape10.Y2 = 286;
-            // 
-            // lineShape11
-            // 
-            this.lineShape11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lineShape11.Name = "lineShape11";
-            this.lineShape11.X1 = 22;
-            this.lineShape11.X2 = 151;
-            this.lineShape11.Y1 = 375;
-            this.lineShape11.Y2 = 375;
-            // 
-            // lineShape12
-            // 
-            this.lineShape12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lineShape12.Name = "lineShape12";
-            this.lineShape12.X1 = 202;
-            this.lineShape12.X2 = 386;
-            this.lineShape12.Y1 = 375;
-            this.lineShape12.Y2 = 375;
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label16.Location = new System.Drawing.Point(22, 13);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(129, 20);
+            this.label16.Size = new System.Drawing.Size(131, 18);
             this.label16.TabIndex = 21;
             this.label16.Text = "Datos Personales";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label17.Location = new System.Drawing.Point(23, 208);
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label17.Location = new System.Drawing.Point(23, 222);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(75, 20);
+            this.label17.Size = new System.Drawing.Size(79, 18);
             this.label17.TabIndex = 22;
             this.label17.Text = "Domicilio";
             // 
-            // s
+            // FormMiCuenta
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -659,9 +659,9 @@ namespace Hermosibanco
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "s";
+            this.Name = "FormMiCuenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "s";
+            this.Text = "Mi cuenta";
             this.Load += new System.EventHandler(this.FormMiCuenta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
