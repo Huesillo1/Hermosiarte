@@ -111,6 +111,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAgregarItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgregarItem.designer.cs">
+      <DependentUpon>FormAgregarItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAgregarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,18 @@
     <Compile Include="FormAutorizarRetiro.Designer.cs">
       <DependentUpon>FormAutorizarRetiro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBusquedaCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusquedaCompra.designer.cs">
+      <DependentUpon>FormBusquedaCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCart.designer.cs">
+      <DependentUpon>FormCart.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormClaveRetiro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +152,12 @@
     </Compile>
     <Compile Include="FormDeposito.Designer.cs">
       <DependentUpon>FormDeposito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDetalleCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDetalleCompra.designer.cs">
+      <DependentUpon>FormDetalleCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDetallesSolicitudRetiro.cs">
       <SubType>Form</SubType>
@@ -177,6 +201,12 @@
     <Compile Include="FormRetiros.Designer.cs">
       <DependentUpon>FormRetiros.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTienda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTienda.designer.cs">
+      <DependentUpon>FormTienda.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTransferencias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,10 +225,19 @@
     <Compile Include="FormUsuarios.Designer.cs">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Product.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Product.designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAgregarItem.resx">
+      <DependentUpon>FormAgregarItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAgregarUsuario.resx">
       <DependentUpon>FormAgregarUsuario.cs</DependentUpon>
@@ -206,11 +245,20 @@
     <EmbeddedResource Include="FormAutorizarRetiro.resx">
       <DependentUpon>FormAutorizarRetiro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormBusquedaCompra.resx">
+      <DependentUpon>FormBusquedaCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCart.resx">
+      <DependentUpon>FormCart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormClaveRetiro.resx">
       <DependentUpon>FormClaveRetiro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDeposito.resx">
       <DependentUpon>FormDeposito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDetalleCompra.resx">
+      <DependentUpon>FormDetalleCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDetallesSolicitudRetiro.resx">
       <DependentUpon>FormDetallesSolicitudRetiro.cs</DependentUpon>
@@ -233,6 +281,9 @@
     <EmbeddedResource Include="FormRetiros.resx">
       <DependentUpon>FormRetiros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTienda.resx">
+      <DependentUpon>FormTienda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTransferencias.resx">
       <DependentUpon>FormTransferencias.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUsuarios.resx">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -316,6 +370,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-update-file-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-añadir-etiqueta-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

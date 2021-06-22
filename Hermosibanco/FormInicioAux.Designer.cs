@@ -41,6 +41,8 @@ namespace Hermosibanco
             this.agregarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autorizarRetiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.tiendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.misComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,7 +73,9 @@ namespace Hermosibanco
             this.miCuentaToolStripMenuItem,
             this.movimientosToolStripMenuItem,
             this.transferirToolStripMenuItem,
-            this.retirarToolStripMenuItem});
+            this.retirarToolStripMenuItem,
+            this.tiendaToolStripMenuItem,
+            this.misComprasToolStripMenuItem});
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
             this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.opcionesToolStripMenuItem.Text = "&Opciones";
@@ -79,28 +83,28 @@ namespace Hermosibanco
             // miCuentaToolStripMenuItem
             // 
             this.miCuentaToolStripMenuItem.Name = "miCuentaToolStripMenuItem";
-            this.miCuentaToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.miCuentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.miCuentaToolStripMenuItem.Text = "Mi &Cuenta";
             this.miCuentaToolStripMenuItem.Click += new System.EventHandler(this.miCuentaToolStripMenuItem_Click);
             // 
             // movimientosToolStripMenuItem
             // 
             this.movimientosToolStripMenuItem.Name = "movimientosToolStripMenuItem";
-            this.movimientosToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.movimientosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.movimientosToolStripMenuItem.Text = "&Movimientos";
             this.movimientosToolStripMenuItem.Click += new System.EventHandler(this.movimientosToolStripMenuItem_Click);
             // 
             // transferirToolStripMenuItem
             // 
             this.transferirToolStripMenuItem.Name = "transferirToolStripMenuItem";
-            this.transferirToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.transferirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.transferirToolStripMenuItem.Text = "&Transferir";
             this.transferirToolStripMenuItem.Click += new System.EventHandler(this.transferirToolStripMenuItem_Click);
             // 
             // retirarToolStripMenuItem
             // 
             this.retirarToolStripMenuItem.Name = "retirarToolStripMenuItem";
-            this.retirarToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.retirarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.retirarToolStripMenuItem.Text = "Retirar";
             this.retirarToolStripMenuItem.Click += new System.EventHandler(this.retirarToolStripMenuItem_Click);
             // 
@@ -117,21 +121,21 @@ namespace Hermosibanco
             // verTodoToolStripMenuItem
             // 
             this.verTodoToolStripMenuItem.Name = "verTodoToolStripMenuItem";
-            this.verTodoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verTodoToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.verTodoToolStripMenuItem.Text = "&Ver todo";
             this.verTodoToolStripMenuItem.Click += new System.EventHandler(this.verTodoToolStripMenuItem_Click);
             // 
             // agregarUsuarioToolStripMenuItem
             // 
             this.agregarUsuarioToolStripMenuItem.Name = "agregarUsuarioToolStripMenuItem";
-            this.agregarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.agregarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.agregarUsuarioToolStripMenuItem.Text = "&Agregar Usuario";
             this.agregarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.agregarUsuarioToolStripMenuItem_Click);
             // 
             // autorizarRetiroToolStripMenuItem
             // 
             this.autorizarRetiroToolStripMenuItem.Name = "autorizarRetiroToolStripMenuItem";
-            this.autorizarRetiroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.autorizarRetiroToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.autorizarRetiroToolStripMenuItem.Text = "Autorizar Retiro";
             this.autorizarRetiroToolStripMenuItem.Click += new System.EventHandler(this.autorizarRetiroToolStripMenuItem_Click);
             // 
@@ -144,6 +148,19 @@ namespace Hermosibanco
             this.lblNombre.Size = new System.Drawing.Size(86, 37);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Hola, ";
+            // 
+            // tiendaToolStripMenuItem
+            // 
+            this.tiendaToolStripMenuItem.Name = "tiendaToolStripMenuItem";
+            this.tiendaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tiendaToolStripMenuItem.Text = "Tienda";
+            this.tiendaToolStripMenuItem.Click += new System.EventHandler(this.tiendaToolStripMenuItem_Click);
+            // 
+            // misComprasToolStripMenuItem
+            // 
+            this.misComprasToolStripMenuItem.Name = "misComprasToolStripMenuItem";
+            this.misComprasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.misComprasToolStripMenuItem.Text = "Mis Compras";
             // 
             // FormInicioAux
             // 
@@ -179,5 +196,7 @@ namespace Hermosibanco
         private System.Windows.Forms.ToolStripMenuItem transferirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem retirarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem autorizarRetiroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiendaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem misComprasToolStripMenuItem;
     }
 }

@@ -45,3 +45,9 @@ C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosiban
 C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormRetiros.resources
 C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormAutorizarRetiro.resources
 C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormObservaciones.resources
+C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormCart.resources
+C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormTienda.resources
+C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.Product.resources
+C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormAgregarItem.resources
+C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormBusquedaCompra.resources
+C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormDetalleCompra.resources
