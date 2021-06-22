@@ -132,11 +132,11 @@
     <Compile Include="FormAutorizarRetiro.Designer.cs">
       <DependentUpon>FormAutorizarRetiro.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormBusquedaCompra.cs">
+    <Compile Include="FormBusquedaCarrito.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBusquedaCompra.Designer.cs">
-      <DependentUpon>FormBusquedaCompra.cs</DependentUpon>
+    <Compile Include="FormBusquedaCarrito.Designer.cs">
+      <DependentUpon>FormBusquedaCarrito.cs</DependentUpon>
     </Compile>
     <Compile Include="FormClaveRetiro.cs">
       <SubType>Form</SubType>
@@ -150,11 +150,11 @@
     <Compile Include="FormDeposito.Designer.cs">
       <DependentUpon>FormDeposito.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDetalleCompra.cs">
+    <Compile Include="FormDetalleCarrito.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDetalleCompra.Designer.cs">
-      <DependentUpon>FormDetalleCompra.cs</DependentUpon>
+    <Compile Include="FormDetalleCarrito.Designer.cs">
+      <DependentUpon>FormDetalleCarrito.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDetallesSolicitudRetiro.cs">
       <SubType>Form</SubType>
@@ -242,8 +242,8 @@
     <EmbeddedResource Include="FormAutorizarRetiro.resx">
       <DependentUpon>FormAutorizarRetiro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBusquedaCompra.resx">
-      <DependentUpon>FormBusquedaCompra.cs</DependentUpon>
+    <EmbeddedResource Include="FormBusquedaCarrito.resx">
+      <DependentUpon>FormBusquedaCarrito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormClaveRetiro.resx">
       <DependentUpon>FormClaveRetiro.cs</DependentUpon>
@@ -251,8 +251,8 @@
     <EmbeddedResource Include="FormDeposito.resx">
       <DependentUpon>FormDeposito.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDetalleCompra.resx">
-      <DependentUpon>FormDetalleCompra.cs</DependentUpon>
+    <EmbeddedResource Include="FormDetalleCarrito.resx">
+      <DependentUpon>FormDetalleCarrito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDetallesSolicitudRetiro.resx">
       <DependentUpon>FormDetallesSolicitudRetiro.cs</DependentUpon>

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Hermosibanco
 {
-    public partial class FormBusquedaCompra : Form
+    public partial class FormBusquedaCarrito : Form
     {
         BasedeDatos bd = new BasedeDatos();
         // USUARIO HARDCODEADO (SE DEBE DE TRAER DESDE EL LOGIN) USAR Settings.Default.usuarioId
@@ -22,7 +22,7 @@ namespace Hermosibanco
         string _status;
         string _id;
 
-        public FormBusquedaCompra()
+        public FormBusquedaCarrito()
         {
             InitializeComponent();
             string id = IDTextBox.Text.ToString();
@@ -73,7 +73,7 @@ namespace Hermosibanco
         private void button1_Click(object sender, EventArgs e)
         {
             string _id = IDTextBox.Text.ToString();
-            Form toDetalleCompra = new FormDetalleCompra(_id);
+            Form toDetalleCompra = new FormDetalleCarrito(_id);
             toDetalleCompra.Show();
 
         }
@@ -139,7 +139,7 @@ namespace Hermosibanco
             string idColumna = DatosGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
             Console.WriteLine(idColumna);
 
-            Form toDetalleCompra = new FormDetalleCompra(idColumna);
+            Form toDetalleCompra = new FormDetalleCarrito(idColumna);
             toDetalleCompra.Show();
 
         }

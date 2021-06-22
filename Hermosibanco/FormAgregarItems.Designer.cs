@@ -54,10 +54,10 @@ namespace Hermosibanco
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(71, 28);
+            this.label1.Location = new System.Drawing.Point(17, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 41);
+            this.label1.Size = new System.Drawing.Size(215, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nuevo Articulo";
             // 
@@ -76,7 +76,7 @@ namespace Hermosibanco
             // 
             this.DescripcionTextBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DescripcionTextBox.Location = new System.Drawing.Point(24, 108);
-            this.DescripcionTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DescripcionTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.DescripcionTextBox.Name = "DescripcionTextBox";
             this.DescripcionTextBox.Size = new System.Drawing.Size(296, 26);
             this.DescripcionTextBox.TabIndex = 2;
@@ -85,7 +85,7 @@ namespace Hermosibanco
             // 
             this.LinkTextBox.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LinkTextBox.Location = new System.Drawing.Point(24, 185);
-            this.LinkTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LinkTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.LinkTextBox.Name = "LinkTextBox";
             this.LinkTextBox.Size = new System.Drawing.Size(296, 51);
             this.LinkTextBox.TabIndex = 3;
@@ -128,7 +128,7 @@ namespace Hermosibanco
             // 
             this.CantidadUpDown.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CantidadUpDown.Location = new System.Drawing.Point(156, 259);
-            this.CantidadUpDown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CantidadUpDown.Margin = new System.Windows.Forms.Padding(4);
             this.CantidadUpDown.Name = "CantidadUpDown";
             this.CantidadUpDown.Size = new System.Drawing.Size(164, 26);
             this.CantidadUpDown.TabIndex = 7;
@@ -138,7 +138,7 @@ namespace Hermosibanco
             this.PrecioUpDown.DecimalPlaces = 2;
             this.PrecioUpDown.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PrecioUpDown.Location = new System.Drawing.Point(156, 304);
-            this.PrecioUpDown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PrecioUpDown.Margin = new System.Windows.Forms.Padding(4);
             this.PrecioUpDown.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -153,7 +153,7 @@ namespace Hermosibanco
             this.DisponibleCheckBox.AutoSize = true;
             this.DisponibleCheckBox.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DisponibleCheckBox.Location = new System.Drawing.Point(23, 338);
-            this.DisponibleCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DisponibleCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.DisponibleCheckBox.Name = "DisponibleCheckBox";
             this.DisponibleCheckBox.Size = new System.Drawing.Size(164, 35);
             this.DisponibleCheckBox.TabIndex = 10;
@@ -224,7 +224,7 @@ namespace Hermosibanco
             this.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormAgregarItems";
             this.Text = "FormAgregarItems";
             ((System.ComponentModel.ISupportInitialize)(this.CantidadUpDown)).EndInit();

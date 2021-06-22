@@ -11,9 +11,9 @@ using System.Runtime.InteropServices;
 
 namespace Hermosibanco
 {
-    public partial class FormDetalleCompra : Form
+    public partial class FormDetalleCarrito : Form
     {
-        public FormDetalleCompra(string _idCompraFormAnterior)
+        public FormDetalleCarrito(string _idCompraFormAnterior)
         {
             InitializeComponent();
 

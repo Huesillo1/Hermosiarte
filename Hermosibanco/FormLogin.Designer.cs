@@ -49,10 +49,10 @@ namespace Hermosibanco
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(134, 186);
+            this.btnLogin.Location = new System.Drawing.Point(136, 186);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(234, 34);
+            this.btnLogin.Size = new System.Drawing.Size(252, 34);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Iniciar Sesión";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -65,7 +65,7 @@ namespace Hermosibanco
             this.txtUser.Location = new System.Drawing.Point(136, 95);
             this.txtUser.Margin = new System.Windows.Forms.Padding(4);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(234, 28);
+            this.txtUser.Size = new System.Drawing.Size(252, 28);
             this.txtUser.TabIndex = 1;
             this.txtUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUser_KeyDown);
             // 
@@ -114,7 +114,7 @@ namespace Hermosibanco
             this.txtPass.Location = new System.Drawing.Point(136, 133);
             this.txtPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(234, 28);
+            this.txtPass.Size = new System.Drawing.Size(252, 28);
             this.txtPass.TabIndex = 2;
             this.txtPass.UseSystemPasswordChar = true;
             this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
@@ -124,7 +124,7 @@ namespace Hermosibanco
             // 
             this.pbMinimized.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbMinimized.Image = ((System.Drawing.Image)(resources.GetObject("pbMinimized.Image")));
-            this.pbMinimized.Location = new System.Drawing.Point(339, 2);
+            this.pbMinimized.Location = new System.Drawing.Point(340, 1);
             this.pbMinimized.Name = "pbMinimized";
             this.pbMinimized.Size = new System.Drawing.Size(36, 30);
             this.pbMinimized.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -138,7 +138,7 @@ namespace Hermosibanco
             // 
             this.pbClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbClose.Image = ((System.Drawing.Image)(resources.GetObject("pbClose.Image")));
-            this.pbClose.Location = new System.Drawing.Point(377, 2);
+            this.pbClose.Location = new System.Drawing.Point(377, 0);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(36, 30);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
