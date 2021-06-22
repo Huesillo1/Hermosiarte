@@ -22,7 +22,7 @@ namespace Hermosibanco
 
         private bool _createConnection()
         {
-            connection.ConnectionString = "server=" + Properties.Settings.Default.server + ";user id=" + Properties.Settings.Default.user + ";password = " + Properties.Settings.Default.password + ";database=" + Properties.Settings.Default.database;
+            connection.ConnectionString = "server=" + Properties.Settings.Default.server + ";user id=" + Properties.Settings.Default.user + ";password = " + Properties.Settings.Default.password + ";database=" + Properties.Settings.Default.database + ";Convert Zero Datetime=True ";
             return true;
         }
 
@@ -208,15 +208,22 @@ namespace Hermosibanco
         /// <returns>True o False</returns>
         public bool delete(string tabla, string where, string id)
         {
+            _createConnection();
             MySqlCommand cmd = new MySqlCommand();
-            command.Connection = connection;
-            command.CommandText = "DELETE FROM " + tabla + " WHERE " + where + " = @id";
-            command.Parameters.Add(new MySqlParameter("@id", id));
-
-            _openConnection();
+            cmd.Connection = connection;
+            if (id == "")
+            {
+                cmd.CommandText = "DELETE FROM " + tabla + " WHERE " + where;
+            }
+            else
+            {
+                command.CommandText = "DELETE FROM " + tabla + " WHERE " + where + " = @id";
+                command.Parameters.Add(new MySqlParameter("@id", id));
+            }
 
             try
             {
+                _openConnection();
                 cmd.ExecuteNonQuery();
                 _closeConnection();
                 return true;

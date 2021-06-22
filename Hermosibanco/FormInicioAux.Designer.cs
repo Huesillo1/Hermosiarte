@@ -120,6 +120,7 @@ namespace Hermosibanco
             this.misComprasToolStripMenuItem.Name = "misComprasToolStripMenuItem";
             this.misComprasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.misComprasToolStripMenuItem.Text = "Mis Compras";
+            this.misComprasToolStripMenuItem.Click += new System.EventHandler(this.misComprasToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 

@@ -84,5 +84,10 @@ namespace Hermosibanco
         {
             AbrirFormEnPanel(new FormTienda());
         }
+
+        private void misComprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new FormHistorialCompras());
+        }
     }
 }

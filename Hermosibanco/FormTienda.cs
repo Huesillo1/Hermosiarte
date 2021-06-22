@@ -26,7 +26,7 @@ namespace Hermosibanco
 
         private void cargarProductos()
         {
-            DataSet ds;
+            DataSet ds = new DataSet();
             if (textBox1.TextLength > 0)
             {
                 string busca = "descripcion LIKE '%" + textBox1.Text + "%'";
@@ -34,7 +34,15 @@ namespace Hermosibanco
             }
             else
             {
-                ds = bd.consult("*", "articulos", "", "NO");
+                try
+                {
+                    ds = bd.consult("*", "articulos", "", "NO");
+                }
+                catch(MySql.Data.MySqlClient.MySqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }                   
+                
             }
 
             if (layoutProducts.Controls.Count > 0)

@@ -51,3 +51,5 @@ C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosiban
 C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormAgregarItem.resources
 C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormBusquedaCompra.resources
 C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormDetalleCompra.resources
+C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormHistorialCompras.resources
+C:\Users\angel\Desktop\CUCEI\SEMESTRE 4\Software Engineering\Proyecto\Hermosibanco\Hermosibanco\obj\Debug\Hermosibanco.FormDetallesTransacciones.resources

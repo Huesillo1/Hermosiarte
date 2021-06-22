@@ -38,12 +38,12 @@ namespace Hermosibanco
                 string values2;
                 string saldo2 = "saldo = '" + saldo + "'";
                 bd.update(saldo2, "cuentas_bancarias", where2, "SI");
-                string where = "usuario_id = " + "'" + Properties.Settings.Default.idUsuario + "' " + "AND status = 'Pendiente'";
-                string a = "status = 'Pagado'";
+                string where = "usuario_id = " + "'" + Properties.Settings.Default.idUsuario + "' " + "AND status = 'PENDIENTE'";
+                string a = "status = 'COMPLETADA'";
                 bd.update(a, "carrito", where, "SI");
                 string where3 = "carrito_id = '" + idCarrito + "'";
-                string values = "'" + total + "', 'Pagado', '" + DateTime.Now.ToString("yyyy-MM-dd") + "'";
-                bd.insert("compras", "importe, status, fecha", values);
+                string values = Properties.Settings.Default.idUsuario + ", '" + total + "', 'COMPLETADA', '" + DateTime.Now.ToString("yyyy-MM-dd") + "'";
+                bd.insert("compras", "id_usuario, importe, status, fecha", values);
                 dsss = bd.consult("id", "compras ORDER BY id DESC LIMIT 1", "", "NO");
                 int idCompra = Convert.ToInt32(dsss.Tables[0].Rows[0]["id"]);
 
@@ -71,7 +71,7 @@ namespace Hermosibanco
         private void FormCart_Load(object sender, EventArgs e)
         {
             DataSet ds;
-            string where = "usuario_id = " + "'" + Properties.Settings.Default.idUsuario + "' " + "AND status = 'Pendiente'";
+            string where = "usuario_id = " + "'" + Properties.Settings.Default.idUsuario + "' " + "AND status = 'PENDIENTE'";
             ds = bd.consult("*", "carrito", where, "SI");
 
             if (ds.Tables[0].Rows.Count > 0)

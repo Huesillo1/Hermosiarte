@@ -46,7 +46,6 @@ namespace Hermosibanco
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnModificar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.addCart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.dgvMenu.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -231,26 +230,12 @@ namespace Hermosibanco
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // addCart
-            // 
-            this.addCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.addCart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.addCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addCart.ForeColor = System.Drawing.Color.Orange;
-            this.addCart.Location = new System.Drawing.Point(262, 365);
-            this.addCart.Name = "addCart";
-            this.addCart.Size = new System.Drawing.Size(91, 23);
-            this.addCart.TabIndex = 4;
-            this.addCart.Text = "Añadir al carrito";
-            this.addCart.UseVisualStyleBackColor = false;
-            // 
             // FormUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(775, 414);
-            this.Controls.Add(this.addCart);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.button1);
@@ -285,6 +270,5 @@ namespace Hermosibanco
         private System.Windows.Forms.ToolStripMenuItem eliminarUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem depositarToolStripMenuItem;
-        private System.Windows.Forms.Button addCart;
     }
 }
