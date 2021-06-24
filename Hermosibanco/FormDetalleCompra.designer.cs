@@ -96,7 +96,8 @@ namespace Hermosibanco
             this.ClientSize = new System.Drawing.Size(594, 334);
             this.Controls.Add(this.InfoCompraGrid);
             this.Name = "FormDetalleCompra";
-            this.Text = "FormDetalleCompra";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Detalles de la compra";
             ((System.ComponentModel.ISupportInitialize)(this.InfoCompraGrid)).EndInit();
             this.ResumeLayout(false);
 

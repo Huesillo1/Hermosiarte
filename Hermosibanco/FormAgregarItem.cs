@@ -35,8 +35,8 @@ namespace Hermosibanco
         private void button1_Click(object sender, EventArgs e)
         {
             string campos = "descripcion, cantidad, precio, status, fecha_registro, fecha_modificacion, imagen";
-            bd.insert("articulos", campos, ObtenerInformacion());
-
+            if (bd.insert("articulos", campos, ObtenerInformacion()))
+                Close();
         }
 
         public FormAgregarItem()

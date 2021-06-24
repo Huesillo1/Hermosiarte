@@ -30,10 +30,10 @@ namespace Hermosibanco
             DataSet ds = new DataSet();
             //string campos = "id, usuario_id, total, fecha_creacion, status";
             string tabla = "carrito";
-            string WHERE = "usuario_id = " + usuarioID;
+            //string WHERE = "usuario_id = " + usuarioID;
             try
             {
-                ds = bd.consult("*", tabla, WHERE, "SI");
+                ds = bd.consult("*", tabla, "", "NO");
                 if (ds.Tables[0].Rows.Count > 0)
                 {
                     for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
@@ -211,6 +211,16 @@ namespace Hermosibanco
             Form toDetalleCompra = new FormDetalleCompra(idColumna);
             toDetalleCompra.Show();
 
+        }
+
+        private void entregarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bd.update("status = 'ENTREGADO'", "carrito", "id = " + DatosGridView.CurrentRow.Cells[0].Value.ToString(), "SI");
+        }
+
+        private void cancelarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bd.update("status = 'CANCELADO'", "carrito", "id = " + DatosGridView.CurrentRow.Cells[0].Value.ToString(), "SI");
         }
     }
 }

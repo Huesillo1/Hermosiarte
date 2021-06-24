@@ -31,7 +31,7 @@ namespace Hermosibanco
                             "carrito_articulos.cantidad," +
                             "carrito_articulos.precio_unitario," +
                             "carrito.total";
-            string tabla = "carrito_articulos JOIN carrito ON carrito_id = carrito.id JOIN articulos ON articulo_id = articulos.id";
+            string tabla = "carrito_articulos left JOIN carrito ON carrito_id = carrito.id left join articulos ON articulo_id = articulos.id";
             string WHERE = "carrito_id =" + _idCompra;
             try
             {

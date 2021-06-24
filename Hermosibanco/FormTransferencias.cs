@@ -30,7 +30,7 @@ namespace Hermosibanco
             dgvData.Columns[0].HeaderText = "CUENTA";
             dgvData.Columns[1].HeaderText = "NOMBRE";
             dgvData.Columns[0].Width = 100;
-            dgvData.Columns[1].Width = 608;
+            dgvData.Columns[1].Width = 1000;
             dgvData.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvData.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
@@ -61,6 +61,7 @@ namespace Hermosibanco
             //dgvData.AutoGenerateColumns = true;
             cargarContactosComboBox();
             cargarDatosTabla();
+            cargarHeaders();
         }
 
         private void btnValidar_Click(object sender, EventArgs e)

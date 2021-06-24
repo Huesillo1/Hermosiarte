@@ -82,6 +82,7 @@ namespace Hermosibanco
         {
             FormAgregarItem formAgregarItem = new FormAgregarItem();
             formAgregarItem.ShowDialog();
+            cargarProductos();
         }
     }
 }

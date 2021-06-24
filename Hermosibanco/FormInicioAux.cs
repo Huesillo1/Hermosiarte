@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Hermosibanco
 {
@@ -18,6 +19,12 @@ namespace Hermosibanco
         {
             InitializeComponent();
         }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
         private void AbrirFormEnPanel(object formhija)
         {
@@ -33,9 +40,9 @@ namespace Hermosibanco
 
         private void FormInicioAux_Load(object sender, EventArgs e)
         {
-            DataSet ds = bd.consult("nombre, apellido_paterno,apellido_materno", "usuarios", "id = " + Properties.Settings.Default.idUsuario, "SI");
-            if (ds.Tables[0].Rows.Count > 0)
-                lblNombre.Text = "Hola, " + ds.Tables[0].Rows[0]["nombre"].ToString() + " " + ds.Tables[0].Rows[0]["apellido_paterno"].ToString() + " " + ds.Tables[0].Rows[0]["apellido_materno"].ToString();
+            //DataSet ds = bd.consult("nombre, apellido_paterno,apellido_materno", "usuarios", "id = " + Properties.Settings.Default.idUsuario, "SI");
+            //if (ds.Tables[0].Rows.Count > 0)
+                //lblNombre.Text = "Hola, " + ds.Tables[0].Rows[0]["nombre"].ToString() + " " + ds.Tables[0].Rows[0]["apellido_paterno"].ToString() + " " + ds.Tables[0].Rows[0]["apellido_materno"].ToString();
             AbrirFormEnPanel(new FormMiCuenta());
         }
 
@@ -88,6 +95,55 @@ namespace Hermosibanco
         private void misComprasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AbrirFormEnPanel(new FormHistorialCompras());
+        }
+
+        private void pbClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pbMinimized_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pbClose_MouseEnter(object sender, EventArgs e)
+        {
+            pbClose.BackColor = Color.Orange;
+        }
+
+        private void pbClose_MouseLeave(object sender, EventArgs e)
+        {
+            pbClose.BackColor = this.BackColor;
+        }
+
+        private void pbMinimized_MouseEnter(object sender, EventArgs e)
+        {
+            pbMinimized.BackColor = Color.Orange;
+        }
+
+        private void pbMinimized_MouseLeave(object sender, EventArgs e)
+        {
+            pbMinimized.BackColor = this.BackColor;
+        }
+
+        private void FormInicioAux_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void menuStrip1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void verComprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormBusquedaCompra formBusquedaCompra = new FormBusquedaCompra();
+            formBusquedaCompra.ShowDialog();
+            //AbrirFormEnPanel(new FormBusquedaCompra());
         }
     }
 }

@@ -29,6 +29,7 @@ namespace Hermosibanco
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.IDTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -42,14 +43,18 @@ namespace Hermosibanco
             this.FiltroFecha = new System.Windows.Forms.DateTimePicker();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.entregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.DatosGridView)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Orange;
-            this.label1.Location = new System.Drawing.Point(9, 270);
+            this.label1.Location = new System.Drawing.Point(19, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 0;
@@ -60,14 +65,14 @@ namespace Hermosibanco
             // 
             this.IDTextBox.BackColor = System.Drawing.SystemColors.ControlText;
             this.IDTextBox.ForeColor = System.Drawing.Color.Orange;
-            this.IDTextBox.Location = new System.Drawing.Point(98, 267);
+            this.IDTextBox.Location = new System.Drawing.Point(108, 72);
             this.IDTextBox.Name = "IDTextBox";
             this.IDTextBox.Size = new System.Drawing.Size(100, 20);
             this.IDTextBox.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(204, 265);
+            this.button1.Location = new System.Drawing.Point(214, 70);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
@@ -80,7 +85,7 @@ namespace Hermosibanco
             this.a.AutoSize = true;
             this.a.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.a.ForeColor = System.Drawing.Color.Orange;
-            this.a.Location = new System.Drawing.Point(12, 228);
+            this.a.Location = new System.Drawing.Point(22, 33);
             this.a.Name = "a";
             this.a.Size = new System.Drawing.Size(220, 31);
             this.a.TabIndex = 5;
@@ -100,11 +105,12 @@ namespace Hermosibanco
             this.TOTAL,
             this.FECHA_CREACION,
             this.STATUS});
-            this.DatosGridView.Location = new System.Drawing.Point(64, 12);
+            this.DatosGridView.ContextMenuStrip = this.contextMenuStrip1;
+            this.DatosGridView.Location = new System.Drawing.Point(22, 109);
             this.DatosGridView.MultiSelect = false;
             this.DatosGridView.Name = "DatosGridView";
             this.DatosGridView.ReadOnly = true;
-            this.DatosGridView.Size = new System.Drawing.Size(446, 190);
+            this.DatosGridView.Size = new System.Drawing.Size(528, 295);
             this.DatosGridView.TabIndex = 9;
             this.DatosGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DatosGridView_CellContentClick);
             this.DatosGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DatosGridView_CellContentDoubleClick);
@@ -139,7 +145,7 @@ namespace Hermosibanco
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Orange;
-            this.label2.Location = new System.Drawing.Point(324, 228);
+            this.label2.Location = new System.Drawing.Point(334, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(216, 31);
             this.label2.TabIndex = 10;
@@ -153,7 +159,7 @@ namespace Hermosibanco
             this.FiltroFecha.CustomFormat = "dd-MM-yyyy";
             this.FiltroFecha.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FiltroFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FiltroFecha.Location = new System.Drawing.Point(330, 265);
+            this.FiltroFecha.Location = new System.Drawing.Point(340, 70);
             this.FiltroFecha.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
             this.FiltroFecha.Name = "FiltroFecha";
             this.FiltroFecha.Size = new System.Drawing.Size(101, 23);
@@ -162,7 +168,7 @@ namespace Hermosibanco
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(465, 265);
+            this.button2.Location = new System.Drawing.Point(475, 70);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 12;
@@ -177,18 +183,41 @@ namespace Hermosibanco
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Orange;
-            this.label3.Location = new System.Drawing.Point(61, 205);
+            this.label3.Location = new System.Drawing.Point(71, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(305, 13);
             this.label3.TabIndex = 13;
             this.label3.Text = "**Doble clic sobre el ID del carrito para mostrar mas informacion";
+            this.label3.Visible = false;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.entregarToolStripMenuItem,
+            this.cancelarToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(121, 48);
+            // 
+            // entregarToolStripMenuItem
+            // 
+            this.entregarToolStripMenuItem.Name = "entregarToolStripMenuItem";
+            this.entregarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.entregarToolStripMenuItem.Text = "Entregar";
+            this.entregarToolStripMenuItem.Click += new System.EventHandler(this.entregarToolStripMenuItem_Click);
+            // 
+            // cancelarToolStripMenuItem
+            // 
+            this.cancelarToolStripMenuItem.Name = "cancelarToolStripMenuItem";
+            this.cancelarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cancelarToolStripMenuItem.Text = "Cancelar";
+            this.cancelarToolStripMenuItem.Click += new System.EventHandler(this.cancelarToolStripMenuItem_Click);
             // 
             // FormBusquedaCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(564, 311);
+            this.ClientSize = new System.Drawing.Size(564, 416);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.FiltroFecha);
@@ -199,9 +228,11 @@ namespace Hermosibanco
             this.Controls.Add(this.IDTextBox);
             this.Controls.Add(this.label1);
             this.Name = "FormBusquedaCompra";
-            this.Text = "FormBusquedaCompra";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Revisar Compras";
             this.Load += new System.EventHandler(this.FormBusquedaCompra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DatosGridView)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,5 +253,8 @@ namespace Hermosibanco
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA_CREACION;
         private System.Windows.Forms.DataGridViewTextBoxColumn STATUS;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem entregarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cancelarToolStripMenuItem;
     }
 }
